@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="border-t border-gray-200 py-8 mt-16">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-600">
         {/* Brand */}
-        <p className="font-semibold text-lg">MyBrand © {new Date().getFullYear()}</p>
+        <p className="font-semibold text-lg">Mindut Gendut © {new Date().getFullYear()}</p>
 
         {/* Links */}
         <div className="flex space-x-6 mt-4 md:mt-0">
