@@ -54,12 +54,36 @@ export default function Navbar() {
                     : "text-white hover:text-yellow-400"
                 }`}
               >
-                Tentang Kami
+                Tentang Mindut
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/#catering"
+                className={`transition-colors ${
+                  scrolled
+                    ? "text-[#9a0906] hover:text-green-800"
+                    : "text-white hover:text-yellow-400"
+                }`}
+              >
+                Catering
               </Link>
             </li>
             <li>
               <a
-                href="#kontak"
+                href="#spicy-bites"
+                className={`transition-colors ${
+                  scrolled
+                    ? "text-[#9a0906] hover:text-green-800"
+                    : "text-white hover:text-yellow-400"
+                }`}
+              >
+                Spicy Bites
+              </a>
+            </li>
+            <li>
+              <Link
+                to="/kontak"
                 className={`transition-colors ${
                   scrolled
                     ? "text-[#9a0906] hover:text-green-800"
@@ -67,7 +91,7 @@ export default function Navbar() {
                 }`}
               >
                 Kontak
-              </a>
+              </Link>
             </li>
           </ul>
 

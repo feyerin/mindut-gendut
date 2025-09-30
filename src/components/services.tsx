@@ -6,22 +6,17 @@ export default function Services() {
     {
       title: "Catering Kantor",
       desc: "Layanan katering untuk kebutuhan makan siang dan acara kantor, praktis dan sehat.",
-      img: "/food/kantor.jpg",
-    },
-    {
-      title: "Catering Pernikahan",
-      desc: "Hidangan istimewa untuk momen spesial pernikahanmu dengan kualitas premium.",
-      img: "/food/nikahan.jpg",
+      img: "/services/catering.jpg",
     },
     {
       title: "Catering Acara Lainnya",
       desc: "Cocok untuk ulang tahun, arisan, gathering, hingga event besar lainnya.",
-      img: "/food/lainnya.png",
+      img: "/services/lainnya.jpg",
     },
   ];
 
     return (
-    <section className="relative py-28 overflow-hidden">
+    <section id="catering" className="relative py-28 overflow-hidden">
       {/* Background daun pisang tetap */}
       <motion.img
         src="/background/secondary.png"
@@ -47,7 +42,7 @@ export default function Services() {
           Layanan Catering
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 max-w-3xl mx-auto">
           {services.map((s, i) => (
             <motion.div
               key={i}
@@ -65,10 +60,10 @@ export default function Services() {
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-2xl font-[Playfair-Display] font-semibold mb-3 text-[#1B3F33]">
+                <h3 className="text-xl uppercase font-[Playfair-Display] font-semibold mb-3 text-[#1B3F33]">
                   {s.title}
                 </h3>
-                <p className="text-gray-700 mb-6 flex-1 text-justify">{s.desc}</p>
+                <p className="text-gray-700 mb-6 flex-1 text-sm text-justify eading-relaxed">{s.desc}</p>
                 <Link
                   to="/order"
                   className="mt-auto inline-block px-6 py-3 rounded-full text-white font-medium transition-all duration-300 hover:bg-[#2a5b43]"

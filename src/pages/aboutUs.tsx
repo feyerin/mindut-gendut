@@ -2,14 +2,11 @@ import { motion } from "framer-motion";
 
 export default function AboutUs() {
   const gallery = [
-    "/aboutUs/1.png",
-    "/aboutUs/2.png",
-    "/aboutUs/3.png",
-    "/aboutUs/4.png",
-    "/aboutUs/5.png",
-    "/aboutUs/6.png",
-    "/aboutUs/7.png",
-    "/aboutUs/8.png",
+    "/aboutUs/1.jpg",
+    "/aboutUs/2.jpg",
+    "/aboutUs/3.jpg",
+    "/aboutUs/4.jpg",
+    "/aboutUs/5.jpg",
   ];
 
   // Fungsi untuk random small offset dan rotate
@@ -31,9 +28,9 @@ export default function AboutUs() {
       }}
     >
       {/* Hero Title */}
-      <div className="min-h-screen flex flex-col justify-center items-center text-center px-6">
+      <div className="flex flex-col justify-center items-center text-center px-6 lg:pt-32 pt-28">
         <motion.h2
-          className="text-6xl md:text-7xl font-[Playfair-Display] font-bold text-[#1B3F33]"
+          className="font-[Playfair-Display] w-full uppercase text-center font-medium text-4xl md:text-6xl my-auto text-primary mb-4 sm:mb-8"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -46,22 +43,6 @@ export default function AboutUs() {
       {/* Deskripsi + Foto side by side */}
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 py-24">
         <motion.div
-          className="lg:w-1/2"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-[#1B3F33] text-lg md:text-xl leading-relaxed">
-            Mindut Gendut adalah restoran katering yang berfokus pada kualitas dan
-            rasa. Kami menyediakan berbagai jenis hidangan untuk acara kantor,
-            pernikahan, ulang tahun, hingga event spesial lainnya. Setiap hidangan
-            dibuat dengan bahan segar dan resep terbaik agar setiap momenmu
-            spesial dan berkesan.
-          </p>
-        </motion.div>
-
-        <motion.div
           className="lg:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -73,6 +54,26 @@ export default function AboutUs() {
             alt="Restoran Mindut Gendut"
             className="w-full h-auto rounded-3xl shadow-lg object-cover"
           />
+        </motion.div>
+
+        <motion.div
+          className="lg:w-1/2 leading-5 text-md"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-[#1B3F33] leading-relaxed">
+            “Mindut” ialah panggilan sayang Nenek untuk dan karena badanku yang gempal sejak kecil selalu dipanggil Mindut Gendut. Setiap pulang sekolah, aroma nasi bakar buatan Nenek selalu menyambutku dengan hangat. Saat Nenek tiada, almarhumah kakak langsung sosok yang sangat berarti.
+          </p>
+          <br/>
+          <p className="text-[#1B3F33] leading-relaxed">
+            Untuk mengenang Nenek, aku mulai membuka PO nasi bakar dari rumah tempatku di tahun 2020. Dimulai dari dapur kecil di rumah, tak disangka kini banyak yang menyukai nasi bakar buatanku. Kini, Mindut Gendut sudah dipercaya untuk berbagai acara seperti acara kantoran, ulang tahun maupun pernikahan.          
+          </p>
+            <br/>
+          <p className="text-[#1B3F33] leading-relaxed">
+            Terima kasih untuk para pelanggan yang sudah memberikan kesempatan untuk warisan resep Mindut tetap hidup dan dapat dinikmati banyak orang.
+          </p>
         </motion.div>
       </div>
 
@@ -101,7 +102,7 @@ export default function AboutUs() {
                 <img
                   src={img}
                   alt={`Galeri ${i + 1}`}
-                  className="w-full h-[250px] md:h-[300px] lg:h-[280px] object-cover transition-transform duration-500 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </motion.div>
             );

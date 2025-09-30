@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function MenuPage() {
   const categories = [
-    { name: "Sarapan", img: "/menu/1.png" },
-    { name: "Makan Siang", img: "/menu/2.png" },
-    { name: "Dinner", img: "/menu/3.png" },
-    { name: "Snack", img: "/menu/4.png" },
+    { name: "NASI BAKAR", img: "/menu/1.png" },
+    { name: "NASI KREMES", img: "/menu/2.png" },
+    { name: "SPICY BITES", img: "/menu/3.png" },
+    { name: "EXTRAS", img: "/menu/4.png" },
   ];
 
   const [active, setActive] = useState(categories[0]);

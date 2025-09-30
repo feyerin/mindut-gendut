@@ -7,7 +7,7 @@ export default function ProductCard({ product }: { product: any }) {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full blur-sm h-80 object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
       <h3 className="mt-4 text-xl font-medium">{product.name}</h3>
