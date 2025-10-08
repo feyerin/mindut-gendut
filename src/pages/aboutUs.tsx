@@ -21,7 +21,7 @@ export default function AboutUs() {
     <section
       className="relative"
       style={{
-        backgroundImage: "url('/background/secondary.png')",
+        backgroundImage: "url('/background/secondary.jpeg')",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",

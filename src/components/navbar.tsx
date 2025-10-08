@@ -13,8 +13,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        scrolled ? "bg-[#f1eedd] shadow-md" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-colors uppercase duration-300 ${
+        scrolled ? "bg-[#420606] shadow-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -22,9 +22,7 @@ export default function Navbar() {
           to="/"
         >
           <h1
-            className={`text-2xl font-bold transition-colors ${
-              scrolled ? "text-[#9a0906]" : "text-white"
-            }`}
+            className={`text-2xl font-extrabold transition-colors text-white`}
           >
             Mindut Gendut
           </h1>
@@ -32,15 +30,11 @@ export default function Navbar() {
 
         {/* Menu */}
         <div className="flex items-center gap-6">
-          <ul className="hidden md:flex gap-6 font-medium">
+          <ul className="hidden md:flex gap-6 font-semibold text-white">
             <li>
               <Link
                 to="/menu"
-                className={`transition-colors ${
-                  scrolled
-                    ? "text-[#9a0906] hover:text-green-800"
-                    : "text-white hover:text-yellow-400"
-                }`}
+                className="transition-colors text-white hover:text-gray-300"
               >
                 Menu
               </Link>
@@ -48,11 +42,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/aboutUs"
-                className={`transition-colors ${
-                  scrolled
-                    ? "text-[#9a0906] hover:text-green-800"
-                    : "text-white hover:text-yellow-400"
-                }`}
+                className="transition-colors text-white hover:text-gray-300"
               >
                 Tentang Mindut
               </Link>
@@ -60,11 +50,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/#catering"
-                className={`transition-colors ${
-                  scrolled
-                    ? "text-[#9a0906] hover:text-green-800"
-                    : "text-white hover:text-yellow-400"
-                }`}
+                className="transition-colors text-white hover:text-gray-300"
               >
                 Catering
               </Link>
@@ -72,11 +58,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#spicy-bites"
-                className={`transition-colors ${
-                  scrolled
-                    ? "text-[#9a0906] hover:text-green-800"
-                    : "text-white hover:text-yellow-400"
-                }`}
+                className="transition-colors text-white hover:text-gray-300"
               >
                 Spicy Bites
               </a>
@@ -84,11 +66,7 @@ export default function Navbar() {
             <li>
               <Link
                 to="/kontak"
-                className={`transition-colors ${
-                  scrolled
-                    ? "text-[#9a0906] hover:text-green-800"
-                    : "text-white hover:text-yellow-400"
-                }`}
+                className="transition-colors text-white hover:text-gray-300"
               >
                 Kontak
               </Link>

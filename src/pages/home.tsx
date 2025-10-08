@@ -10,7 +10,7 @@ export default function Home() {
       <section
         id="lokasi"
         style={{
-          backgroundImage: "url('/background/main.png')",
+          backgroundImage: "url('/background/main.jpeg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",

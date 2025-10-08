@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaWhatsapp, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#6B3422] text-white pt-16 pb-10">
+    <footer className="bg-[#f9c433] text-[#000] pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Logo + Deskripsi */}
         <div>
@@ -20,7 +20,7 @@ export default function Footer() {
           </p>
           <p className="text-sm leading-relaxed">
             Mindut Gendut siap menghadirkan cita rasa khas nasi bakar yang unik, lezat, dan autentik untuk menemani momen spesial Anda.          </p>
-          <button className="mt-6 px-6 py-2 rounded-lg bg-green-900 hover:bg-green-800 transition">
+          <button className="mt-6 px-6 py-2 bg-[#420606] text-white rounded-full">
             Pesan Sekarang
           </button>
         </div>

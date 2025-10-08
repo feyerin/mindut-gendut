@@ -46,7 +46,7 @@ export default function ContactUs() {
                 id="kontak" 
                 className="w-full min-h-[400px] pt-20 flex-1 relative"
                 style={{
-                    backgroundImage: "url('/background/secondary.png')",
+                    backgroundImage: "url('/background/secondary.jpeg')",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
                     backgroundSize: "cover",

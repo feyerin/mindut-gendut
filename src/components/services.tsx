@@ -5,12 +5,12 @@ export default function Services() {
   const services = [
     {
       title: "Catering Kantor",
-      desc: "Layanan katering untuk kebutuhan makan siang dan acara kantor, praktis dan sehat.",
+      desc: "Ucap selamat tinggal pada menu catering kantoran yang itu-itu saja",
       img: "/services/catering.jpg",
     },
     {
       title: "Catering Acara Lainnya",
-      desc: "Cocok untuk ulang tahun, arisan, gathering, hingga event besar lainnya.",
+      desc: "Apapun acaranya, kami siap sajikan nasi kotak, tumpeng, atau pilihan nasi lainnya",
       img: "/services/lainnya.jpg",
     },
   ];
@@ -19,7 +19,7 @@ export default function Services() {
     <section id="catering" className="relative py-28 overflow-hidden">
       {/* Background daun pisang tetap */}
       <motion.img
-        src="/background/secondary.png"
+        src="/background/secondary.jpeg"
         alt="Banana leaf background"
         initial={{ scale: 1.1, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -60,14 +60,13 @@ export default function Services() {
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl uppercase font-[Playfair-Display] font-semibold mb-3 text-[#1B3F33]">
+                <h3 className="text-xl uppercase font-[Playfair-Display] font-semibold mb-3 text-[#9a0906]">
                   {s.title}
                 </h3>
-                <p className="text-gray-700 mb-6 flex-1 text-sm text-justify eading-relaxed">{s.desc}</p>
+                <p className="text-black mb-6 flex-1 text-sm text-justify eading-relaxed">{s.desc}</p>
                 <Link
                   to="/order"
-                  className="mt-auto inline-block px-6 py-3 rounded-full text-white font-medium transition-all duration-300 hover:bg-[#2a5b43]"
-                  style={{ backgroundColor: "rgb(27, 63, 51)" }}
+                  className="mt-auto inline-block px-6 py-3 rounded-full text-white font-medium transition-all duration-300 bg-[#9a0906] "
                 >
                   Pesan Sekarang
                 </Link>
