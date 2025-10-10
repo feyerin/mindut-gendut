@@ -119,7 +119,7 @@ export default function ContactUs() {
                         <div className="flex items-center justify-between">
                         <button
                             type="submit"
-                            className="bg-[#1b3f33] text-white font-bold sm:text-md text-sm py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-[#9a0906] text-white font-bold sm:text-md text-sm py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             Submit
                         </button>
@@ -130,7 +130,7 @@ export default function ContactUs() {
             </section>
 
             {/* FAQ Section */}
-            <section id="faq" className="w-full bg-[#184D3A] py-12 px-4">
+            <section id="faq" className="w-full bg-[#990001] py-12 px-4">
                 <div className="max-w-4xl mx-auto">
                     {/* Title */}
                     <h1 className="text-center text-4xl md:text-5xl font-bold text-white mb-8">
@@ -143,7 +143,7 @@ export default function ContactUs() {
                             <div key={index}>
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="w-full flex justify-between items-center p-4 text-left text-white font-medium hover:bg-[#20684D] transition"
+                                className="w-full flex justify-between items-center p-4 text-left text-white font-medium hover:bg-[#990001] transition"
                             >
                                 <span>{faq.question}</span>
                                 <span
@@ -155,7 +155,7 @@ export default function ContactUs() {
                                 </span>
                             </button>
                             {openIndex === index && (
-                                <div className="p-4 text-white bg-[#20684D]">
+                                <div className="p-4 text-white bg-[#990001]">
                                 <p>{faq.answer}</p>
                                 </div>
                             )}

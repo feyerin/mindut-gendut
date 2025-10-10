@@ -11,7 +11,7 @@ export default {
         playfair: ["'Playfair Display'", "serif"],
       },
       colors: {
-        brand: "#1B3F33", // contoh warna khusus untuk button
+        brand: "#9a0906", // contoh warna khusus untuk button
       },
     },
   },

@@ -19,7 +19,7 @@ export default function Services() {
     <section id="catering" className="relative py-28 overflow-hidden">
       {/* Background daun pisang tetap */}
       <motion.img
-        src="/background/secondary.jpeg"
+        src="/background/background.jpg"
         alt="Banana leaf background"
         initial={{ scale: 1.1, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -33,7 +33,7 @@ export default function Services() {
 
       <div className="relative max-w-7xl mx-auto px-6 text-center">
         <motion.h2
-          className="text-5xl md:text-6xl font-[Playfair-Display] text-[#1B3F33] font-bold mb-16"
+          className="text-5xl md:text-6xl font-[Playfair-Display] text-[#9a0906] font-bold mb-16"
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}

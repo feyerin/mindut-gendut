@@ -14,7 +14,7 @@ export default function MenuPage() {
 
   return (
     <section
-      className="relative min-h-screen border-t border-[#1B3F33]/30 pt-24"
+      className="relative min-h-screen border-t border-[#9a0906]/30 pt-24"
       style={{
         backgroundImage: "url('/background/secondary.jpeg')",
         backgroundRepeat: "no-repeat",
@@ -24,7 +24,7 @@ export default function MenuPage() {
     >
       {/* Title */}
       <div className="text-center mb-12">
-        <h2 className="text-5xl md:text-6xl font-[Playfair-Display] font-bold text-[#1B3F33]">
+        <h2 className="text-5xl md:text-6xl font-[Playfair-Display] font-bold text-[#9a0906]">
           Menu Kami
         </h2>
       </div>
@@ -37,8 +37,8 @@ export default function MenuPage() {
             onClick={() => setActive(cat)}
             className={`px-6 py-3 rounded-full font-semibold transition-all ${
               active.name === cat.name
-                ? "bg-[#1B3F33] text-white shadow-md"
-                : "bg-white text-[#1B3F33] border border-[#1B3F33] hover:bg-[#f1eedd]"
+                ? "bg-[#9a0906] text-white shadow-md"
+                : "bg-white text-[#9a0906] border border-[#9a0906] hover:bg-[#f1eedd]"
             }`}
           >
             {cat.name}

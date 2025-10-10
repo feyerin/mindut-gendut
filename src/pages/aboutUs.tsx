@@ -63,15 +63,15 @@ export default function AboutUs() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-[#1B3F33] leading-relaxed">
+          <p className="text-[#9a0906] leading-relaxed">
             “Mindut” ialah panggilan sayang Nenek untuk dan karena badanku yang gempal sejak kecil selalu dipanggil Mindut Gendut. Setiap pulang sekolah, aroma nasi bakar buatan Nenek selalu menyambutku dengan hangat. Saat Nenek tiada, almarhumah kakak langsung sosok yang sangat berarti.
           </p>
           <br/>
-          <p className="text-[#1B3F33] leading-relaxed">
+          <p className="text-[#9a0906] leading-relaxed">
             Untuk mengenang Nenek, aku mulai membuka PO nasi bakar dari rumah tempatku di tahun 2020. Dimulai dari dapur kecil di rumah, tak disangka kini banyak yang menyukai nasi bakar buatanku. Kini, Mindut Gendut sudah dipercaya untuk berbagai acara seperti acara kantoran, ulang tahun maupun pernikahan.          
           </p>
             <br/>
-          <p className="text-[#1B3F33] leading-relaxed">
+          <p className="text-[#9a0906] leading-relaxed">
             Terima kasih untuk para pelanggan yang sudah memberikan kesempatan untuk warisan resep Mindut tetap hidup dan dapat dinikmati banyak orang.
           </p>
         </motion.div>
@@ -79,7 +79,7 @@ export default function AboutUs() {
 
       {/* Galeri */}
       <div className="max-w-7xl mx-auto px-6 pb-24">
-        <h3 className="text-4xl font-[Playfair-Display] font-bold mb-10 text-center text-[#1B3F33]">
+        <h3 className="text-4xl font-[Playfair-Display] font-bold mb-10 text-center text-[#9a0906]">
           Galeri Mindut
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
