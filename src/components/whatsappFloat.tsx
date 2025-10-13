@@ -2,7 +2,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppFloat({
-  phone = "6281234567890",
+  phone = "628119938180",
   message = "Halo! Saya mau pesan catering.",
 }: {
   phone?: string;
