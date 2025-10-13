@@ -19,7 +19,7 @@ export default function Services() {
     <section id="catering" className="relative py-28 overflow-hidden">
       {/* Background daun pisang tetap */}
       <motion.img
-        src="/background/background.jpg"
+        src="/background/secondary.png"
         alt="Banana leaf background"
         initial={{ scale: 1.1, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}

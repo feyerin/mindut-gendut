@@ -8,7 +8,7 @@ export default function Hero() {
     <section
       className="relative overflow-hidden " 
       style={{
-        backgroundImage: "url('/background/main.jpeg')",
+        backgroundImage: "url('/background/main.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

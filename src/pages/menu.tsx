@@ -16,7 +16,7 @@ export default function MenuPage() {
     <section
       className="relative min-h-screen border-t border-[#9a0906]/30 pt-24"
       style={{
-        backgroundImage: "url('/background/secondary.jpeg')",
+        backgroundImage: "url('/background/secondary.png')",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
