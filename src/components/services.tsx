@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -15,9 +16,19 @@ export default function Services() {
     },
   ];
 
-    return (
+  const [loaded, setLoaded] = useState<boolean[]>(Array(services.length).fill(false));
+
+  const handleLoad = (index: number) => {
+    setLoaded((prev) => {
+      const copy = [...prev];
+      copy[index] = true;
+      return copy;
+    });
+  };
+
+  return (
     <section id="catering" className="relative py-28 overflow-hidden">
-      {/* Background daun pisang tetap */}
+      {/* Background daun pisang */}
       <motion.img
         src="/background/secondary.png"
         alt="Banana leaf background"
@@ -28,7 +39,7 @@ export default function Services() {
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
       />
 
-      {/* Overlay ringan agar card lebih kontras */}
+      {/* Overlay kontras */}
       <div className="absolute inset-0 bg-white/20 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 text-center">
@@ -42,7 +53,7 @@ export default function Services() {
           Layanan Catering
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-3xl mx-auto">
           {services.map((s, i) => (
             <motion.div
               key={i}
@@ -52,21 +63,34 @@ export default function Services() {
               transition={{ duration: 0.6, delay: i * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="overflow-hidden rounded-t-3xl">
+              <div className="relative w-full h-96 md:h-[28rem] overflow-hidden rounded-t-3xl">
+                {/* Skeleton shimmer */}
+                {!loaded[i] && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 animate-pulse" />
+                )}
+
+                {/* Gambar utama */}
                 <motion.img
                   src={s.img}
                   alt={s.title}
-                  className="w-full h-96 md:h-[28rem] object-cover transition-transform duration-500 hover:scale-105"
+                  onLoad={() => handleLoad(i)}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: loaded[i] ? 1 : 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
+
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl uppercase font-[Playfair-Display] font-semibold mb-3 text-[#9a0906]">
                   {s.title}
                 </h3>
-                <p className="text-black mb-6 flex-1 text-sm text-justify eading-relaxed">{s.desc}</p>
+                <p className="text-black mb-6 flex-1 text-sm text-justify leading-relaxed">
+                  {s.desc}
+                </p>
                 <Link
                   to="/order"
-                  className="mt-auto inline-block px-6 py-3 rounded-full text-white font-medium transition-all duration-300 bg-[#9a0906] "
+                  className="mt-auto inline-block px-6 py-3 rounded-full text-white font-medium transition-all duration-300 bg-[#9a0906]"
                 >
                   Pesan Sekarang
                 </Link>

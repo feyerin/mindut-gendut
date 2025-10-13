@@ -12,14 +12,22 @@ const foods = [
 
 export default function HeroCarousel2() {
   const [index, setIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(nextSlide, 4000);
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => setIndex((prev) => (prev + 1) % foods.length);
-  const prevSlide = () => setIndex((prev) => (prev - 1 + foods.length) % foods.length);
+  const nextSlide = () => {
+    setIsLoading(true);
+    setIndex((prev) => (prev + 1) % foods.length);
+  };
+
+  const prevSlide = () => {
+    setIsLoading(true);
+    setIndex((prev) => (prev - 1 + foods.length) % foods.length);
+  };
 
   const textContainer = {
     hidden: { opacity: 0 },
@@ -33,18 +41,29 @@ export default function HeroCarousel2() {
   return (
     <section className="relative z-10 text-center py-16 text-white px-6 flex flex-col items-center">
       {/* Gambar carousel */}
-      <div className="relative w-[60vw] max-w-[400px] h-[60vw] max-h-[400px] md:w-[33vw] md:max-w-[500px] md:h-[33vw] md:max-h-[500px] mb-6">
+      <div className="relative w-[60vw] max-w-[400px] h-[60vw] max-h-[400px] md:w-[33vw] md:max-w-[500px] md:h-[33vw] md:max-h-[500px] mb-6 overflow-hidden rounded-2xl">
         <AnimatePresence mode="wait">
-          <motion.img
+          <motion.div
             key={foods[index].img}
-            src={foods[index].img}
-            alt={`${foods[index].title} ${foods[index].subtitle}`}
             initial={{ opacity: 0, y: 40, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -40, scale: 0.9 }}
             transition={{ duration: 0.6 }}
-            className="absolute inset-0 w-full h-full object-contain"
-          />
+            className="absolute inset-0"
+          >
+            {isLoading && (
+              <div className="absolute inset-0 bg-gray-800 animate-pulse rounded-2xl" />
+            )}
+
+            <img
+              src={foods[index].img}
+              alt={`${foods[index].title} ${foods[index].subtitle}`}
+              onLoad={() => setIsLoading(false)}
+              className={`w-full h-full object-contain transition-opacity duration-500 ${
+                isLoading ? "opacity-0" : "opacity-100"
+              }`}
+            />
+          </motion.div>
         </AnimatePresence>
 
         {/* Tombol navigasi */}
