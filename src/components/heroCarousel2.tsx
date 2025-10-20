@@ -42,11 +42,33 @@ export default function HeroCarousel2() {
 
   return (
     <section className="relative z-10 text-center py-16 text-white px-6 flex flex-col items-center">
-      {/* Container gambar & tombol */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={foods[index].title + foods[index].subtitle}
+          variants={textContainer}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          className="mb-4"
+        >
+          <motion.div
+            variants={textItem}
+            className="text-xl md:text-3xl font-extrabold text-amber-400"
+          >
+            {foods[index].title}
+          </motion.div>
+          <motion.div
+            variants={textItem}
+            className="text-3xl md:text-4xl font-bold text-white drop-shadow-md font-playfair"
+          >
+            {foods[index].subtitle}
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
+
       <div className="relative w-[60vw] max-w-[400px] h-[60vw] max-h-[400px] 
                       md:w-[33vw] md:max-w-[500px] md:h-[33vw] md:max-h-[500px] mb-6 rounded-2xl">
 
-        {/* Wrapper gambar */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl ">
           <AnimatePresence mode="wait">
             <motion.div
@@ -74,7 +96,6 @@ export default function HeroCarousel2() {
           </AnimatePresence>
         </div>
 
-        {/* Tombol navigasi */}
         <button
           onClick={prevSlide}
           className="absolute -left-10 md:-left-20 top-1/2 -translate-y-1/2 p-2 md:p-4"
@@ -90,30 +111,6 @@ export default function HeroCarousel2() {
         </button>
       </div>
 
-      {/* Teks bawah gambar */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={foods[index].title + foods[index].subtitle}
-          variants={textContainer}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          className="mb-4"
-        >
-          <motion.div
-            variants={textItem}
-            className="text-xl md:text-3xl font-extrabold text-amber-400"
-          >
-            {foods[index].title}
-          </motion.div>
-          <motion.div
-            variants={textItem}
-            className="text-3xl md:text-4xl font-bold text-white drop-shadow-md font-playfair"
-          >
-            {foods[index].subtitle}
-          </motion.div>
-        </motion.div>
-      </AnimatePresence>
     </section>
   );
 }

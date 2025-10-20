@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const foods = [
-  { title: "NASBAK", subtitle: "TELOR GIMBAL", img: "/food/telorgimbal.jpg" },
-  { title: "NASBAK", subtitle: "KULIT KEMANGI", img: "/food/1.png" },
+  { title: "NASBAK", subtitle: "TELOR GIMBAL", img: "/food/Nasbak Sambal Telor Gimbal.png" },
+  { title: "NASBAK", subtitle: "KULIT KEMANGI", img: "/food/Nasbak Sambal Kulit Kemangi.png" },
   { title: "NASBAK", subtitle: "AYAM SUWIR KEMANGI", img: "/food/Nasbak Ayam Suwir.png" },
-  { title: "NASBAK", subtitle: "BABY CUMI", img: "/food/2.png" },
-  { title: "NASBAK", subtitle: "CUMI PETE", img: "/food/Nasbak Cumi Pete.png" },
+  { title: "NASBAK", subtitle: "BABY CUMI", img: "/food/Nasbak Baby Cumi.png" },
+  { title: "NASBAK", subtitle: "CUMI PETE", img: "/food/Nasbak Cumi Pete-01.png" },
   { title: "NASBAK", subtitle: "PARU WARISAN", img: "/food/Nasbak Paru Warisan.png" },
   { title: "NASBAK", subtitle: "AYAM GORENG KALASAN", img: "/food/Nasbak Ayam Goreng.png" },
   { title: "NASBAK", subtitle: "IGA WARISAN", img: "/food/Nasbak Iga Warisan.png" },
@@ -45,12 +45,34 @@ export default function HeroCarousel() {
   };
 
   return (
-    <section className="relative z-10 text-center py-16 text-white px-6 flex flex-col items-center">
-      {/* Container gambar & tombol */}
+    <section className="relative z-10 text-center py-16 pt-32 text-white px-6 flex flex-col items-center">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={foods[index].title + foods[index].subtitle}
+          variants={textContainer}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          className="mb-4"
+        >
+          <motion.div
+            variants={textItem}
+            className="text-xl md:text-3xl font-extrabold text-amber-400"
+          >
+            {foods[index].title}
+          </motion.div>
+          <motion.div
+            variants={textItem}
+            className="text-3xl md:text-4xl font-bold text-white drop-shadow-md font-playfair"
+          >
+            {foods[index].subtitle}
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
+
       <div className="relative w-[60vw] max-w-[400px] h-[60vw] max-h-[400px] 
                       md:w-[33vw] md:max-w-[500px] md:h-[33vw] md:max-h-[500px] mb-6 rounded-2xl">
 
-        {/* Wrapper gambar */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl ">
           <AnimatePresence mode="wait">
             <motion.div
@@ -78,7 +100,6 @@ export default function HeroCarousel() {
           </AnimatePresence>
         </div>
 
-        {/* Tombol navigasi */}
         <button
           onClick={prevSlide}
           className="absolute -left-10 md:-left-20 top-1/2 -translate-y-1/2 p-2 md:p-4"
@@ -93,31 +114,6 @@ export default function HeroCarousel() {
           <FaChevronRight className="text-4xl md:text-6xl text-amber-400 drop-shadow-lg" />
         </button>
       </div>
-
-      {/* Teks bawah gambar */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={foods[index].title + foods[index].subtitle}
-          variants={textContainer}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          className="mb-4"
-        >
-          <motion.div
-            variants={textItem}
-            className="text-xl md:text-3xl font-extrabold text-amber-400"
-          >
-            {foods[index].title}
-          </motion.div>
-          <motion.div
-            variants={textItem}
-            className="text-3xl md:text-4xl font-bold text-white drop-shadow-md font-playfair"
-          >
-            {foods[index].subtitle}
-          </motion.div>
-        </motion.div>
-      </AnimatePresence>
     </section>
   );
 }
