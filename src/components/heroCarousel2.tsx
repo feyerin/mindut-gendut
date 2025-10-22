@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const foods = [
+  { title: "NASI KREMES", subtitle: "TELOR GIMBAL", img: "/food/Nasi Kremes" },
+  { title: "NASI KREMES", subtitle: "AYAM GORENG KALASAN", img: "/food/Nasi Ayam Kremes.png" },
   { title: "NASI KREMES", subtitle: "AYAM BAKAR KALASAN", img: "/food/Nasi Kremes Ayam Bakar Kalasan.png" },
-  { title: "NASI KREMES", subtitle: "IGA", img: "/food/Nasi Kremes Iga.png" },
-  { title: "NASI KREMES", subtitle: "KOTAK", img: "/food/Nasi Kremes Kotak.png" },
-  { title: "NASI KREMES", subtitle: "SAMBAL UDANG", img: "/food/Nasi Kremes Sambal Udang.png" },
   { title: "NASI KREMES", subtitle: "LELE", img: "/food/Nasi Lele Kremes.png" },
+  { title: "NASI KREMES", subtitle: "PARU WARISAN", img: "/food/Nasi Kremes.png" },
 ];
 
 export default function HeroCarousel2() {
