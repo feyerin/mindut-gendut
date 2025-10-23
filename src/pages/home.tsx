@@ -1,26 +1,10 @@
 import Hero from "../components/hero";
 import Services from "../components/services";
 import { MapPin, Clock } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   return (
     <div>
-      <Helmet>
-        <title>Mindut Gendut | Nasi Bakar & Catering Tradisional</title>
-        <meta
-          name="description"
-          content="Mindut Gendut menyajikan nasi bakar dan lauk autentik dari resep warisan keluarga. Pesan catering untuk acara kantor dan pesta."
-        />
-        <meta
-          name="keywords"
-          content="mindut gendut, nasi bakar, catering, makanan indonesia, catering kantor"
-        />
-        <meta property="og:title" content="Mindut Gendut" />
-        <meta property="og:description" content="Nasi bakar autentik dari resep turun-temurun." />
-        <meta property="og:image" content="https://mindutgendut.netlify.app/og-image.jpg" />
-        <meta property="og:url" content="https://mindutgendut.netlify.app/" />
-      </Helmet>
       <Hero />
       <Services/>
       <section

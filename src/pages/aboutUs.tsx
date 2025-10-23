@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 
 export default function AboutUs() {
   const gallery = [
@@ -33,13 +32,11 @@ export default function AboutUs() {
 
   return (
     <section className="relative overflow-hidden">
-      <Helmet>
         <title>Tentang Mindut | Mindut Gendut</title>
         <meta
           name="description"
           content="Kenali kisah di balik Mindut Gendut — warisan resep keluarga yang kini hadir untukmu dengan cita rasa autentik dan penuh kehangatan."
         />
-      </Helmet>
 
       {/* Background */}
       <div

@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 
 export default function MenuPage() {
   const categories = [
@@ -15,28 +14,6 @@ export default function MenuPage() {
 
   return (
     <>
-      {/* ✅ SEO Metadata */}
-      <Helmet>
-        <title>Menu Kami | Mindut Gendut</title>
-        <meta
-          name="description"
-          content="Temukan berbagai pilihan menu lezat Mindut Gendut seperti nasi bakar, nasi kremes, spicy bites, dan berbagai lauk spesial lainnya."
-        />
-        <meta
-          name="keywords"
-          content="mindut gendut, menu mindut gendut, nasi bakar, nasi kremes, spicy bites, makanan tradisional, catering"
-        />
-        <meta property="og:title" content="Menu Kami | Mindut Gendut" />
-        <meta
-          property="og:description"
-          content="Lihat dan pilih menu favoritmu dari Mindut Gendut. Semua dibuat dengan bahan segar dan resep autentik."
-        />
-        <meta property="og:image" content="/og-image.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mindutgendut.netlify.app/menu" />
-      </Helmet>
-
-      {/* ✅ Konten utama */}
       <section
         className="relative min-h-screen border-t border-[#9a0906]/30 pt-24"
         style={{
