@@ -5,14 +5,14 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const foods = [
   { title: "NASBAK", subtitle: "TELOR GIMBAL", img: "/food/Nasbak Telor gimbal box.png" },
-  { title: "NASBAK", subtitle: "KULIT KEMANGI", img: "/food/Nasbak.png" },
+  { title: "NASBAK", subtitle: "KULIT KEMANGI", img: "/food/Nasbak Kulit Kemangi_Box.png" },
   { title: "NASBAK", subtitle: "AYAM SUWIR KEMANGI", img: "/food/Nasbak Ayam Suwir box.png" },
-  { title: "NASBAK", subtitle: "BABY CUMI", img: "/food/Nasbak.png" },
+  { title: "NASBAK", subtitle: "BABY CUMI", img: "/food/Nasbak Baby Cumi_Box.png" },
   { title: "NASBAK", subtitle: "CUMI PETE", img: "/food/Nasbak Cumi pete box.png" },
   { title: "NASBAK", subtitle: "PARU WARISAN", img: "/food/Nasbak Paru box.png" },
   { title: "NASBAK", subtitle: "AYAM GORENG KALASAN", img: "/food/Nasbak Ayam box.png" },
   { title: "NASBAK", subtitle: "IGA WARISAN", img: "/food/Nasbak Iga box.png" },
-  { title: "NASBAK", subtitle: "RENDANG SAPI", img: "/food/Nasbak.png" },
+  { title: "NASBAK", subtitle: "RENDANG SAPI", img: "/food/Nasbak Rendang Sapi_Box.png" },
 ];
 
 export default function HeroCarousel() {
