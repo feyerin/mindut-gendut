@@ -1,11 +1,13 @@
 import Hero from "../components/hero";
 import Services from "../components/services";
 import { MapPin, Clock } from "lucide-react";
+import SpicyBites from "../components/spicyBites";
 
 export default function Home() {
   return (
     <div>
       <Hero />
+      <SpicyBites />
       <Services/>
       <section
         id="lokasi"

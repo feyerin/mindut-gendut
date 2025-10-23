@@ -5,7 +5,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const foods = [
   { title: "NASI KREMES", subtitle: "TELOR GIMBAL", img: "/food/Nasi kremes Telor Gimbal_Box.png" },
-  { title: "NASI KREMES", subtitle: "AYAM GORENG KALASAN", img: "/food/Nasi kremes Ayam Goreng Kalasan_Box.png" },
+  { title: "NASI KREMES", subtitle: "AYAM GORENG KALASAN", img: "/food/Nasi kremes Ayam Bakar Kalasan_Box.png" },
   { title: "NASI KREMES", subtitle: "AYAM BAKAR KALASAN", img: "/food/Nasi kremes Ayam Bakar Kalasan_Box.png" },
   { title: "NASI KREMES", subtitle: "PARU WARISAN", img: "/food/Nasi kremes Paru Warisan_Box.png" },
 ];

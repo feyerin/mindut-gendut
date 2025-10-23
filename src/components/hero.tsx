@@ -1,5 +1,4 @@
 import HeroCarousel from "./heroCarousel";
-import SpicyBites from "./spicyBites";
 import QualitySection from "./qualitySection";
 import HeroCarousel2 from "./heroCarousel2";
 
@@ -15,7 +14,6 @@ export default function Hero() {
     >
       <HeroCarousel />
       <HeroCarousel2 />
-      <SpicyBites />
       <QualitySection />
     </section>
   );

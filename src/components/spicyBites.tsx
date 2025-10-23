@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const spicyItems = [
   { name: "Bumbu Ungkep", img: "https://boganamaymay.com/storage/storage/images/package/8470415166.png" },
@@ -26,11 +27,23 @@ export default function SpicyBites() {
   };
 
   return (
-    <div className="py-20 px-6 md:px-12 w-full">
-      <div className="w-11/12 max-w-7xl mx-auto">
-        <h2 className="text-center text-3xl font-bold text-white mb-10">
+    <div className="py-20 px-6 md:px-12 w-full bg-center"
+      style={{
+        backgroundImage: "url('/background/secondary.png')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="w-11/12 max-w-7xl mx-auto text-center">
+        <motion.h2
+          className="text-5xl md:text-6xl font-[Playfair-Display] text-[#9a0906] font-bold mb-16"
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           Spicy Bites
-        </h2>
+        </motion.h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {spicyItems.map((item, index) => (
@@ -52,13 +65,13 @@ export default function SpicyBites() {
                 />
               </div>
 
-              <p className="font-medium text-white">{item.name}</p>
+              <p className="font-medium text-[#9a0906]">{item.name}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 text-center">
-          <button className="px-8 py-3 text-white rounded-full border border-white hover:border-yellow-300 transition">
+          <button className="px-8 py-3 text-[#9a0906] rounded-full border border-[#9a0906] hover:border-red-800 transition">
             Lihat Menu Lengkap
           </button>
         </div>
