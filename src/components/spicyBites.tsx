@@ -3,14 +3,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const spicyItems = [
-  { name: "Bumbu Ungkep", img: "https://boganamaymay.com/storage/storage/images/package/8470415166.png" },
-  { name: "Ayam Ungkep", img: "https://boganamaymay.com/storage/storage/images/package/8470415166.png" },
-  { name: "Sambal", img: "https://boganamaymay.com/storage/storage/images/package/8470415166.png" },
-  { name: "Sambal Lauk", img: "https://boganamaymay.com/storage/storage/images/package/8470415166.png" },
-  { name: "Sapi", img: "https://boganamaymay.com/storage/storage/images/package/8470415166.png" },
-  { name: "Kripik Kentang", img: "https://boganamaymay.com/storage/storage/images/package/8470415166.png" },
-  { name: "Tahu", img: "https://boganamaymay.com/storage/storage/images/package/8470415166.png" },
-  { name: "Tempe", img: "https://boganamaymay.com/storage/storage/images/package/8470415166.png" },
+  { name: "Bumbu Ungkep", img: "/spicyBites/Bumbu ungkep.png" },
+  { name: "Ayam Ungkep", img: "/spicyBites/Ayam Ungkep.png" },
+  { name: "Sambal", img: "/spicyBites/Sambal.png" },
+  { name: "Sambal Lauk", img: "/spicyBites/Sambal lauk.png" },
+  { name: "Sapi", img: "/spicyBites/Sapi.png" },
+  { name: "Kripik Kentang", img: "/spicyBites/Keripik kentang.png" },
+  { name: "Tahu", img: "/spicyBites/Tahu tempe.png" },
+  { name: "Tempe", img: "/spicyBites/Tahu tempe.png" },
 ];
 
 export default function SpicyBites() {
@@ -48,7 +48,7 @@ export default function SpicyBites() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {spicyItems.map((item, index) => (
             <div key={item.name} className="flex flex-col items-center text-center">
-              <div className="relative w-32 h-32 mb-3 rounded-xl overflow-hidden">
+              <div className="relative w-32 h-32 mb-3 overflow-hidden">
                 {/* Skeleton */}
                 {!loadedImages[index] && (
                   <div className="absolute inset-0 bg-gray-800 animate-pulse rounded-xl" />
@@ -59,7 +59,7 @@ export default function SpicyBites() {
                   src={item.img}
                   alt={item.name}
                   onLoad={() => handleImageLoad(index)}
-                  className={`w-full h-full object-cover rounded-xl transition-opacity duration-500 ${
+                  className={`w-full h-full object-cover transition-opacity duration-500 ${
                     loadedImages[index] ? "opacity-100" : "opacity-0"
                   }`}
                 />
