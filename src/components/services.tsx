@@ -30,7 +30,7 @@ export default function Services() {
     <section id="catering" className="relative py-28 overflow-hidden">
       {/* Background daun pisang */}
       <motion.img
-        src="/background/secondary.png"
+        src="/background/main.png"
         alt="Banana leaf background"
         initial={{ scale: 1.1, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -39,12 +39,9 @@ export default function Services() {
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
       />
 
-      {/* Overlay kontras */}
-      <div className="absolute inset-0 bg-white/20 pointer-events-none"></div>
-
       <div className="relative max-w-7xl mx-auto px-6 text-center">
         <motion.h2
-          className="text-5xl md:text-6xl font-[Playfair-Display] text-[#9a0906] font-bold mb-16"
+          className="text-5xl md:text-6xl font-[Playfair-Display] text-[#f9c433] font-bold mb-16"
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -90,7 +87,7 @@ export default function Services() {
                 </p>
                 <Link
                   to="/order"
-                  className="mt-auto inline-block px-6 py-3 rounded-full text-white font-medium transition-all duration-300 bg-[#9a0906]"
+                  className="mt-auto inline-block px-6 py-3 rounded-full text-[#9a0906] font-medium transition-all duration-300 bg-[#f9c433]"
                 >
                   Pesan Sekarang
                 </Link>

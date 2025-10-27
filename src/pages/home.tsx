@@ -12,14 +12,14 @@ export default function Home() {
       <section
         id="lokasi"
         style={{
-          backgroundImage: "url('/background/main.png')",
+          backgroundImage: "url('/background/secondary.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}   
         >
         <div className="max-w-7xl mx-auto px-6 py-20">
-          <h2 className="text-4xl md:text-5xl font-[Playfair-Display] font-bold text-center text-white mb-12">
+          <h2 className="text-4xl md:text-5xl font-[Playfair-Display] font-bold text-center text-[#9a0906] mb-12">
             Lokasi & Jam Operasional
           </h2>
 
@@ -37,16 +37,16 @@ export default function Home() {
             </div>
 
             {/* Info */}
-            <div className="space-y-6 text-white">
+            <div className="space-y-6 text-[#9a0906]">
               <div className="flex items-start gap-4">
-                <MapPin className="w-12 h-12 text-[#f5b74b]" />
+                <MapPin className="w-12 h-12 text-[#9a0906]" />
                 <p className="text-lg leading-relaxed">
                   Jl. Klp. Gading Sel. Blok AH10 No.19, RT.8/RW.12, West Pakulonan, Kelapa Dua, Tangerang Regency, Banten 15810
                 </p>
               </div>
 
               <div className="flex items-start gap-4">
-                <Clock className="w-6 h-6 text-[#f5b74b]" />
+                <Clock className="w-6 h-6 text-[#9a0906]" />
                 <div>
                   <p className="text-lg font-semibold">Jam Operasional:</p>
                   <ul className="mt-2 space-y-1">
