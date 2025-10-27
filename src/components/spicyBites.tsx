@@ -9,8 +9,8 @@ const spicyItems = [
   { name: "Sambal Lauk", img: "/spicyBites/Sambal lauk.png" },
   { name: "Sapi", img: "/spicyBites/Sapi.png" },
   { name: "Kripik Kentang", img: "/spicyBites/Keripik kentang.png" },
-  { name: "Tahu", img: "/spicyBites/Tahu tempe.png" },
-  { name: "Tempe", img: "/spicyBites/Tahu tempe.png" },
+  { name: "Tahu", img: "/spicyBites/Tahu.png" },
+  { name: "Tempe", img: "/spicyBites/Tempe.png" },
 ];
 
 export default function SpicyBites() {
