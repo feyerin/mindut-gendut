@@ -50,9 +50,9 @@ export default function AboutUs() {
 
       <div className="relative z-10">
         {/* Hero Title */}
-        <div className="flex flex-col justify-center items-center text-center px-6 lg:pt-32 pt-28">
+        <div className="flex flex-col justify-center items-center text-center px-6 lg:pt-26 pt-32">
           <motion.h2
-            className="font-[Playfair-Display] uppercase font-medium text-4xl md:text-6xl text-primary mb-8"
+            className="text-5xl md:text-6xl font-[Playfair-Display] text-[#9a0906] font-bold mb-16"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -63,7 +63,7 @@ export default function AboutUs() {
         </div>
 
         {/* Deskripsi + Foto */}
-        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 py-24">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 py-10">
           <motion.div
             className="lg:w-1/2 flex justify-center relative"
             initial={{ opacity: 0, x: 50 }}
@@ -115,7 +115,7 @@ export default function AboutUs() {
         </div>
 
         {/* Galeri */}
-        <div className="max-w-7xl mx-auto px-6 pb-24">
+        <div className="max-w-7xl mx-auto px-6 py-24">
           <h3 className="text-4xl font-[Playfair-Display] font-bold mb-10 text-center text-[#9a0906]">
             Galeri Mindut
           </h3>

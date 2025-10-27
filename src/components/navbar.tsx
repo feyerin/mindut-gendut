@@ -75,7 +75,7 @@ export default function Navbar() {
 
           {/* Tablet & Desktop Button */}
           <a
-            href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20catering"
+            href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
             target="_blank"
             rel="noreferrer"
             className="hidden md:inline-block px-4 py-2 rounded-full font-semibold transition-colors"
@@ -89,7 +89,7 @@ export default function Navbar() {
 
           {/* Tablet only: small icon instead of full button */}
           <a
-            href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20catering"
+            href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
             target="_blank"
             rel="noreferrer"
             className="hidden sm:inline-block md:hidden"

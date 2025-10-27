@@ -19,10 +19,17 @@ export default function Footer() {
             Kami selalu mengutamakan kualitas bahan pilihan, bumbu autentik nusantara, dan proses produksi yang higienis. Dengan sertifikasi halal resmi, Mindut Gendut bukan hanya menjamin kehalalan, tapi juga kebersihan dan keamanan di setiap sajian.          
           </p>
           <p className="text-sm leading-relaxed">
-            Mindut Gendut siap menghadirkan cita rasa khas nasi bakar yang unik, lezat, dan autentik untuk menemani momen spesial Anda.          </p>
-          <button className="mt-6 px-6 py-2 bg-[#990001] text-white rounded-full">
+            Mindut Gendut siap menghadirkan cita rasa khas nasi bakar yang unik, lezat, dan autentik untuk menemani momen spesial Anda.          
+          </p>
+          <a
+            href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
+            target="_blank"
+            rel="noreferrer"
+          >
+          <button className="mt-2 px-6 py-2 bg-[#990001] text-white rounded-full">
             Pesan Sekarang
-          </button>
+            </button>
+          </a>
         </div>
 
         {/* Information */}

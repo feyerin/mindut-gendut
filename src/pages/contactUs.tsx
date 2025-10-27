@@ -65,14 +65,14 @@ export default function ContactUs() {
                     {/* Info + Form */}
                     <div className="col-span-12 sm:col-span-6 lg:col-span-8 px-4 py-8 sm:py-16 sm:px-8 xl:px-40">
                     {/* Info Kontak */}
-                    <div className="text-left">
+                    <div className="text-left text-[#990001]">
                         <h1 className="uppercase font-[Playfair-Display] text-5xl md:text-6xl xl:text-8xl text-primary">
                         Kontak Kami
                         </h1>
                         <div className="mt-4 mb-4 text-md md:text-xl">
-                        <p>Jl. Kencana Raya No.8 Blok K1 RT.6/RW.14</p>
-                        <p>Ciater, Serpong, Tangerang Selatan, Banten 15310</p>
-                        <p className="mt-6">Telp : +628111098052</p>
+                        <p>Jl. Klp. Gading Sel. Blok AH10 No.19, RT.8/RW.12</p>
+                        <p>West Pakulonan, Kelapa Dua, Tangerang Regency, Banten 15810</p>
+                        <p className="mt-6">Telp : +628119938180</p>
                         <p>Email : bogana.mm@gmail.com</p>
                         </div>
                     </div>
