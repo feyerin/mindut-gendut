@@ -6,7 +6,7 @@ const spicyItems = [
   { name: "Bumbu Ungkep", img: "/spicyBites/Bumbu ungkep.png" },
   { name: "Ayam Ungkep", img: "/spicyBites/Ayam Ungkep.png" },
   { name: "Sambal", img: "/spicyBites/Sambal.png" },
-  { name: "Sambal Lauk", img: "/spicyBites/Sambal lauk.png" },
+  { name: "Sambal Lauk", img: "/spicyBites/Sambal Lauk.png" },
   { name: "Sapi", img: "/spicyBites/Sapi.png" },
   { name: "Kripik Kentang", img: "/spicyBites/Keripik kentang.png" },
   { name: "Tahu", img: "/spicyBites/Tahu.png" },
@@ -48,18 +48,16 @@ export default function SpicyBites() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {spicyItems.map((item, index) => (
             <div key={item.name} className="flex flex-col items-center text-center">
-              <div className="relative w-32 h-32 mb-3 overflow-hidden">
-                {/* Skeleton */}
+              <div className="relative w-42 h-42 mb-3 overflow-hidden">
                 {!loadedImages[index] && (
                   <div className="absolute inset-0 bg-gray-800 animate-pulse rounded-xl" />
                 )}
 
-                {/* Image */}
                 <img
                   src={item.img}
                   alt={item.name}
                   onLoad={() => handleImageLoad(index)}
-                  className={`w-full h-full object-cover transition-opacity duration-500 ${
+                  className={`w-full h-full object-cover transition-opacity duration-500 rounded-xl ${
                     loadedImages[index] ? "opacity-100" : "opacity-0"
                   }`}
                 />

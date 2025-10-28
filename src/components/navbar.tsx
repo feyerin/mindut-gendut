@@ -22,9 +22,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link to="/">
-          <h1 className="text-2xl font-extrabold transition-colors text-white">
-            Mindut Gendut
-          </h1>
+          <img
+            src="/logo.png"
+            alt="Mindut Gendut"
+            className="h-14"
+          />
         </Link>
 
         {/* Right section (menu + button) */}

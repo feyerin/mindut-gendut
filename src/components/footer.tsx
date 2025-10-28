@@ -8,9 +8,9 @@ export default function Footer() {
         {/* Logo + Deskripsi */}
         <div>
           <img
-            src="/logo-yellow.png"
+            src="/logo.png"
             alt="Mindut Gendut"
-            className="h-14 mb-6 blur-sm"
+            className="h-14 mb-6"
           />
           <p className="text-sm leading-relaxed">
             Berdiri sejak 2020, Mindut Gendut dikenal sebagai pelopor Nasi Bakar Cobek pertama di Indonesia.
