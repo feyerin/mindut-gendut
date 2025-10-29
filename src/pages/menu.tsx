@@ -6,7 +6,6 @@ export default function MenuPage() {
   const categories = [
     { name: "NASI BAKAR", img: "/menu/1.png" },
     { name: "NASI KREMES", img: "/menu/2.png" },
-    { name: "SPICY BITES", img: "/menu/3.png" },
     { name: "EXTRAS", img: "/menu/4.png" },
   ];
 
