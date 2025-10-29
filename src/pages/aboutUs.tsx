@@ -41,7 +41,7 @@ export default function AboutUs() {
 
       {/* Background */}
       <div
-        className="absolute inset-0 bg-fixed bg-cover bg-center will-change-transform"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: "url('/background/secondary.png')",
           transform: "translateZ(0)",
@@ -55,7 +55,7 @@ export default function AboutUs() {
           <motion.h2
             className="text-5xl md:text-6xl font-[Playfair-Display] text-[#9a0906] font-bold mb-16"
             initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -83,6 +83,7 @@ export default function AboutUs() {
               animate={{ opacity: mainLoaded ? 1 : 0 }}
               transition={{ duration: 0.6 }}
               className="max-w-96 rounded-3xl shadow-lg object-cover"
+              loading="lazy"
             />
           </motion.div>
 
