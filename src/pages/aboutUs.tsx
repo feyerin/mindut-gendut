@@ -76,13 +76,13 @@ export default function AboutUs() {
               <div className="absolute inset-0 bg-[#f1eedd] animate-pulse rounded-3xl" />
             )}
             <motion.img
-              src="/aboutUs/1.png"
+              src="/aboutUs/7.jpg"
               alt="Restoran Mindut Gendut"
               onLoad={() => setMainLoaded(true)}
               initial={{ opacity: 0 }}
               animate={{ opacity: mainLoaded ? 1 : 0 }}
               transition={{ duration: 0.6 }}
-              className="w-full h-auto rounded-3xl shadow-lg object-cover"
+              className="max-w-96 rounded-3xl shadow-lg object-cover"
             />
           </motion.div>
 

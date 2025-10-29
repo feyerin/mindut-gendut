@@ -56,8 +56,8 @@ export default function ContactUs() {
                     {/* Gambar */}
                     <div className="col-span-12 sm:col-span-6 lg:col-span-4">
                     <img
-                        src="https://boganamaymay.com/storage/storage/images/section/3766591877.png"
-                        alt="Kontak Bogana May-May"
+                        src="/contactUs.jpg"
+                        alt="Kontak mindut gendut"
                         className="w-full h-full"
                     />
                     </div>
@@ -73,7 +73,7 @@ export default function ContactUs() {
                         <p>Jl. Klp. Gading Sel. Blok AH10 No.19, RT.8/RW.12</p>
                         <p>West Pakulonan, Kelapa Dua, Tangerang Regency, Banten 15810</p>
                         <p className="mt-6">Telp : +628119938180</p>
-                        <p>Email : bogana.mm@gmail.com</p>
+                        <p>Email : inquiry.nasibakarmindutgendut@gmail.com</p>
                         </div>
                     </div>
 
