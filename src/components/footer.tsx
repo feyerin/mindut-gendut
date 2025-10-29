@@ -1,5 +1,5 @@
 "use client";
-import { FaInstagram, FaFacebook, FaWhatsapp, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
