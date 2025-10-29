@@ -83,16 +83,18 @@ export default function Footer() {
 
           <h4 className="font-semibold mb-4">Follow Us</h4>
           <div className="flex gap-4 text-2xl">
-            <a href="#" className="hover:text-yellow-400">
+            <a href="https://www.instagram.com/mindutgendut.id?igsh=bDJla2FucnN1YWE3" className="hover:text-red-700">
               <FaInstagram />
             </a>
-            <a href="#" className="hover:text-yellow-400">
-              <FaFacebook />
-            </a>
-            <a href="#" className="hover:text-yellow-400">
+            <a
+              href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-red-700"
+            >
               <FaWhatsapp />
             </a>
-            <a href="#" className="hover:text-yellow-400">
+            <a href="https://www.tiktok.com/@mindutgendut.id?_t=ZS-90witXDZDQm&_r=1" className="hover:text-red-700">
               <FaTiktok />
             </a>
           </div>

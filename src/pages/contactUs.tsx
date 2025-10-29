@@ -73,7 +73,7 @@ export default function ContactUs() {
                         <p>Jl. Klp. Gading Sel. Blok AH10 No.19, RT.8/RW.12</p>
                         <p>West Pakulonan, Kelapa Dua, Tangerang Regency, Banten 15810</p>
                         <p className="mt-6">Telp : +628119938180</p>
-                        <p>Email : inquiry.nasibakarmindutgendut@gmail.com</p>
+                        <p>Email : cobekbakarmindutgendut@gmail.com</p>
                         </div>
                     </div>
 
