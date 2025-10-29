@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 export default function Services() {
   const services = [
@@ -24,6 +23,12 @@ export default function Services() {
       copy[index] = true;
       return copy;
     });
+  };
+
+  const handleWhatsApp = (serviceTitle: string) => {
+    const message = `Halo, saya tertarik dengan layanan ${serviceTitle}. Bisa dibantu untuk informasi lebih lanjut?`;
+    const waLink = `https://wa.me/628119938180?text=${encodeURIComponent(message)}`;
+    window.open(waLink, "_blank");
   };
 
   return (
@@ -85,12 +90,12 @@ export default function Services() {
                 <p className="text-black mb-6 flex-1 text-sm text-justify leading-relaxed">
                   {s.desc}
                 </p>
-                <Link
-                  to="/order"
-                  className="mt-auto inline-block px-6 py-3 rounded-full text-[#9a0906] font-medium transition-all duration-300 bg-[#f9c433]"
+                <button
+                  onClick={() => handleWhatsApp(s.title)}
+                  className="mt-auto inline-block px-6 py-3 rounded-full text-[#9a0906] font-medium transition-all duration-300 bg-[#f9c433] hover:bg-[#f8b400]"
                 >
                   Pesan Sekarang
-                </Link>
+                </button>
               </div>
             </motion.div>
           ))}

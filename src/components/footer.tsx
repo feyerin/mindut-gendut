@@ -1,5 +1,6 @@
 "use client";
 import { FaInstagram, FaFacebook, FaWhatsapp, FaTiktok } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -37,24 +38,24 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-4">Information</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <a href="#menu" className="hover:underline">
+              <a href="/menu" className="hover:underline">
                 Menu
               </a>
             </li>
             <li>
-              <a href="#about" className="hover:underline">
+              <a href="/aboutUs" className="hover:underline">
                 Tentang Kami
               </a>
             </li>
             <li>
-              <a href="#outlet" className="hover:underline">
+              <Link to="/#lokasi">
                 Outlet
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#faqs" className="hover:underline">
+              <Link to="/kontak/#faqs">
                 FAQs
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

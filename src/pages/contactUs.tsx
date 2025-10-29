@@ -8,16 +8,16 @@ interface FAQ {
 
 const faqs: FAQ[] = [
   {
-    question: "Apa menu andalan BoganaMay-May?",
-    answer: "Menu andalan kami adalah Nasi Bogana dengan lauk khas tradisional.",
+    question: "Apa menu andalan Mindut Gendut",
+    answer: "Menu andalan kami adalah Nasi Bakar. Semua menu kami dibuat dari resep warisan keluarga, dimasak dengan bumbu rempah asli Indonesia dan cara tradisional yang menjaga cita rasa khasnya.",
   },
   {
-    question: "Apakah semua hidangan di Bogana May-May Halal?",
-    answer: "Ya, semua hidangan kami 100% Halal.",
+    question: "Apakah semua hidangan di Mindut Gendut Halal?",
+    answer: "Ya, semua hidangan kami 100% Halal dan Mindut Gendut sudah bersertifikasi Halal.",
   },
   {
     question: "Apakah ada lokasi dine-in?",
-    answer: "Kami melayani dine-in di beberapa outlet tertentu.",
+    answer: "Ya, lokasi dine-in kami berada di Gading Serpong. Anda bisa mencari di Google Maps dengan kata kunci “Nasi Bakar Mindut Gendut",
   },
   {
     question: "Bagaimana cara melakukan pemesanan online?",
@@ -25,10 +25,10 @@ const faqs: FAQ[] = [
   },
   {
     question: "Apakah ada minimal ordernya?",
-    answer: "Minimal order untuk catering adalah 20 porsi.",
+    answer: "Minimal order untuk catering adalah 10 porsi.",
   },
   {
-    question: "Apakah Bogana May-May menerima bulk order?",
+    question: "Apakah Mindut Gendut menerima bulk order?",
     answer: "Ya, kami menerima pesanan dalam jumlah besar untuk event atau acara.",
   },
 ];
@@ -77,52 +77,65 @@ export default function ContactUs() {
                         </div>
                     </div>
 
-                    {/* Form */}
-                    <form className="w-full border border-primary rounded px-4 py-6 mt-6">
-                        {/* Subject */}
+                    <form
+                        className="w-full border border-primary rounded px-4 py-6 mt-6"
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            const form = e.target as HTMLFormElement;
+                            const subject = (form.elements.namedItem("subject") as HTMLSelectElement).value;
+                            const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+                            const waLink = `https://wa.me/628119938180?text=${encodeURIComponent(
+                            `jenis: ${subject}.\n\n${message}`
+                            )}`;
+                            window.open(waLink, "_blank");
+
+                            form.reset();
+                        }}
+                        >
                         <div className="mb-4">
-                        <label
+                            <label
                             htmlFor="subject"
                             className="block text-gray-700 text-sm font-bold mb-2"
-                        >
+                            >
                             Subject
-                        </label>
-                        <select
+                            </label>
+                            <select
                             id="subject"
+                            name="subject"
                             className="shadow bg-white appearance-none border rounded w-full py-3 px-3 text-primary font-worksans focus:outline-none focus:shadow-outline"
                             required
-                        >
+                            >
                             <option value="Catering">Catering</option>
                             <option value="Partnership">Partnership</option>
                             <option value="Feedback">Feedback</option>
                             <option value="Lainnya">Lainnya</option>
-                        </select>
+                            </select>
                         </div>
 
-                        {/* Message */}
                         <div className="mb-4">
-                        <label
+                            <label
                             htmlFor="message"
                             className="block text-gray-700 text-sm font-bold mb-2"
-                        >
+                            >
                             Message
-                        </label>
-                        <textarea
+                            </label>
+                            <textarea
                             id="message"
+                            name="message"
                             className="shadow bg-white appearance-none border font-worksans text-primary rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
                             placeholder="Write your message"
                             required
-                        ></textarea>
+                            ></textarea>
                         </div>
 
-                        {/* Button */}
                         <div className="flex items-center justify-between">
-                        <button
+                            <button
                             type="submit"
                             className="bg-[#9a0906] text-white font-bold sm:text-md text-sm py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        >
+                            >
                             Submit
-                        </button>
+                            </button>
                         </div>
                     </form>
                     </div>
@@ -130,7 +143,7 @@ export default function ContactUs() {
             </section>
 
             {/* FAQ Section */}
-            <section id="faq" className="w-full bg-[#990001] py-12 px-4">
+            <section id="faqs" className="w-full bg-[#990001] py-12 px-4">
                 <div className="max-w-4xl mx-auto">
                     {/* Title */}
                     <h1 className="text-center text-4xl md:text-5xl font-bold text-white mb-8">

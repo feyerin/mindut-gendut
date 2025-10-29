@@ -8,6 +8,7 @@ export default function AboutUs() {
     "/aboutUs/3.jpg",
     "/aboutUs/4.jpg",
     "/aboutUs/5.jpg",
+    "/aboutUs/6.jpg",
   ];
 
   const getRandomStyle = () => {
