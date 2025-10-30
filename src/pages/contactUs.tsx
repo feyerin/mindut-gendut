@@ -17,7 +17,7 @@ const faqs: FAQ[] = [
   },
   {
     question: "Apakah ada lokasi dine-in?",
-    answer: "Ya, lokasi dine-in kami berada di Gading Serpong. Anda bisa mencari di Google Maps dengan kata kunci “Nasi Bakar Mindut Gendut",
+    answer: 'Ya, lokasi dine-in kami berada di Gading Serpong. Anda bisa mencari di Google Maps dengan kata kunci “Nasi Bakar Mindut Gendut".',
   },
   {
     question: "Bagaimana cara melakukan pemesanan online?",
