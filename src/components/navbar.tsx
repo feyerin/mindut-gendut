@@ -1,11 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [spicyOpen, setSpicyOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -22,17 +23,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link to="/">
-          <img
-            src="/logo.png"
-            alt="Mindut Gendut"
-            className="h-14"
-          />
+          <img src="/logo.png" alt="Mindut Gendut" className="h-14" />
         </Link>
 
-        {/* Right section (menu + button) */}
+        {/* Right section */}
         <div className="flex items-center gap-6">
           {/* Desktop & Tablet Menu */}
-          <ul className="hidden sm:flex gap-5 font-semibold text-white">
+          <ul className="hidden sm:flex gap-5 font-semibold text-white relative">
             <li>
               <Link
                 to="/menu"
@@ -57,14 +54,85 @@ export default function Navbar() {
                 Catering
               </Link>
             </li>
-            <li>
-              <a
-                href="#spicy-bites"
-                className="transition-colors text-white hover:text-gray-300"
-              >
-                Spicy Bites
-              </a>
+
+            {/* Spicy Bites Dropdown */}
+            <li className="relative group">
+              <div className="flex items-center gap-1 cursor-pointer">
+                <a
+                  href="/spicyBites"
+                  className="transition-colors text-white hover:text-gray-300"
+                >
+                  Spicy Bites
+                </a>
+                <ChevronDown
+                  size={16}
+                  className="group-hover:rotate-180 transition-transform"
+                />
+              </div>
+
+              {/* Dropdown */}
+              <div className="absolute left-0 top-full pt-2 group-hover:block hidden z-50">
+                <ul className="flex flex-col bg-[#5c0b0b] text-white rounded-md shadow-md w-56 overflow-hidden transition-all duration-200 transform origin-top scale-y-95 group-hover:scale-y-100 opacity-0 group-hover:opacity-100">
+                  <li>
+                    <Link
+                      to="/spicyBites/bumbu-ungkep"
+                      className="block px-4 py-2 hover:bg-[#7a1212]"
+                    >
+                      Bumbu Ungkep
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/spicyBites/ayam-ungkep"
+                      className="block px-4 py-2 hover:bg-[#7a1212]"
+                    >
+                      Ayam Ungkep
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/spicyBites/sambal"
+                      className="block px-4 py-2 hover:bg-[#7a1212]"
+                    >
+                      Sambal
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/spicyBites/sambal-lauk"
+                      className="block px-4 py-2 hover:bg-[#7a1212]"
+                    >
+                      Sambal Lauk
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/spicyBites/sapi"
+                      className="block px-4 py-2 hover:bg-[#7a1212]"
+                    >
+                      Sapi
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/spicyBites/kripik-kentang"
+                      className="block px-4 py-2 hover:bg-[#7a1212]"
+                    >
+                      Kripik Kentang
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/spicyBites/tahu-tempe"
+                      className="block px-4 py-2 hover:bg-[#7a1212]"
+                    >
+                      Tahu Tempe
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </li>
+
             <li>
               <Link
                 to="/kontak"
@@ -75,7 +143,7 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* Tablet & Desktop Button */}
+          {/* Desktop/Tablet Button */}
           <a
             href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
             target="_blank"
@@ -89,7 +157,7 @@ export default function Navbar() {
             Pesan Sekarang
           </a>
 
-          {/* Tablet only: small icon instead of full button */}
+          {/* Tablet Icon */}
           <a
             href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
             target="_blank"
@@ -121,14 +189,53 @@ export default function Navbar() {
           <Link to="/#catering" onClick={() => setMenuOpen(false)}>
             Catering
           </Link>
-          <a href="#spicy-bites" onClick={() => setMenuOpen(false)}>
-            Spicy Bites
-          </a>
+
+          {/* Mobile Spicy Bites Dropdown */}
+          <div className="flex flex-col items-center w-full">
+            <button
+              onClick={() => setSpicyOpen(!spicyOpen)}
+              className="flex items-center gap-1"
+            >
+              Spicy Bites
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${
+                  spicyOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {spicyOpen && (
+              <div className="flex flex-col items-center mt-2 text-sm gap-2">
+                <Link to="/spicyBites/bumbu-ungkep" onClick={() => setMenuOpen(false)}>
+                  Bumbu Ungkep
+                </Link>
+                <Link to="/spicyBites/ayam-ungkep" onClick={() => setMenuOpen(false)}>
+                  Ayam Ungkep
+                </Link>
+                <Link to="/spicyBites/sambal" onClick={() => setMenuOpen(false)}>
+                  Sambal
+                </Link>
+                <Link to="/spicyBites/sambal-lauk" onClick={() => setMenuOpen(false)}>
+                  Sambal Lauk
+                </Link>
+                <Link to="/spicyBites/sapi" onClick={() => setMenuOpen(false)}>
+                  Sapi
+                </Link>
+                <Link to="/spicyBites/kripik-kentang" onClick={() => setMenuOpen(false)}>
+                  Kripik Kentang
+                </Link>
+                <Link to="/spicyBites/tahu-tempe" onClick={() => setMenuOpen(false)}>
+                  Tahu Tempe
+                </Link>
+              </div>
+            )}
+          </div>
+
           <Link to="/kontak" onClick={() => setMenuOpen(false)}>
             Kontak
           </Link>
           <a
-            href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20catering"
+            href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
             target="_blank"
             rel="noreferrer"
             className="mt-2 px-4 py-2 rounded-full font-semibold transition-colors"

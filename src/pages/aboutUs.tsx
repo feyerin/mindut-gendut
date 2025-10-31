@@ -39,7 +39,6 @@ export default function AboutUs() {
           content="Kenali kisah di balik Mindut Gendut — warisan resep keluarga yang kini hadir untukmu dengan cita rasa autentik dan penuh kehangatan."
         />
 
-      {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -63,7 +62,6 @@ export default function AboutUs() {
           </motion.h2>
         </div>
 
-        {/* Deskripsi + Foto */}
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 py-10">
           <motion.div
             className="lg:w-1/2 flex justify-center relative"

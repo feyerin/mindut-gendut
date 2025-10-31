@@ -1,16 +1,17 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const spicyItems = [
-  { name: "Bumbu Ungkep", img: "/spicyBites/Bumbu ungkep.png" },
-  { name: "Ayam Ungkep", img: "/spicyBites/Ayam Ungkep.png" },
-  { name: "Sambal", img: "/spicyBites/Sambal.png" },
-  { name: "Sambal Lauk", img: "/spicyBites/Sambal Lauk.png" },
-  { name: "Sapi", img: "/spicyBites/Sapi.png" },
-  { name: "Kripik Kentang", img: "/spicyBites/Keripik kentang.png" },
-  { name: "Tahu", img: "/spicyBites/Tahu.png" },
-  { name: "Tempe", img: "/spicyBites/Tempe.png" },
+  { name: "Bumbu Ungkep", img: "/spicyBites/Bumbu ungkep.png", category: "bumbu-ungkep" },
+  { name: "Ayam Ungkep", img: "/spicyBites/Ayam Ungkep.png", category: "ayam-ungkep" },
+  { name: "Sambal", img: "/spicyBites/Sambal.png", category: "sambal" },
+  { name: "Sambal Lauk", img: "/spicyBites/Sambal Lauk.png", category: "sambal-lauk" },
+  { name: "Sapi", img: "/spicyBites/Sapi.png", category: "sapi" },
+  { name: "Kripik Kentang", img: "/spicyBites/Keripik kentang.png", category: "kripik-kentang" },
+  { name: "Tahu", img: "/spicyBites/Tahu.png", category: "tahu-tempe" },
+  { name: "Tempe", img: "/spicyBites/Tempe.png", category: "tahu-tempe" },
 ];
 
 export default function SpicyBites() {
@@ -27,7 +28,8 @@ export default function SpicyBites() {
   };
 
   return (
-    <div className="py-20 px-6 md:px-12 w-full bg-center"
+    <div
+      className="py-20 px-6 md:px-12 w-full bg-center"
       style={{
         backgroundImage: "url('/background/secondary.png')",
         backgroundSize: "cover",
@@ -47,8 +49,12 @@ export default function SpicyBites() {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {spicyItems.map((item, index) => (
-            <div key={item.name} className="flex flex-col items-center text-center">
-              <div className="relative w-42 h-42 mb-3 overflow-hidden">
+            <Link
+              to={`/spicyBites/${item.category}`}
+              key={item.name}
+              className="flex flex-col items-center text-center group"
+            >
+              <div className="relative w-42 h-42 mb-3 overflow-hidden rounded-xl shadow-md transition-transform duration-300 group-hover:scale-105">
                 {!loadedImages[index] && (
                   <div className="absolute inset-0 bg-gray-800 animate-pulse rounded-xl" />
                 )}
@@ -64,14 +70,8 @@ export default function SpicyBites() {
               </div>
 
               <p className="font-medium text-[#9a0906]">{item.name}</p>
-            </div>
+            </Link>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <button className="px-8 py-3 text-[#9a0906] rounded-full border border-[#9a0906] hover:border-red-800 transition">
-            Lihat Menu Lengkap
-          </button>
         </div>
       </div>
     </div>

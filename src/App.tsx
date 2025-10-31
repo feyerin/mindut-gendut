@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Home from "./pages/home";
-import Shop from "./pages/shop";
 import WhatsAppFloat from "./components/whatsappFloat";
 import AboutUs from "./pages/aboutUs";
 import MenuPage from "./pages/menu";
 import ContactUs from "./pages/contactUs";
+import SpicyBitesDetail from "./pages/spicyBitesDetail";
 
 function ScrollHandler() {
   const { pathname, hash } = useLocation();
@@ -37,10 +37,10 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Menu" element={<MenuPage />} />
           <Route path="/kontak" element={<ContactUs />} />
+          <Route path="/spicyBites/:category" element={<SpicyBitesDetail />} />
         </Routes>
         <WhatsAppFloat phone="628119938180" message="Halo, saya mau pesan catering untuk 50 orang, kapan bisa?" />
       </main>
