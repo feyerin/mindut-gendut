@@ -9,6 +9,8 @@ export default function SpicyBitesDetail() {
   const item = menuData.find((m) => m.category === category);
 
   const [selectedImage, setSelectedImage] = useState(item?.image);
+  const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  const [selectedVariant, setSelectedVariant] = useState<string | null>(null);
   const [selectedVariants, setSelectedVariants] = useState<Record<string, string>>({});
 
   useEffect(() => {
@@ -23,29 +25,39 @@ export default function SpicyBitesDetail() {
     );
   }
 
-  const handleSelectVariant = (groupName: string, variant: any) => {
+  // 🎨 Tentukan tema berdasarkan ID (ganjil/genap)
+  const isOdd = item.id % 2 !== 0;
+  const bgImage = isOdd ? "/background/secondary.png" : "/background/main.png";
+  const mainColor = isOdd ? "#990001" : "#f5b74b";
+  const secondaryColor = isOdd ? "#f5b74b" : "#990001";
+  const textColor = isOdd ? "#990001" : "#f5b74b";
+
+  const handleSelectVariantGroup = (groupName: string, variant: any) => {
     setSelectedVariants((prev) => ({ ...prev, [groupName]: variant.name }));
     if (variant.image) setSelectedImage(variant.image);
   };
 
+  const handleSelectSize = (size: string) => setSelectedSize(size);
+  const handleSelectVariant = (variant: string) => setSelectedVariant(variant);
+
   return (
     <section
-      className="min-h-screen w-full bg-[#FFF4F1] flex justify-center items-start pt-32 pb-20"
+      className="min-h-screen w-full flex flex-col justify-start items-center pt-24 pb-16"
       style={{
-        backgroundImage: "url('/background/secondary.png')",
+        backgroundImage: `url('${bgImage}')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 px-6">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 px-6 md:px-10">
         {/* LEFT: Product Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
+        <div className="w-full md:w-1/2 flex justify-center items-start">
           <motion.div
             key={selectedImage}
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.4 }}
-            className="w-full h-auto max-w-md rounded-3xl overflow-hidden"
+            className="w-full max-w-md rounded-3xl overflow-hidden shadow-lg"
           >
             <img
               src={selectedImage}
@@ -55,67 +67,137 @@ export default function SpicyBitesDetail() {
           </motion.div>
         </div>
 
-        <div className="w-full md:w-1/2 text-[#9a0906] flex flex-col justify-center">
-          <h1 className="text-4xl font-bold mb-6 font-[Playfair-Display] text-[#420606]">
+        {/* RIGHT: Product Details */}
+        <div className="w-full md:w-1/2 flex flex-col justify-start" style={{ color: textColor }}>
+          <h1
+            className="text-3xl font-extrabold mb-4 font-[Playfair-Display] uppercase"
+            style={{ color: textColor }}
+          >
             {item.name}
           </h1>
 
-          <p className="text-gray-700 leading-relaxed mb-8">
-            Nikmati kelezatan{" "}
-            <span className="font-semibold text-[#420606]">{item.name}</span> —
-            pilih varian favoritmu di bawah ini dan rasakan sensasi pedasnya
-            yang menggoda!
+          <p className="leading-relaxed mb-6">
+            {item.name} bukan sekadar produk biasa. Diracik dari resep tradisional
+            warisan keluarga dengan cita rasa khas nusantara. Praktis, sehat, dan bergizi —
+            menghadirkan rasa autentik khas masakan rumahan.
           </p>
 
-          <div className="space-y-8 mb-8">
-            {item.variantGroups?.map((group, i) => (
-              <div key={i}>
-                <h3 className="font-semibold text-xl mb-3 text-[#420606]">
-                  {group.groupName}
-                </h3>
-                <div className="flex flex-wrap gap-4">
-                  {group.options.map((variant, j) => (
-                    <div
-                      key={j}
-                      onClick={() =>
-                        handleSelectVariant(group.groupName, variant)
-                      }
-                      className={`cursor-pointer flex flex-col items-center transition-all ${
-                        selectedVariants[group.groupName] === variant.name
-                          ? "scale-105"
-                          : "opacity-80 hover:opacity-100"
-                      }`}
+          {/* 🔹 SIZE PILLS */}
+          {item.sizes && item.sizes.length > 0 && (
+            <div className="mb-8">
+              <h3 className="font-semibold text-lg mb-3" style={{ color: textColor }}>
+                Ukuran
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {item.sizes.map((size, i) => {
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => handleSelectSize(size)}
+                      className="px-5 py-2 text-sm font-semibold border transition-all rounded-2xl"
+                      style={{
+                        backgroundColor: mainColor,
+                        color: secondaryColor,
+                        borderColor: mainColor,
+                      }}
                     >
+                      {size}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* 🔹 VARIANT PILLS */}
+          {item.variants && item.variants.length > 0 && (
+            <div className="mb-8">
+              <h3 className="font-semibold text-lg mb-3" style={{ color: textColor }}>
+                Varian
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {item.variants.map((variant, i) => {
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => handleSelectVariant(variant)}
+                      className="px-5 py-2 text-sm font-semibold border transition-all rounded-2xl"
+                      style={{
+                        backgroundColor: mainColor,
+                        color: secondaryColor,
+                        borderColor: mainColor,
+                      }}
+                    >
+                      {variant}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* 🔹 VARIANT GROUP PILLS */}
+          <div className="space-y-8 mb-8">
+            {item.variantGroups.map((group, i) => (
+              <div key={i}>
+                {group.groupName && (
+                  <h3 className="font-semibold text-lg mb-3" style={{ color: textColor }}>
+                    {group.groupName}
+                  </h3>
+                )}
+                <div className="flex flex-wrap gap-4">
+                  {group.options.map((variant, j) => {
+                    const selected = selectedVariants[group.groupName] === variant.name;
+                    return (
                       <div
-                        className={`w-24 h-24 rounded-xl overflow-hidden border-4 transition-all ${
-                          selectedVariants[group.groupName] === variant.name
-                            ? "border-[#9a0906]"
-                            : "border-transparent"
+                        key={j}
+                        onClick={() => handleSelectVariantGroup(group.groupName, variant)}
+                        className={`cursor-pointer flex flex-col items-center transition-all ${
+                          selected ? "scale-105" : "opacity-80 hover:opacity-100"
                         }`}
                       >
-                        <img
-                          src={variant.image || "/placeholder.jpg"}
-                          alt={variant.name}
-                          className="w-full h-full object-cover"
-                        />
+                        <div
+                          className="w-24 h-24 rounded-2xl overflow-hidden border-4 transition-all"
+                          style={{
+                            borderColor: selected ? mainColor : "transparent",
+                          }}
+                        >
+                          <img
+                            src={variant.image || "/placeholder.jpg"}
+                            alt={variant.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        {variant.name && (
+                          <p
+                            className="mt-2 text-sm font-medium text-center"
+                            style={{ color: textColor }}
+                          >
+                            {variant.name}
+                          </p>
+                        )}
                       </div>
-                      <p className="mt-2 text-sm font-medium text-[#420606] text-center">
-                        {variant.name}
-                      </p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             ))}
           </div>
 
+          {/* 🔹 BUTTON WHATSAPP */}
           <button
-            className="px-6 py-3 bg-[#9a0906] text-white rounded-full font-semibold text-lg shadow-md hover:bg-[#7a0704] transition-all w-fit"
+            className="px-6 py-3 rounded-2xl font-semibold text-lg shadow-md transition-all w-fit"
+            style={{
+              backgroundColor: mainColor,
+              color: "white",
+            }}
             onClick={() =>
               window.open(
                 `https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20${encodeURIComponent(
                   item.name
-                )}%20dengan%20varian:%20${Object.entries(selectedVariants)
+                )}%0AUkuran:%20${selectedSize || "-"}%0AVarian:%20${selectedVariant || "-"}%0ADetail:%20${Object.entries(
+                  selectedVariants
+                )
                   .map(([group, choice]) => `${group}: ${choice}`)
                   .join(", ")}`,
                 "_blank"
@@ -124,6 +206,33 @@ export default function SpicyBitesDetail() {
           >
             Pesan Sekarang
           </button>
+        </div>
+      </div>
+
+      {/* FOOTER INFO */}
+      <div
+        className="mt-20 flex flex-col md:flex-row justify-between items-center w-full max-w-5xl pt-10 gap-8"
+        style={{ color: textColor }}
+      >
+        <div className="text-center md:text-left">
+          <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
+          <p className="text-sm max-w-sm">
+            Resep warisan nusantara yang tetap dijaga keaslian dan cara masaknya.
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <img src="/halal.svg" alt="Halal Logo" className="w-10 mb-2" />
+          <p className="text-xs font-semibold">HALAL INDONESIA</p>
+        </div>
+
+        <div className="text-center md:text-right max-w-sm">
+          <h3 className="font-bold text-lg mb-1">PRODUK BEKU</h3>
+          <p className="text-sm">
+            Segera bekukan setelah diterima. Pindahkan ke chiller semalam sebelum dimasak.
+            <br />
+            Tahan: 1 tahun (freezer) & 3 hari (chiller).
+          </p>
         </div>
       </div>
     </section>

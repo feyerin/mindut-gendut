@@ -13,21 +13,27 @@ export interface MenuItem {
   name: string;
   category: string;
   price: string;
+  description: string;
   image: string;
   rating: number;
   reviews: number;
+  sizes?: string[];   
+  variants?: string[];  
   variantGroups: MenuVariantGroup[];
 }
 
 export const menuData: MenuItem[] = [
   {
     id: 1,
-    name: "Bumbu Ungkep",
+    name: "Bumbu Ungkep Kaldu",
     category: "bumbu-ungkep",
     price: "Rp15.000",
+    description: "Bumbu Ungkep Kaldu Mindut Gendut bukan sekadar bumbu ungkep biasa. Diracik dari resep tradisional warisan nenek, bumbu ini sudah mengandung kaldu alami sehingga bisa langsung di gunakan tanpa tambahan bumbu lain. Praktis, sehat, dan bergizi --- menghadirkan rasa gurih autentik khas masakan rumahan.",
     image: "/spicyBites/Bumbu ungkep.png",
     rating: 4.8,
     reviews: 132,
+    sizes: ["500 ml", "1 liter"],
+    variants: ["Kalasan", "Kuning"],
     variantGroups: [
       {
         groupName: "Varian 500ml & 1lt:",
@@ -43,9 +49,12 @@ export const menuData: MenuItem[] = [
     name: "Ayam Ungkep",
     category: "ayam-ungkep",
     price: "Rp20.000",
+    description:"",
     image: "/spicyBites/Ayam Ungkep.png",
     rating: 4.9,
     reviews: 158,
+    sizes: ["500 ml", "1 liter"],
+    variants: ["Kalasan", "Kuning"],
     variantGroups: [
       {
         groupName: "Varian:",
@@ -58,12 +67,15 @@ export const menuData: MenuItem[] = [
   },
   {
     id: 3,
-    name: "Sambal",
+    name: "Sambal Mindut Gendut",
     category: "sambal",
+    description:"",
     price: "Rp20.000",
     image: "/spicyBites/Sambal.png",
     rating: 4.9,
     reviews: 158,
+    sizes: ["200 g", "50 g"],
+    variants: ["Botol", "Pouch"],
     variantGroups: [
       {
         groupName: "Varian Botol 200g:",
@@ -89,10 +101,13 @@ export const menuData: MenuItem[] = [
     id: 4,
     name: "Sambal Lauk",
     category: "sambal-lauk",
+    description:"",
     price: "Rp10.000",
     image: "/spicyBites/Sambal Lauk.png",
     rating: 4.7,
     reviews: 97,
+    sizes: ["200 g", "50 g"],
+    variants: ["Botol", "Pouch"],
     variantGroups: [
       {
         groupName: "Varian Botol 200g:",
@@ -102,7 +117,7 @@ export const menuData: MenuItem[] = [
         ],
       },
       {
-        groupName: "Varian Pouch 50g",
+        groupName: "Varian Pouch 50g:",
         options: [
           { name: "Sambal Cumi", image: "/spicyBites/Sambal Cumi pouch.png" },
           { name: "Sambal Pete", image: "/spicyBites/Sambal Pete pouch.png" },
@@ -114,10 +129,13 @@ export const menuData: MenuItem[] = [
     id: 5,
     name: "Sapi",
     category: "sapi",
+    description:"",
     price: "Rp25.000",
     image: "/spicyBites/Sapi.png",
     rating: 4.9,
     reviews: 140,
+    sizes: ["200 g"],
+    variants: ["Iga", "Paru"],
     variantGroups: [
       {
         groupName: "Iga",
@@ -128,7 +146,7 @@ export const menuData: MenuItem[] = [
       },
       {
         groupName: "Paru",
-       options: [
+        options: [
           { name: "Paru Mercon", image: "/spicyBites/sapi-manis-pedas.jpg" },
           { name: "Paru Warisan", image: "/spicyBites/sapi-blackpepper.jpg" },
         ],
@@ -139,16 +157,19 @@ export const menuData: MenuItem[] = [
     id: 6,
     name: "Kripik Kentang",
     category: "kripik-kentang",
+    description:"",
     price: "Rp12.000",
     image: "/spicyBites/Keripik kentang.png",
     rating: 4.6,
     reviews: 111,
+    sizes: ["100 g"],
+    variants: ["Original", "Keju"],
     variantGroups: [
       {
-        groupName: "",
+        groupName: "Varian:",
         options: [
-          { name: "", image: "/spicyBites/Keripik kentang.png" },
-          { name: "", image: "/spicyBites/kripik-keju.jpg" },
+          { name: "Original", image: "/spicyBites/Keripik kentang.png" },
+          { name: "Keju", image: "/spicyBites/kripik-keju.jpg" },
         ],
       },
     ],
@@ -157,13 +178,16 @@ export const menuData: MenuItem[] = [
     id: 7,
     name: "Tahu Tempe",
     category: "tahu-tempe",
+    description:"",
     price: "Rp8.000",
     image: "/spicyBites/Tahu tempe.png",
     rating: 4.5,
     reviews: 89,
+    sizes: ["Pack isi 10"],
+    variants: ["Tahu", "Tempe"],
     variantGroups: [
       {
-        groupName: "Jenis",
+        groupName: "Jenis:",
         options: [
           { name: "Tahu", image: "/spicyBites/Tahu.png" },
           { name: "Tempe", image: "/spicyBites/Tempe.png" },
