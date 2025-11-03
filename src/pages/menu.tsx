@@ -6,7 +6,7 @@ export default function MenuPage() {
   const categories = [
     { name: "NASI BAKAR", img: "/menu/1.png" },
     { name: "NASI KREMES", img: "/menu/2.png" },
-    { name: "EXTRAS", img: "/menu/4.png" },
+    { name: "ADD ON", img: "/menu/3.png" },
   ];
 
   const [active, setActive] = useState(categories[0]);
