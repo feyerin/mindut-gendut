@@ -36,31 +36,31 @@ export const menuData: MenuItem[] = [
     variants: ["Kalasan", "Kuning"],
     variantGroups: [
       {
-        groupName: "Varian 500ml & 1lt:",
+        groupName: "",
         options: [
-          { name: "Bumbu Kalasan", image: "/spicyBites/Bumbu Kalasan.png" },
-          { name: "Bumbu Kuning", image: "/spicyBites/Bumbu Kuning.png" },
+          { name: "", image: "/spicyBites/Bumbu Kalasan.png" },
+          { name: "", image: "/spicyBites/Bumbu Kuning.png" },
         ],
       },
     ],
   },
   {
     id: 2,
-    name: "Ayam Ungkep",
+    name: "Ayam Ungkep Pejantan",
     category: "ayam-ungkep",
     price: "Rp20.000",
     description:"",
     image: "/spicyBites/Ayam Ungkep.png",
     rating: 4.9,
     reviews: 158,
-    sizes: ["500 ml", "1 liter"],
+    sizes: ["1/2 Ekor", "1 Ekor"],
     variants: ["Kalasan", "Kuning"],
     variantGroups: [
       {
-        groupName: "Varian:",
+        groupName: "",
         options: [
-          { name: "Ayam Kalasan", image: "/spicyBites/Ayam Kalasan.png" },
-          { name: "Ayam Kuning", image: "/spicyBites/Ayam Kuning.png" },
+          { name: "", image: "/spicyBites/Ayam Kalasan.png" },
+          { name: "", image: "/spicyBites/Ayam Kuning.png" },
         ],
       },
     ],
@@ -75,24 +75,15 @@ export const menuData: MenuItem[] = [
     rating: 4.9,
     reviews: 158,
     sizes: ["200 g", "50 g"],
-    variants: ["Botol", "Pouch"],
+    variants: ["Gami", "Terasi", "Korek", "Mercon"],
     variantGroups: [
       {
-        groupName: "Varian Botol 200g:",
+        groupName: "",
         options: [
-          { name: "Sambal Gami", image: "/spicyBites/Sambal Gami botol.png" },
-          { name: "Sambal Terasi", image: "/spicyBites/Sambal Terasi botol.png" },
-          { name: "Sambal Korek", image: "/spicyBites/Sambal Korek botol.png" },
-          { name: "Sambal Mercon", image: "/spicyBites/sambal Mercon botol.png" },
-        ],
-      },
-      {
-        groupName: "Varian Pouch 50g:",
-        options: [
-          { name: "Sambal Gami", image: "/spicyBites/Sambal Gami pouch.png" },
-          { name: "Sambal Terasi", image: "/spicyBites/Sambal Terasi pouch.png" },
-          { name: "Sambal Korek", image: "/spicyBites/Sambal Korek pouch.png" },
-          { name: "Sambal Mercon", image: "/spicyBites/Sambal Mercon pouch.png" },
+          { name: "", image: "/spicyBites/Sambal Gami botol.png" },
+          { name: "", image: "/spicyBites/Sambal Terasi botol.png" },
+          { name: "", image: "/spicyBites/Sambal Korek botol.png" },
+          { name: "", image: "/spicyBites/sambal Mercon botol.png" },
         ],
       },
     ],
@@ -107,20 +98,13 @@ export const menuData: MenuItem[] = [
     rating: 4.7,
     reviews: 97,
     sizes: ["200 g", "50 g"],
-    variants: ["Botol", "Pouch"],
+    variants: ["Sambal Cumi", "Sambal Pete"],
     variantGroups: [
       {
-        groupName: "Varian Botol 200g:",
+        groupName: "",
         options: [
-          { name: "Sambal Cumi", image: "/spicyBites/Sambal Cumi botol.png" },
-          { name: "Sambal Pete", image: "/spicyBites/Sambal Pete botol.png" },
-        ],
-      },
-      {
-        groupName: "Varian Pouch 50g:",
-        options: [
-          { name: "Sambal Cumi", image: "/spicyBites/Sambal Cumi pouch.png" },
-          { name: "Sambal Pete", image: "/spicyBites/Sambal Pete pouch.png" },
+          { name: "", image: "/spicyBites/Sambal Cumi botol.png" },
+          { name: "", image: "/spicyBites/Sambal Pete botol.png" },
         ],
       },
     ],
@@ -135,20 +119,13 @@ export const menuData: MenuItem[] = [
     rating: 4.9,
     reviews: 140,
     sizes: ["200 g"],
-    variants: ["Iga", "Paru"],
+    variants: ["Original", "Pedas"],
     variantGroups: [
       {
-        groupName: "Iga",
+        groupName: "",
         options: [
-          { name: "Iga Mercon", image: "/spicyBites/Iga Mercon.png" },
-          { name: "Iga Warisan", image: "/spicyBites/sapi-blackpepper.jpg" },
-        ],
-      },
-      {
-        groupName: "Paru",
-        options: [
-          { name: "Paru Mercon", image: "/spicyBites/sapi-manis-pedas.jpg" },
-          { name: "Paru Warisan", image: "/spicyBites/sapi-blackpepper.jpg" },
+          { name: "Iga", image: "/spicyBites/Iga Mercon.png" },
+          { name: "Paru", image: "/spicyBites/sapi-blackpepper.jpg" },
         ],
       },
     ],
@@ -162,14 +139,13 @@ export const menuData: MenuItem[] = [
     image: "/spicyBites/Keripik kentang.png",
     rating: 4.6,
     reviews: 111,
-    sizes: ["100 g"],
-    variants: ["Original", "Keju"],
+    sizes: ["80 g"],
+    variants: ["Original"],
     variantGroups: [
       {
         groupName: "Varian:",
         options: [
           { name: "Original", image: "/spicyBites/Keripik kentang.png" },
-          { name: "Keju", image: "/spicyBites/kripik-keju.jpg" },
         ],
       },
     ],
@@ -183,7 +159,7 @@ export const menuData: MenuItem[] = [
     image: "/spicyBites/Tahu tempe.png",
     rating: 4.5,
     reviews: 89,
-    sizes: ["Pack isi 10"],
+    sizes: ["10 Pcs"],
     variants: ["Tahu", "Tempe"],
     variantGroups: [
       {

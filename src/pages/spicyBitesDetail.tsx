@@ -40,6 +40,8 @@ export default function SpicyBitesDetail() {
   const handleSelectSize = (size: string) => setSelectedSize(size);
   const handleSelectVariant = (variant: string) => setSelectedVariant(variant);
 
+  const hideVariants = item.category === "kripik-kentang";
+
   return (
     <section
       className="min-h-screen w-full flex flex-col justify-start items-center pt-24 pb-16"
@@ -89,127 +91,109 @@ export default function SpicyBitesDetail() {
                 Ukuran
               </h3>
               <div className="flex flex-wrap gap-3">
-                {item.sizes.map((size, i) => {
-                  return (
-                    <button
-                      key={i}
-                      onClick={() => handleSelectSize(size)}
-                      className="px-5 py-2 text-sm font-semibold border transition-all rounded-2xl"
-                      style={{
-                        backgroundColor: mainColor,
-                        color: secondaryColor,
-                        borderColor: mainColor,
-                      }}
-                    >
-                      {size}
-                    </button>
-                  );
-                })}
+                {item.sizes.map((size, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleSelectSize(size)}
+                    className={`px-5 py-2 text-sm font-semibold border transition-all rounded-full ${
+                      selectedSize === size ? "scale-105" : ""
+                    }`}
+                    style={{
+                      backgroundColor: mainColor,
+                      color: secondaryColor,
+                      borderColor: mainColor,
+                    }}
+                  >
+                    {size}
+                  </button>
+                ))}
               </div>
             </div>
           )}
 
           {/* 🔹 VARIANT PILLS */}
-          {item.variants && item.variants.length > 0 && (
+          {!hideVariants && item.variants && item.variants.length > 0 && (
             <div className="mb-8">
               <h3 className="font-semibold text-lg mb-3" style={{ color: textColor }}>
                 Varian
               </h3>
               <div className="flex flex-wrap gap-3">
-                {item.variants.map((variant, i) => {
-                  return (
-                    <button
-                      key={i}
-                      onClick={() => handleSelectVariant(variant)}
-                      className="px-5 py-2 text-sm font-semibold border transition-all rounded-2xl"
-                      style={{
-                        backgroundColor: mainColor,
-                        color: secondaryColor,
-                        borderColor: mainColor,
-                      }}
-                    >
-                      {variant}
-                    </button>
-                  );
-                })}
+                {item.variants.map((variant, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleSelectVariant(variant)}
+                    className={`px-5 py-2 text-sm font-semibold border transition-all rounded-full ${
+                      selectedVariant === variant ? "scale-105" : ""
+                    }`}
+                    style={{
+                      backgroundColor: mainColor,
+                      color: secondaryColor,
+                      borderColor: mainColor,
+                    }}
+                  >
+                    {variant}
+                  </button>
+                ))}
               </div>
             </div>
           )}
 
           {/* 🔹 VARIANT GROUP PILLS */}
-          <div className="space-y-8 mb-8">
-            {item.variantGroups.map((group, i) => (
-              <div key={i}>
-                {group.groupName && (
-                  <h3 className="font-semibold text-lg mb-3" style={{ color: textColor }}>
-                    {group.groupName}
-                  </h3>
-                )}
-                <div className="flex flex-wrap gap-4">
-                  {group.options.map((variant, j) => {
-                    const selected = selectedVariants[group.groupName] === variant.name;
-                    return (
-                      <div
-                        key={j}
-                        onClick={() => handleSelectVariantGroup(group.groupName, variant)}
-                        className={`cursor-pointer flex flex-col items-center transition-all ${
-                          selected ? "scale-105" : "opacity-80 hover:opacity-100"
-                        }`}
-                      >
-                        <div
-                          className="w-24 h-24 rounded-2xl overflow-hidden border-4 transition-all"
-                          style={{
-                            borderColor: selected ? mainColor : "transparent",
-                          }}
-                        >
-                          <img
-                            src={variant.image || "/placeholder.jpg"}
-                            alt={variant.name}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        {variant.name && (
-                          <p
-                            className="mt-2 text-sm font-medium text-center"
-                            style={{ color: textColor }}
+          {!hideVariants &&
+            item.variantGroups &&
+            item.variantGroups.length > 0 && (
+              <div className="space-y-8 mb-8">
+                {item.variantGroups.map((group, i) => (
+                  <div key={i}>
+                    {group.groupName && (
+                      <h3 className="font-semibold text-lg mb-3" style={{ color: textColor }}>
+                        {group.groupName}
+                      </h3>
+                    )}
+                    <div className="flex flex-wrap gap-4">
+                      {group.options.map((variant, j) => {
+                        const selected = selectedVariants[group.groupName] === variant.name;
+                        return (
+                          <div
+                            key={j}
+                            onClick={() => handleSelectVariantGroup(group.groupName, variant)}
+                            className={`cursor-pointer flex flex-col items-center transition-all ${
+                              selected ? "scale-105" : "opacity-80 hover:opacity-100"
+                            }`}
                           >
-                            {variant.name}
-                          </p>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
+                            {!hideVariants && variant.image && (
+                              <div
+                                className="w-24 h-24 rounded-2xl overflow-hidden border-4 transition-all"
+                                style={{
+                                  borderColor: selected ? mainColor : "transparent",
+                                }}
+                              >
+                                <img
+                                  src={variant.image}
+                                  alt={variant.name}
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                            )}
+                            {variant.name && (
+                              <p
+                                className="mt-2 text-sm font-medium text-center"
+                                style={{ color: textColor }}
+                              >
+                                {variant.name}
+                              </p>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-
-          {/* 🔹 BUTTON WHATSAPP */}
-          <button
-            className="px-6 py-3 rounded-2xl font-semibold text-lg shadow-md transition-all w-fit"
-            style={{
-              backgroundColor: mainColor,
-              color: "white",
-            }}
-            onClick={() =>
-              window.open(
-                `https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20${encodeURIComponent(
-                  item.name
-                )}%0AUkuran:%20${selectedSize || "-"}%0AVarian:%20${selectedVariant || "-"}%0ADetail:%20${Object.entries(
-                  selectedVariants
-                )
-                  .map(([group, choice]) => `${group}: ${choice}`)
-                  .join(", ")}`,
-                "_blank"
-              )
-            }
-          >
-            Pesan Sekarang
-          </button>
+            )}
         </div>
       </div>
 
-      {/* FOOTER INFO */}
       <div
         className="mt-20 flex flex-col md:flex-row justify-between items-center w-full max-w-5xl pt-10 gap-8"
         style={{ color: textColor }}
