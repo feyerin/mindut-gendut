@@ -125,9 +125,15 @@ export default function SpicyBitesDetail() {
           {/* 🔹 SIZE PILLS */}
           {item.sizes && item.sizes.length > 0 && (
             <div className="mb-8">
-              <h3 className="font-semibold text-lg mb-3" style={{ color: textColor }}>
-                Ukuran
+              <h3
+                className="font-semibold text-lg mb-3"
+                style={{ color: textColor }}
+              >
+                {item.category === "tahu" || item.category === "tempe"
+                  ? "Isi :"
+                  : "Ukuran :"}
               </h3>
+
               <div className="flex flex-wrap gap-3">
                 {item.sizes.map((size, i) => (
                   <button

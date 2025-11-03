@@ -232,8 +232,11 @@ export default function Navbar() {
                 <Link to="/spicyBites/kripik-kentang" onClick={() => setMenuOpen(false)}>
                   Kripik Kentang
                 </Link>
-                <Link to="/spicyBites/tahu-tempe" onClick={() => setMenuOpen(false)}>
-                  Tahu Tempe
+                <Link to="/spicyBites/tahu" onClick={() => setMenuOpen(false)}>
+                  Tahu
+                </Link>
+                <Link to="/spicyBites/tempe" onClick={() => setMenuOpen(false)}>
+                  Tempe
                 </Link>
               </div>
             )}

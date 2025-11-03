@@ -104,7 +104,7 @@ export const menuData: MenuItem[] = [
         groupName: "",
         options: [
           { name: "", image: "/spicyBites/Sambal Cumi botol.png" },
-          { name: "", image: "/spicyBites/Sambal Pete botol.png" },
+          { name: "", image: "/spicyBites/Sambal Pete pouch.png" },
         ],
       },
     ],

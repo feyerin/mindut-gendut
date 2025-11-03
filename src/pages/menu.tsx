@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function MenuPage() {
   const categories = [
-    { name: "NASI BAKAR", img: "/menu/1.png" },
-    { name: "NASI KREMES", img: "/menu/2.png" },
+    { name: "NASI BAKAR", img: "/menu/2.png" },
+    { name: "NASI KREMES", img: "/menu/1.png" },
     { name: "ADD ON", img: "/menu/3.png" },
   ];
 
