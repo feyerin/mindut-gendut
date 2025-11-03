@@ -42,6 +42,45 @@ export default function SpicyBitesDetail() {
 
   const hideVariants = item.category === "kripik-kentang";
 
+  // 🧊 Tentukan tipe produk untuk bagian bawah
+  let productInfo = {
+    title: "PRODUK BEKU",
+    desc: "Segera bekukan setelah diterima. Pindahkan ke chiller semalam sebelum dimasak.",
+    duration: "Tahan: 1 tahun (freezer) & 3 hari (chiller)",
+    icon: "/Ikon Frozen.png",
+    bgColor: "transparent",
+    textColor,
+  };
+
+  if (item.category === "kentang") {
+    productInfo = {
+      title: "PRODUK SIAP SANTAP",
+      desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
+      duration: "Tahan: 1 Minggu (chiller)",
+      icon: "/Ikon siap santap.png",
+      bgColor: "#990001",
+      textColor: "#f5b74b",
+    };
+  } else if (item.category === "tahu") {
+    productInfo = {
+      title: "PRODUK SIAP MASAK",
+      desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
+      duration: "Tahan: 1 Minggu (chiller)",
+      icon: "/Ikon siap masak.png",
+      bgColor: "none",
+      textColor: "#990001",
+    };
+  }else if (item.category === "tempe") {
+    productInfo = {
+      title: "PRODUK SIAP MASAK",
+      desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
+      duration: "Tahan: 1 Minggu (chiller)",
+      icon: "/Ikon siap masak.png",
+      bgColor: "none",
+      textColor: "#f5b74b",
+    };
+  }
+
   return (
     <section
       className="min-h-screen w-full flex flex-col justify-start items-center pt-24 pb-16"
@@ -51,7 +90,7 @@ export default function SpicyBitesDetail() {
         backgroundSize: "cover",
       }}
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 px-6 md:px-10">
+      <div className="max-w-8xl mx-auto flex flex-col md:flex-row gap-12 px-6 md:px-10">
         {/* LEFT: Product Image */}
         <div className="w-full md:w-1/2 flex justify-center items-start">
           <motion.div
@@ -70,7 +109,10 @@ export default function SpicyBitesDetail() {
         </div>
 
         {/* RIGHT: Product Details */}
-        <div className="w-full md:w-1/2 flex flex-col justify-start" style={{ color: textColor }}>
+        <div
+          className="w-full md:w-1/2 flex flex-col justify-start"
+          style={{ color: textColor }}
+        >
           <h1
             className="text-3xl font-extrabold mb-4 font-[Playfair-Display] uppercase"
             style={{ color: textColor }}
@@ -78,11 +120,7 @@ export default function SpicyBitesDetail() {
             {item.name}
           </h1>
 
-          <p className="leading-relaxed mb-6">
-            {item.name} bukan sekadar produk biasa. Diracik dari resep tradisional
-            warisan keluarga dengan cita rasa khas nusantara. Praktis, sehat, dan bergizi —
-            menghadirkan rasa autentik khas masakan rumahan.
-          </p>
+          <p className="leading-relaxed mb-6">{item.description}</p>
 
           {/* 🔹 SIZE PILLS */}
           {item.sizes && item.sizes.length > 0 && (
@@ -194,29 +232,51 @@ export default function SpicyBitesDetail() {
         </div>
       </div>
 
+      {/* 🔸 PRODUCT INFO SECTION */}
       <div
-        className="mt-20 flex flex-col md:flex-row justify-between items-center w-full max-w-5xl pt-10 gap-8"
+        className="mt-20 w-full max-w-7xl pt-10 grid grid-cols-1 md:grid-cols-3 gap-2 items-center text-center md:text-left"
         style={{ color: textColor }}
       >
-        <div className="text-center md:text-left">
-          <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
-          <p className="text-sm max-w-sm">
-            Resep warisan nusantara yang tetap dijaga keaslian dan cara masaknya.
-          </p>
+        <div className="flex items-center justify-center md:justify-start gap-6">
+          <img
+            src="/Ikon bahan baku pilihan.png"
+            alt="Resep Warisan Icon"
+            className="w-12 h-12 object-contain flex-shrink-0"
+          />
+          <div>
+            <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
+            <p className="text-sm max-w-[320px]">
+              Resep warisan nusantara yang tetap dijaga keaslian dan cara masaknya.
+            </p>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center">
-          <img src="/halal.svg" alt="Halal Logo" className="w-10 mb-2" />
-          <p className="text-xs font-semibold">HALAL INDONESIA</p>
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src="https://boganamaymay.com/storage/images/halal.png"
+            alt="Halal Logo"
+            className="w-12 mb-2"
+          />
         </div>
 
-        <div className="text-center md:text-right max-w-sm">
-          <h3 className="font-bold text-lg mb-1">PRODUK BEKU</h3>
-          <p className="text-sm">
-            Segera bekukan setelah diterima. Pindahkan ke chiller semalam sebelum dimasak.
-            <br />
-            Tahan: 1 tahun (freezer) & 3 hari (chiller).
-          </p>
+        {/* 🧊 Produk Info Dinamis */}
+        <div
+          className="flex items-center gap-6 p-4 rounded-xl"
+          style={{
+            backgroundColor: productInfo.bgColor,
+            color: productInfo.textColor,
+          }}
+        >
+          <img
+            src={productInfo.icon}
+            alt={productInfo.title}
+            className="w-12 h-12 object-contain flex-shrink-0"
+          />
+          <div className="text-left">
+            <h3 className="font-bold text-lg mb-1">{productInfo.title}</h3>
+            <p className="text-sm max-w-[320px]">{productInfo.desc}</p>
+            <p className="text-sm mt-1 font-medium">{productInfo.duration}</p>
+          </div>
         </div>
       </div>
     </section>

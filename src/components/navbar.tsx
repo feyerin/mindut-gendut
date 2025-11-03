@@ -123,10 +123,18 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites/tahu-tempe"
+                      to="/spicyBites/tahu"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
-                      Tahu Tempe
+                      Tahu
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/spicyBites/tempe"
+                      className="block px-4 py-2 hover:bg-[#7a1212]"
+                    >
+                      Tempe
                     </Link>
                   </li>
                 </ul>
