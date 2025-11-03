@@ -74,7 +74,7 @@ export const menuData: MenuItem[] = [
     image: "/spicyBites/Sambal.png",
     rating: 4.9,
     reviews: 158,
-    sizes: ["200 g", "50 g"],
+    sizes: ["200 gr", "50 gr"],
     variants: ["Gami", "Terasi", "Korek", "Mercon"],
     variantGroups: [
       {
@@ -97,7 +97,7 @@ export const menuData: MenuItem[] = [
     image: "/spicyBites/Sambal Lauk.png",
     rating: 4.7,
     reviews: 97,
-    sizes: ["200 g", "50 g"],
+    sizes: ["200 gr", "50 gr"],
     variants: ["Sambal Cumi", "Sambal Pete"],
     variantGroups: [
       {
@@ -118,7 +118,7 @@ export const menuData: MenuItem[] = [
     image: "/spicyBites/Sapi.png",
     rating: 4.9,
     reviews: 140,
-    sizes: ["200 g"],
+    sizes: ["200 gr"],
     variants: ["Original", "Pedas"],
     variantGroups: [
       {
@@ -139,7 +139,7 @@ export const menuData: MenuItem[] = [
     image: "/spicyBites/Keripik kentang.png",
     rating: 4.6,
     reviews: 111,
-    sizes: ["80 g"],
+    sizes: ["80 gr"],
     variants: ["Original"],
     variantGroups: [
       {
