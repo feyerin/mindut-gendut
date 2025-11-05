@@ -50,7 +50,7 @@ export default function SpicyBites() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {spicyItems.map((item, index) => (
             <Link
-              to={`/spicyBites/${item.category}`}
+              to={`/spicyBites#${item.category}`}
               key={item.name}
               className="flex flex-col items-center text-center group"
             >
