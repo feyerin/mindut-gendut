@@ -40,7 +40,7 @@ export default function App() {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Menu" element={<MenuPage />} />
           <Route path="/kontak" element={<ContactUs />} />
-          <Route path="/spicyBites/:category" element={<SpicyBitesDetail />} />
+          <Route path="/spicyBites" element={<SpicyBitesDetail />} />
         </Routes>
         <WhatsAppFloat phone="628119938180" message="Halo, saya mau pesan catering untuk 50 orang, kapan bisa?" />
       </main>

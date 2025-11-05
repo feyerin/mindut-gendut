@@ -75,7 +75,7 @@ export default function Navbar() {
                 <ul className="flex flex-col bg-[#5c0b0b] text-white rounded-md shadow-md w-56 overflow-hidden transition-all duration-200 transform origin-top scale-y-95 group-hover:scale-y-100 opacity-0 group-hover:opacity-100">
                   <li>
                     <Link
-                      to="/spicyBites/bumbu-ungkep"
+                      to="/spicyBites#bumbu-ungkep"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Bumbu Ungkep
@@ -83,7 +83,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites/ayam-ungkep"
+                      to="/spicyBites#ayam-ungkep"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Ayam Ungkep
@@ -91,7 +91,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites/sambal"
+                      to="/spicyBites#sambal"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Sambal
@@ -99,7 +99,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites/sambal-lauk"
+                      to="/spicyBites#sambal-lauk"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Sambal Lauk
@@ -107,7 +107,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites/sapi"
+                      to="/spicyBites#sapi"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Sapi
@@ -115,7 +115,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites/kripik-kentang"
+                      to="/spicyBites#kripik-kentang"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Kripik Kentang
@@ -123,7 +123,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites/tahu"
+                      to="/spicyBites#tahu"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Tahu
@@ -131,7 +131,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites/tempe"
+                      to="/spicyBites#tempe"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Tempe
@@ -214,28 +214,28 @@ export default function Navbar() {
             </button>
             {spicyOpen && (
               <div className="flex flex-col items-center mt-2 text-sm gap-2">
-                <Link to="/spicyBites/bumbu-ungkep" onClick={() => setMenuOpen(false)}>
+                <Link to="/spicyBites#bumbu-ungkep" onClick={() => setMenuOpen(false)}>
                   Bumbu Ungkep
                 </Link>
-                <Link to="/spicyBites/ayam-ungkep" onClick={() => setMenuOpen(false)}>
+                <Link to="/spicyBites#ayam-ungkep" onClick={() => setMenuOpen(false)}>
                   Ayam Ungkep
                 </Link>
-                <Link to="/spicyBites/sambal" onClick={() => setMenuOpen(false)}>
+                <Link to="/spicyBites#sambal" onClick={() => setMenuOpen(false)}>
                   Sambal
                 </Link>
-                <Link to="/spicyBites/sambal-lauk" onClick={() => setMenuOpen(false)}>
+                <Link to="/spicyBites#sambal-lauk" onClick={() => setMenuOpen(false)}>
                   Sambal Lauk
                 </Link>
-                <Link to="/spicyBites/sapi" onClick={() => setMenuOpen(false)}>
+                <Link to="/spicyBites#sapi" onClick={() => setMenuOpen(false)}>
                   Sapi
                 </Link>
-                <Link to="/spicyBites/kripik-kentang" onClick={() => setMenuOpen(false)}>
+                <Link to="/spicyBites#kripik-kentang" onClick={() => setMenuOpen(false)}>
                   Kripik Kentang
                 </Link>
-                <Link to="/spicyBites/tahu" onClick={() => setMenuOpen(false)}>
+                <Link to="/spicyBites#tahu" onClick={() => setMenuOpen(false)}>
                   Tahu
                 </Link>
-                <Link to="/spicyBites/tempe" onClick={() => setMenuOpen(false)}>
+                <Link to="/spicyBites#tempe" onClick={() => setMenuOpen(false)}>
                   Tempe
                 </Link>
               </div>

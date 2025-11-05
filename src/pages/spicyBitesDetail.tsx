@@ -1,290 +1,213 @@
 "use client";
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { menuData } from "../data/spicyBites";
 
-export default function SpicyBitesDetail() {
-  const { category } = useParams();
-  const item = menuData.find((m) => m.category === category);
-
-  const [selectedImage, setSelectedImage] = useState(item?.image);
-  const [selectedSize, setSelectedSize] = useState<string | null>(null);
-  const [selectedVariant, setSelectedVariant] = useState<string | null>(null);
-  const [selectedVariants, setSelectedVariants] = useState<Record<string, string>>({});
-
+export default function SpicyBitesPage() {
   useEffect(() => {
-    if (item) setSelectedImage(item.image);
-  }, [item]);
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        setTimeout(() => {
+          const yOffset = -200; // offset agar tidak ketutup navbar
+          const y =
+            el.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }, 300);
+      }
+    }
+  }, []);
 
-  if (!item) {
-    return (
-      <div className="text-center py-20 text-gray-500 text-lg">
-        Produk tidak ditemukan 😢
-      </div>
-    );
-  }
-
-  // 🎨 Tentukan tema berdasarkan ID (ganjil/genap)
-  const isOdd = item.id % 2 !== 0;
-  const bgImage = isOdd ? "/background/secondary.png" : "/background/main.png";
-  const mainColor = isOdd ? "#990001" : "#f5b74b";
-  const secondaryColor = isOdd ? "#f5b74b" : "#990001";
-  const textColor = isOdd ? "#990001" : "#f5b74b";
-
-  const handleSelectVariantGroup = (groupName: string, variant: any) => {
-    setSelectedVariants((prev) => ({ ...prev, [groupName]: variant.name }));
-    if (variant.image) setSelectedImage(variant.image);
+  const sectionIds: Record<string, string> = {
+    "bumbu-ungkep": "bumbu-ungkep",
+    "ayam-ungkep": "ayam-ungkep",
+    sambal: "sambal",
+    "sambal-lauk": "sambal-lauk",
+    sapi: "sapi",
+    "kripik-kentang": "kripik-kentang",
+    tahu: "tahu",
+    tempe: "tempe",
   };
-
-  const handleSelectSize = (size: string) => setSelectedSize(size);
-  const handleSelectVariant = (variant: string) => setSelectedVariant(variant);
-
-  const hideVariants = item.category === "kripik-kentang";
-
-  // 🧊 Tentukan tipe produk untuk bagian bawah
-  let productInfo = {
-    title: "PRODUK BEKU",
-    desc: "Segera bekukan setelah diterima. Pindahkan ke chiller semalam sebelum dimasak.",
-    duration: "Tahan: 1 tahun (freezer) & 3 hari (chiller)",
-    icon: "/Ikon Frozen.png",
-    bgColor: "transparent",
-    textColor,
-  };
-
-  if (item.category === "kentang") {
-    productInfo = {
-      title: "PRODUK SIAP SANTAP",
-      desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
-      duration: "Tahan: 1 Minggu (chiller)",
-      icon: "/Ikon siap santap.png",
-      bgColor: "#990001",
-      textColor: "#f5b74b",
-    };
-  } else if (item.category === "tahu") {
-    productInfo = {
-      title: "PRODUK SIAP MASAK",
-      desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
-      duration: "Tahan: 1 Minggu (chiller)",
-      icon: "/Ikon siap masak.png",
-      bgColor: "none",
-      textColor: "#990001",
-    };
-  }else if (item.category === "tempe") {
-    productInfo = {
-      title: "PRODUK SIAP MASAK",
-      desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
-      duration: "Tahan: 1 Minggu (chiller)",
-      icon: "/Ikon siap masak.png",
-      bgColor: "none",
-      textColor: "#f5b74b",
-    };
-  }
 
   return (
-    <section
-      className="min-h-screen w-full flex flex-col justify-start items-center pt-24 pb-16"
-      style={{
-        backgroundImage: `url('${bgImage}')`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
-      <div className="max-w-8xl mx-auto flex flex-col md:flex-row gap-12 px-6 md:px-10">
-        {/* LEFT: Product Image */}
-        <div className="w-full md:w-1/2 flex justify-center items-start">
-          <motion.div
-            key={selectedImage}
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.4 }}
-            className="w-full max-w-md rounded-3xl overflow-hidden shadow-lg"
+    <section className="w-full">
+      {menuData.map((item) => {
+        const isOdd = item.id % 2 !== 0;
+        const bgImage = isOdd
+          ? "/background/secondary.png"
+          : "/background/main.png";
+        const mainColor = isOdd ? "#990001" : "#f5b74b";
+        const secondaryColor = isOdd ? "#f5b74b" : "#990001";
+        const textColor = isOdd ? "#990001" : "#f5b74b";
+        const hideVariants = item.category === "kripik-kentang";
+
+        let productInfo = {
+          title: "PRODUK BEKU",
+          desc: "Segera bekukan setelah diterima. Pindahkan ke chiller semalam sebelum dimasak.",
+          duration: "Tahan: 1 tahun (freezer) & 3 hari (chiller)",
+          icon: "/Ikon Frozen.png",
+          bgColor: "transparent",
+          textColor,
+        };
+
+        if (item.category === "kentang") {
+          productInfo = {
+            title: "PRODUK SIAP SANTAP",
+            desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
+            duration: "Tahan: 1 Minggu (chiller)",
+            icon: "/Ikon siap santap.png",
+            bgColor: "#990001",
+            textColor: "#f5b74b",
+          };
+        } else if (["tahu", "tempe"].includes(item.category)) {
+          productInfo = {
+            title: "PRODUK SIAP MASAK",
+            desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
+            duration: "Tahan: 1 Minggu (chiller)",
+            icon: "/Ikon siap masak.png",
+            bgColor: "none",
+            textColor: item.category === "tahu" ? "#990001" : "#f5b74b",
+          };
+        }
+
+        return (
+          <section
+            key={item.id}
+            id={sectionIds[item.category] || item.category}
+            className="w-full h-screen flex flex-col justify-between items-center"
+            style={{
+              backgroundImage: `url('${bgImage}')`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
-            <img
-              src={selectedImage}
-              alt={item.name}
-              className="w-full object-cover rounded-2xl"
-            />
-          </motion.div>
-        </div>
+            <div className="flex flex-col md:flex-row items-center justify-center flex-1 w-full">
+              <div className="w-full md:w-1/2 flex justify-center items-center">
+                <motion.img
+                  src={item.image}
+                  alt={item.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4 }}
+                  className="rounded-3xl shadow-lg w-full max-w-md"
+                />
+              </div>
 
-        {/* RIGHT: Product Details */}
-        <div
-          className="w-full md:w-1/2 flex flex-col justify-start"
-          style={{ color: textColor }}
-        >
-          <h1
-            className="text-3xl font-extrabold mb-4 font-[Playfair-Display] uppercase"
-            style={{ color: textColor }}
-          >
-            {item.name}
-          </h1>
-
-          <p className="leading-relaxed mb-6">{item.description}</p>
-
-          {/* 🔹 SIZE PILLS */}
-          {item.sizes && item.sizes.length > 0 && (
-            <div className="mb-8">
-              <h3
-                className="font-semibold text-lg mb-3"
+              <div
+                className="w-full md:w-1/2 flex flex-col justify-center h-full px-8 md:px-16"
                 style={{ color: textColor }}
               >
-                {item.category === "tahu" || item.category === "tempe"
-                  ? "Isi :"
-                  : "Ukuran :"}
-              </h3>
+                <h2 className="text-3xl font-extrabold mb-4 uppercase font-[Playfair-Display]">
+                  {item.name}
+                </h2>
+                <p className="mb-6 leading-relaxed">{item.description}</p>
 
-              <div className="flex flex-wrap gap-3">
-                {item.sizes.map((size, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleSelectSize(size)}
-                    className={`px-5 py-2 text-sm font-semibold border transition-all rounded-full ${
-                      selectedSize === size ? "scale-105" : ""
-                    }`}
-                    style={{
-                      backgroundColor: mainColor,
-                      color: secondaryColor,
-                      borderColor: mainColor,
-                    }}
-                  >
-                    {size}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* 🔹 VARIANT PILLS */}
-          {!hideVariants && item.variants && item.variants.length > 0 && (
-            <div className="mb-8">
-              <h3 className="font-semibold text-lg mb-3" style={{ color: textColor }}>
-                Varian
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {item.variants.map((variant, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleSelectVariant(variant)}
-                    className={`px-5 py-2 text-sm font-semibold border transition-all rounded-full ${
-                      selectedVariant === variant ? "scale-105" : ""
-                    }`}
-                    style={{
-                      backgroundColor: mainColor,
-                      color: secondaryColor,
-                      borderColor: mainColor,
-                    }}
-                  >
-                    {variant}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* 🔹 VARIANT GROUP PILLS */}
-          {!hideVariants &&
-            item.variantGroups &&
-            item.variantGroups.length > 0 && (
-              <div className="space-y-8 mb-8">
-                {item.variantGroups.map((group, i) => (
-                  <div key={i}>
-                    {group.groupName && (
-                      <h3 className="font-semibold text-lg mb-3" style={{ color: textColor }}>
-                        {group.groupName}
-                      </h3>
-                    )}
-                    <div className="flex flex-wrap gap-4">
-                      {group.options.map((variant, j) => {
-                        const selected = selectedVariants[group.groupName] === variant.name;
-                        return (
-                          <div
-                            key={j}
-                            onClick={() => handleSelectVariantGroup(group.groupName, variant)}
-                            className={`cursor-pointer flex flex-col items-center transition-all ${
-                              selected ? "scale-105" : "opacity-80 hover:opacity-100"
-                            }`}
-                          >
-                            {!hideVariants && variant.image && (
-                              <div
-                                className="w-24 h-24 rounded-2xl overflow-hidden border-4 transition-all"
-                                style={{
-                                  borderColor: selected ? mainColor : "transparent",
-                                }}
-                              >
-                                <img
-                                  src={variant.image}
-                                  alt={variant.name}
-                                  className="w-full h-full object-cover"
-                                />
-                              </div>
-                            )}
-                            {variant.name && (
-                              <p
-                                className="mt-2 text-sm font-medium text-center"
-                                style={{ color: textColor }}
-                              >
-                                {variant.name}
-                              </p>
-                            )}
-                          </div>
-                        );
-                      })}
+                {Array.isArray(item.sizes) && item.sizes.length > 0 && (
+                  <div className="mb-6">
+                    <h3 className="font-semibold text-lg mb-3">
+                      {["tahu", "tempe"].includes(item.category)
+                        ? "Isi :"
+                        : "Ukuran :"}
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                      {item.sizes.map((size, i) => (
+                        <button
+                          key={i}
+                          className="px-5 py-2 text-sm font-semibold border rounded-full"
+                          style={{
+                            backgroundColor: mainColor,
+                            color: secondaryColor,
+                            borderColor: mainColor,
+                          }}
+                        >
+                          {size}
+                        </button>
+                      ))}
                     </div>
                   </div>
-                ))}
+                )}
+
+                {!hideVariants &&
+                  Array.isArray(item.variants) &&
+                  item.variants.length > 0 && (
+                    <div className="mb-8">
+                      <h3 className="font-semibold text-lg mb-3">Varian</h3>
+                      <div className="flex flex-wrap gap-3">
+                        {item.variants.map((variant, i) => (
+                          <button
+                            key={i}
+                            className="px-5 py-2 text-sm font-semibold border rounded-full"
+                            style={{
+                              backgroundColor: mainColor,
+                              color: secondaryColor,
+                              borderColor: mainColor,
+                            }}
+                          >
+                            {variant}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
               </div>
-            )}
-        </div>
-      </div>
+            </div>
 
-      {/* 🔸 PRODUCT INFO SECTION */}
-      <div
-        className="mt-20 w-full max-w-7xl pt-10 grid grid-cols-1 md:grid-cols-3 gap-2 items-center text-center md:text-left"
-        style={{ color: textColor }}
-      >
-        <div className="flex items-center justify-center md:justify-start gap-6">
-          <img
-            src="/Ikon bahan baku pilihan.png"
-            alt="Resep Warisan Icon"
-            className="w-12 h-12 object-contain flex-shrink-0"
-          />
-          <div>
-            <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
-            <p className="text-sm max-w-[320px]">
-              Resep warisan nusantara yang tetap dijaga keaslian dan cara masaknya.
-            </p>
-          </div>
-        </div>
+            <div
+              className="w-full grid grid-cols-1 md:grid-cols-3 items-center text-center md:text-left px-6 md:px-16 py-6"
+              style={{ color: textColor }}
+            >
+              <div className="flex items-center justify-center md:justify-start gap-6">
+                <img
+                  src="/Ikon bahan baku pilihan.png"
+                  alt="Resep Warisan Icon"
+                  className="w-12 h-12 object-contain flex-shrink-0"
+                />
+                <div>
+                  <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
+                  <p className="text-sm max-w-[320px]">
+                    Resep warisan nusantara yang tetap dijaga keaslian dan cara
+                    masaknya.
+                  </p>
+                </div>
+              </div>
 
-        <div className="flex flex-col items-center justify-center">
-          <img
-            src="https://boganamaymay.com/storage/images/halal.png"
-            alt="Halal Logo"
-            className="w-12 mb-2"
-          />
-        </div>
+              <div className="flex flex-col items-center justify-center">
+                <img
+                  src="https://boganamaymay.com/storage/images/halal.png"
+                  alt="Halal Logo"
+                  className="w-12 mb-2"
+                />
+              </div>
 
-        {/* 🧊 Produk Info Dinamis */}
-        <div
-          className="flex items-center gap-6 p-4 rounded-xl"
-          style={{
-            backgroundColor: productInfo.bgColor,
-            color: productInfo.textColor,
-          }}
-        >
-          <img
-            src={productInfo.icon}
-            alt={productInfo.title}
-            className="w-12 h-12 object-contain flex-shrink-0"
-          />
-          <div className="text-left">
-            <h3 className="font-bold text-lg mb-1">{productInfo.title}</h3>
-            <p className="text-sm max-w-[320px]">{productInfo.desc}</p>
-            <p className="text-sm mt-1 font-medium">{productInfo.duration}</p>
-          </div>
-        </div>
-      </div>
+              <div
+                className="flex items-center gap-6 p-4 rounded-xl justify-center md:justify-start"
+                style={{
+                  backgroundColor: productInfo.bgColor,
+                  color: productInfo.textColor,
+                }}
+              >
+                <img
+                  src={productInfo.icon}
+                  alt={productInfo.title}
+                  className="w-12 h-12 object-contain flex-shrink-0"
+                />
+                <div className="text-left">
+                  <h3 className="font-bold text-lg mb-1">
+                    {productInfo.title}
+                  </h3>
+                  <p className="text-sm max-w-[320px]">{productInfo.desc}</p>
+                  <p className="text-sm mt-1 font-medium">
+                    {productInfo.duration}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      })}
     </section>
   );
 }
