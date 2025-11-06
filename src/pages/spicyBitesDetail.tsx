@@ -135,7 +135,7 @@ export default function SpicyBitesPage() {
                   Array.isArray(item.variants) &&
                   item.variants.length > 0 && (
                     <div className="mb-8">
-                      <h3 className="font-semibold text-lg mb-3">Varian</h3>
+                      <h3 className="font-semibold text-lg mb-3">Varian :</h3>
                       <div className="flex flex-wrap gap-3">
                         {item.variants.map((variant, i) => (
                           <button
