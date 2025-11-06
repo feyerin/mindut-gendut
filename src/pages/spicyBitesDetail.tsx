@@ -40,10 +40,11 @@ export default function SpicyBitesPage() {
         const mainColor = isOdd ? "#990001" : "#f5b74b";
         const secondaryColor = isOdd ? "#f5b74b" : "#990001";
         const textColor = isOdd ? "#990001" : "#f5b74b";
-        const hideVariants = item.category === "kripik-kentang";
+        const hideVariants = false;
 
-        const iconSuffix = !isOdd ? "_Kuning" : ""; // bg main → pakai versi kuning
+        const iconSuffix = !isOdd ? "_Kuning" : ""; // bg main → versi kuning
 
+        // 🔹 Info produk default
         let productInfo = {
           title: "PRODUK BEKU",
           desc: "Segera bekukan setelah diterima. Pindahkan ke chiller semalam sebelum dimasak.",
@@ -53,7 +54,8 @@ export default function SpicyBitesPage() {
           textColor,
         };
 
-        if (item.category === "kentang") {
+        // 🔹 Override info produk berdasarkan kategori
+        if (["kentang", "kripik-kentang"].includes(item.category)) {
           productInfo = {
             title: "PRODUK SIAP SANTAP",
             desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
@@ -73,6 +75,10 @@ export default function SpicyBitesPage() {
           };
         }
 
+        // 🔹 Cek apakah pakai ikon "Bahan Baku Pilihan" atau "Resep Warisan"
+        const isBahanBaku =
+          ["kentang", "kripik-kentang", "tahu", "tempe"].includes(item.category);
+
         return (
           <section
             key={item.id}
@@ -85,6 +91,7 @@ export default function SpicyBitesPage() {
               backgroundPosition: "center",
             }}
           >
+            {/* 🔹 Bagian utama */}
             <div className="flex flex-col md:flex-row items-center justify-center flex-1 w-full">
               <div className="w-full md:w-1/2 flex justify-center items-center">
                 <motion.img
@@ -156,26 +163,39 @@ export default function SpicyBitesPage() {
               </div>
             </div>
 
-            {/* 🔹 Bagian bawah (ikon + info) */}
+            {/* 🔹 Bagian bawah */}
             <div
               className="w-full grid grid-cols-1 md:grid-cols-3 items-center text-center md:text-left px-6 md:px-16 py-6"
               style={{ color: textColor }}
             >
+              {/* 🔹 Kiri: Ikon Bahan Baku atau Resep Warisan */}
               <div className="flex items-center justify-center md:justify-start gap-6">
                 <img
-                  src={`/Ikon bahan baku pilihan${iconSuffix}.png`}
-                  alt="Resep Warisan Icon"
+                  src={
+                    isBahanBaku
+                      ? `/Ikon bahan baku pilihan${iconSuffix}.png`
+                      : `/Ikon Resep Warisan${iconSuffix}.png`
+                  }
+                  alt={
+                    isBahanBaku
+                      ? "Bahan Baku Pilihan Icon"
+                      : "Resep Warisan Icon"
+                  }
                   className="w-12 h-12 object-contain flex-shrink-0"
                 />
                 <div>
-                  <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
+                  <h3 className="font-bold text-lg mb-1">
+                    {isBahanBaku ? "BAHAN BAKU PILIHAN" : "RESEP WARISAN"}
+                  </h3>
                   <p className="text-sm max-w-[320px]">
-                    Resep warisan nusantara yang tetap dijaga keaslian dan cara
-                    masaknya.
+                    {isBahanBaku
+                      ? "Kami menggunakan bahan baku terbaik untuk menjaga cita rasa dan kualitas produk."
+                      : "Resep warisan nusantara yang tetap dijaga keaslian dan cara masaknya."}
                   </p>
                 </div>
               </div>
 
+              {/* 🔹 Tengah: Halal */}
               <div className="flex flex-col items-center justify-center">
                 <img
                   src={`/Ikon Halal${iconSuffix}.png`}
@@ -184,6 +204,7 @@ export default function SpicyBitesPage() {
                 />
               </div>
 
+              {/* 🔹 Kanan: Info produk */}
               <div
                 className="flex items-center gap-6 p-4 rounded-xl justify-center md:justify-start"
                 style={{
