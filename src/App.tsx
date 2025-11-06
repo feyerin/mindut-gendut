@@ -8,8 +8,7 @@ import WhatsAppFloat from "./components/whatsappFloat";
 import AboutUs from "./pages/aboutUs";
 import MenuPage from "./pages/menu";
 import ContactUs from "./pages/contactUs";
-// import SpicyBitesDetail from "./pages/spicyBitesDetail";
-import SpicyBites from "./components/spicyBites";
+import SpicyBitesDetail from "./pages/spicyBitesDetail";
 import SpicyBitesPage from "./pages/spicyBites";
 
 function ScrollHandler() {
@@ -42,7 +41,8 @@ export default function App() {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Menu" element={<MenuPage />} />
           <Route path="/kontak" element={<ContactUs />} />
-          <Route path="/SpicyBites" element={<SpicyBitesPage />} />
+          <Route path="/spicyBites" element={<SpicyBitesPage />} />
+          <Route path="/spicyBitesv2" element={<SpicyBitesDetail />} />
         </Routes>
         <WhatsAppFloat phone="628119938180" message="Halo, saya mau pesan catering untuk 50 orang, kapan bisa?" />
       </main>

@@ -11,9 +11,8 @@ export default function SpicyBitesPage() {
       const el = document.querySelector(hash);
       if (el) {
         setTimeout(() => {
-          const yOffset = -200; // offset agar tidak ketutup navbar
-          const y =
-            el.getBoundingClientRect().top + window.scrollY + yOffset;
+          const yOffset = -200;
+          const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }, 300);
       }
@@ -43,11 +42,13 @@ export default function SpicyBitesPage() {
         const textColor = isOdd ? "#990001" : "#f5b74b";
         const hideVariants = item.category === "kripik-kentang";
 
+        const iconSuffix = !isOdd ? "_Kuning" : ""; // bg main → pakai versi kuning
+
         let productInfo = {
           title: "PRODUK BEKU",
           desc: "Segera bekukan setelah diterima. Pindahkan ke chiller semalam sebelum dimasak.",
           duration: "Tahan: 1 tahun (freezer) & 3 hari (chiller)",
-          icon: "/Ikon Frozen.png",
+          icon: `/Ikon Frozen${iconSuffix}.png`,
           bgColor: "transparent",
           textColor,
         };
@@ -57,7 +58,7 @@ export default function SpicyBitesPage() {
             title: "PRODUK SIAP SANTAP",
             desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
             duration: "Tahan: 1 Minggu (chiller)",
-            icon: "/Ikon siap santap.png",
+            icon: `/Ikon siap santap${iconSuffix}.png`,
             bgColor: "#990001",
             textColor: "#f5b74b",
           };
@@ -66,7 +67,7 @@ export default function SpicyBitesPage() {
             title: "PRODUK SIAP MASAK",
             desc: "Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.",
             duration: "Tahan: 1 Minggu (chiller)",
-            icon: "/Ikon siap masak.png",
+            icon: `/Ikon siap masak${iconSuffix}.png`,
             bgColor: "none",
             textColor: item.category === "tahu" ? "#990001" : "#f5b74b",
           };
@@ -155,13 +156,14 @@ export default function SpicyBitesPage() {
               </div>
             </div>
 
+            {/* 🔹 Bagian bawah (ikon + info) */}
             <div
               className="w-full grid grid-cols-1 md:grid-cols-3 items-center text-center md:text-left px-6 md:px-16 py-6"
               style={{ color: textColor }}
             >
               <div className="flex items-center justify-center md:justify-start gap-6">
                 <img
-                  src="/Ikon bahan baku pilihan.png"
+                  src={`/Ikon bahan baku pilihan${iconSuffix}.png`}
                   alt="Resep Warisan Icon"
                   className="w-12 h-12 object-contain flex-shrink-0"
                 />
@@ -176,7 +178,7 @@ export default function SpicyBitesPage() {
 
               <div className="flex flex-col items-center justify-center">
                 <img
-                  src="https://boganamaymay.com/storage/images/halal.png"
+                  src={`/Ikon Halal${iconSuffix}.png`}
                   alt="Halal Logo"
                   className="w-12 mb-2"
                 />

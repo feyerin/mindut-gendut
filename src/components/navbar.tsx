@@ -54,15 +54,24 @@ export default function Navbar() {
                 Catering
               </Link>
             </li>
+             <li>
+              <Link
+                to="/spicyBites"
+                className="transition-colors text-white hover:text-gray-300"
+              >
+                Spicy Bites
+              </Link>
+            </li>
+            
 
             {/* Spicy Bites Dropdown */}
             <li className="relative group">
               <div className="flex items-center gap-1 cursor-pointer">
                 <a
-                  href="/spicyBites"
+                  href="/spicyBitesv2"
                   className="transition-colors text-white hover:text-gray-300"
                 >
-                  Spicy Bites
+                  Spicy Bites V2
                 </a>
                 <ChevronDown
                   size={16}
@@ -75,7 +84,7 @@ export default function Navbar() {
                 <ul className="flex flex-col bg-[#5c0b0b] text-white rounded-md shadow-md w-56 overflow-hidden transition-all duration-200 transform origin-top scale-y-95 group-hover:scale-y-100 opacity-0 group-hover:opacity-100">
                   <li>
                     <Link
-                      to="/spicyBites#bumbu-ungkep"
+                      to="/spicyBitesv2#bumbu-ungkep"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Bumbu Ungkep
@@ -83,7 +92,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites#ayam-ungkep"
+                      to="/spicyBitesv2#ayam-ungkep"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Ayam Ungkep
@@ -91,7 +100,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites#sambal"
+                      to="/spicyBitesv2#sambal"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Sambal
@@ -99,7 +108,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites#sambal-lauk"
+                      to="/spicyBitesv2#sambal-lauk"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Sambal Lauk
@@ -107,7 +116,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites#sapi"
+                      to="/spicyBitesv2#sapi"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Sapi
@@ -115,7 +124,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites#kripik-kentang"
+                      to="/spicyBitesv2#kripik-kentang"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Kripik Kentang
@@ -123,7 +132,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites#tahu"
+                      to="/spicyBitesv2#tahu"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Tahu
@@ -131,7 +140,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      to="/spicyBites#tempe"
+                      to="/spicyBitesv2#tempe"
                       className="block px-4 py-2 hover:bg-[#7a1212]"
                     >
                       Tempe
