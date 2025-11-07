@@ -33,11 +33,11 @@ export default function AboutUs() {
 
   return (
     <section className="relative overflow-hidden">
-        <title>Tentang Mindut | Mindut Gendut</title>
-        <meta
-          name="description"
-          content="Kenali kisah di balik Mindut Gendut — warisan resep keluarga yang kini hadir untukmu dengan cita rasa autentik dan penuh kehangatan."
-        />
+      <title>Tentang Mindut | Mindut Gendut</title>
+      <meta
+        name="description"
+        content="Kenali kisah di balik Mindut Gendut — warisan resep keluarga yang kini hadir untukmu dengan cita rasa autentik dan penuh kehangatan."
+      />
 
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -49,7 +49,6 @@ export default function AboutUs() {
       <div className="absolute inset-0 bg-white/10 pointer-events-none" />
 
       <div className="relative z-10">
-        {/* Hero Title */}
         <div className="flex flex-col justify-center items-center text-center px-6 lg:pt-26 pt-32">
           <motion.h2
             className="text-5xl md:text-6xl font-[Playfair-Display] text-[#9a0906] font-bold mb-16"
@@ -107,14 +106,13 @@ export default function AboutUs() {
             </p>
             <br />
             <p>
-              Terima kasih untuk para pelanggan yang sudah memberikan
-              kesempatan agar warisan resep Mindut tetap hidup dan dapat
-              dinikmati banyak orang.
+              Terima kasih untuk para pelanggan yang sudah memberikan kesempatan
+              agar warisan resep Mindut tetap hidup dan dapat dinikmati banyak
+              orang.
             </p>
           </motion.div>
         </div>
 
-        {/* Galeri */}
         <div className="max-w-7xl mx-auto px-6 py-24">
           <h3 className="text-4xl font-[Playfair-Display] font-bold mb-10 text-center text-[#9a0906]">
             Galeri Mindut
