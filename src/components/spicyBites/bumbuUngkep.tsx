@@ -6,7 +6,7 @@ export default function BumbuUngkep() {
   return (
     <section
       id="bumbu-ungkep"
-      className="w-full min-h-screen flex flex-col justify-between items-center pb-20 relative"
+      className="w-full min-h-screen flex flex-col justify-between items-center pb-16 relative"
       style={{
         backgroundImage: `url('/background/secondary.png')`,
         backgroundRepeat: "no-repeat",
@@ -33,19 +33,20 @@ export default function BumbuUngkep() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#990001" }}
         >
-          <h2 className="text-3xl font-extrabold mb-4 uppercase font-[Playfair-Display]">
+          <h2 className="text-[35px] font-bold mb-6 uppercase font-[Playfair-Display] leading-tight">
             Bumbu Ungkep Kaldu
           </h2>
-          <p className="mb-6 text-xl leading-relaxed">
-            Bumbu Ungkep Kaldu Mindut Gendut bukan sekadar bumbu ungkep biasa. Diracik dari resep tradisional warisan nenek, bumbu ini sudah mengandung kaldu alami sehingga bisa langsung di gunakan tanpa tambahan bumbu lain. Praktis, sehat, dan bergizi - menghadirkan rasa gurih autentik khas masakan rumahan.
+
+          <p className="mb-8 text-[23px] leading-relaxed font-sans">
+            Bumbu Ungkep Kaldu Mindut Gendut bukan sekadar bumbu ungkep biasa. Diracik dari resep tradisional warisan nenek, bumbu ini sudah mengandung kaldu alami sehingga bisa langsung digunakan tanpa tambahan bumbu lain. Praktis, sehat, dan bergizi — menghadirkan rasa gurih autentik khas masakan rumahan.
           </p>
 
           {/* Ukuran */}
-          <div className="mb-6">
-            <h3 className="font-semibold text-lg mb-3">Ukuran :</h3>
-            <div className="flex flex-wrap gap-12">
+          <div className="mb-10">
+            <h3 className="font-semibold text-[18px] mb-3">Ukuran :</h3>
+            <div className="flex flex-wrap gap-6">
               <button
-                className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                className="px-2 py-1 text-[18px] font-semibold border rounded-lg"
                 style={{
                   backgroundColor: "#990001",
                   color: "#fff",
@@ -55,7 +56,7 @@ export default function BumbuUngkep() {
                 500 ml
               </button>
               <button
-                className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                className="px-2 py-1 text-[18px] font-semibold border rounded-lg"
                 style={{
                   backgroundColor: "#990001",
                   color: "#fff",
@@ -69,7 +70,7 @@ export default function BumbuUngkep() {
 
           {/* 🔹 Varian */}
           <div className="w-full">
-            <h3 className="font-semibold text-lg mb-3">Varian :</h3>
+            <h3 className="font-semibold text-[18px] mb-3">Varian :</h3>
             <div className="flex flex-wrap gap-4 justify-start items-start">
               {/* Varian 1 */}
               <motion.div
@@ -79,7 +80,7 @@ export default function BumbuUngkep() {
                 className="flex flex-col items-start"
               >
                 <div
-                  className="px-2 py-1 rounded-lg font-semibold text-lg mb-3 border"
+                  className="px-2 py-1 rounded-lg font-semibold text-[18px] mb-3 border"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -88,13 +89,12 @@ export default function BumbuUngkep() {
                 >
                   Kalasan
                 </div>
-
                 <img
                   src="/spicyBites/Kalasan.png"
-                  alt="kalasan"
+                  alt="Kalasan"
                   className="h-28 object-contain"
                   style={{
-                    maxWidth: "140px",
+                    maxWidth: "160px",
                     borderRadius: "12px",
                   }}
                 />
@@ -108,7 +108,7 @@ export default function BumbuUngkep() {
                 className="flex flex-col items-start"
               >
                 <div
-                  className="px-2 py-1 rounded-lg font-semibold text-lg mb-3 border"
+                  className="px-2 py-1 rounded-lg font-semibold text-[18px] mb-3 border"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -117,13 +117,12 @@ export default function BumbuUngkep() {
                 >
                   Kuning
                 </div>
-
                 <img
                   src="/spicyBites/Kuning.png"
                   alt="Kuning"
                   className="h-28 object-contain"
                   style={{
-                    maxWidth: "140px",
+                    maxWidth: "160px",
                     borderRadius: "12px",
                   }}
                 />
@@ -133,24 +132,26 @@ export default function BumbuUngkep() {
         </div>
       </div>
 
-      {/* 🔹 Bagian bawah - rata tengah */}
+      {/* 🔹 Bagian bawah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8 md:px-20 gap-6 mt-20"
+        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8 md:px-20 mt-12"
         style={{
           color: "#990001",
-          minHeight: "240px",
+          minHeight: "200px",
         }}
       >
         {/* 🔸 Kiri: Resep Warisan */}
-        <div className="flex items-center justify-center md:justify-start gap-6">
+        <div className="flex items-center justify-center md:justify-start gap-4">
           <img
             src="/Ikon Resep Warisan.png"
             alt="Resep Warisan"
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div>
-            <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1 uppercase">
+              RESEP WARISAN
+            </h3>
+            <p className="text-[16px] max-w-[280px] leading-snug">
               Resep warisan nusantara yang tetap dijaga keaslian dan cara
               masaknya.
             </p>
@@ -162,13 +163,13 @@ export default function BumbuUngkep() {
           <img
             src="/Ikon Halal.png"
             alt="Halal Logo"
-            className="w-24 h-24 md:w-28 md:h-28 object-contain"
+            className="w-28 h-28 object-contain"
           />
         </div>
 
         {/* 🔸 Kanan: Produk Info */}
         <div
-          className="flex items-center gap-6 justify-center md:justify-start"
+          className="flex items-center gap-4 justify-center md:justify-start"
           style={{
             color: "#990001",
           }}
@@ -179,12 +180,14 @@ export default function BumbuUngkep() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div className="text-left">
-            <h3 className="font-bold text-lg mb-1">PRODUK BEKU</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1 uppercase">
+              PRODUK BEKU
+            </h3>
+            <p className="text-[16px] max-w-[280px] leading-snug">
               Segera bekukan setelah diterima. Pindahkan ke chiller semalam
               sebelum dimasak.
             </p>
-            <p className="text-sm mt-1 font-medium">
+            <p className="text-[16px] mt-1 font-medium leading-snug">
               Tahan: 1 tahun (freezer) & 3 hari (chiller)
             </p>
           </div>

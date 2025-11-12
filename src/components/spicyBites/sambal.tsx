@@ -33,10 +33,10 @@ export default function Sambal() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#990001" }}
         >
-          <h2 className="text-3xl font-extrabold mb-4 uppercase font-[Playfair-Display]">
+          <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Sambal Mindut Gendut
           </h2>
-          <p className="mb-6 text-xl leading-relaxed">
+          <p className="mb-6 text-[23px] leading-relaxed font-[Arial]">
             Sambal rumahan autentik tanpa pengawet, dibuat dari bahan segar pilihan dengan cita rasa khas Indonesia. 
             <br/> <br/>Tersedia 4 varian rasa sesuai level pedas favoritmu: 
             <br/> Gami: pedas manis gurih, Terasi: pedas sedang, 
@@ -45,7 +45,7 @@ export default function Sambal() {
 
           {/* Ukuran */}
           <div className="mb-6">
-            <h3 className="font-semibold text-lg mb-3">Ukuran :</h3>
+            <h3 className="font-semibold text-[18px] mb-3">Ukuran :</h3>
             <div className="flex flex-wrap gap-10">
               <button
                 className="px-4 py-1 text-lg font-semibold border rounded-lg"
@@ -58,7 +58,7 @@ export default function Sambal() {
                 50 gr
               </button>
               <button
-                className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                className="px-2 py-1 text-[18px] font-semibold border rounded-lg"
                 style={{
                   backgroundColor: "#990001",
                   color: "#fff",
@@ -210,8 +210,8 @@ export default function Sambal() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div>
-            <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1">RESEP WARISAN</h3>
+            <p className="text-[16px] max-w-[320px]">
               Resep warisan nusantara yang tetap dijaga keaslian dan cara
               masaknya.
             </p>
@@ -240,12 +240,12 @@ export default function Sambal() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div className="text-left">
-            <h3 className="font-bold text-lg mb-1">PRODUK BEKU</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1">PRODUK BEKU</h3>
+            <p className="text-[16px] max-w-[320px]">
               Segera bekukan setelah diterima. Pindahkan ke chiller semalam
               sebelum dimasak.
             </p>
-            <p className="text-sm mt-1 font-medium">
+            <p className="text-[16px] mt-1 font-medium">
               Tahan: 1 tahun (freezer) & 3 hari (chiller)
             </p>
           </div>

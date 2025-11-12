@@ -33,17 +33,17 @@ export default function Tahu() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#990001" }}
         >
-          <h2 className="text-3xl font-extrabold mb-4 uppercase font-[Playfair-Display]">
+          <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Tahu
           </h2>
-          <p className="mb-6 text-xl leading-relaxed">
+          <p className="mb-6 text-[23px] leading-relaxed">
             Tahu Susu Spesial Mindut Gendut — dibuat fresh setiap hari dari bahan berkualitas, menghasilkan tekstur lembut dan rasa gurih alami yang khas. Tanpa pengawet, bisa langsung digoreng atau dijadikan lauk sesuai selera. 
             <br/> <br/> Untuk penyimpanan lebih lama, setelah diterima ganti airnya dengan air panas, lalu simpan di kulkas — tahan hingga 1 minggu. Praktis, segar, dan lezat setiap hari!          
           </p>
 
           {/* Ukuran */}
           <div className="mb-6">
-            <h3 className="font-semibold text-lg mb-3">Isi :</h3>
+            <h3 className="font-semibold text-[18px] mb-3">Isi :</h3>
             <div className="flex flex-wrap gap-12">
               <button
                 className="px-2 py-1 text-lg font-semibold border rounded-lg"
@@ -76,8 +76,8 @@ export default function Tahu() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div>
-            <h3 className="font-bold text-lg mb-1">BAHAN BAKU PILIHAN</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1">BAHAN BAKU PILIHAN</h3>
+            <p className="text-[16px] max-w-[320px]">
               Bahan baku pilihan. Segar, dan alami rahasia kelezatan Mindut Gendut.
             </p>
           </div>
@@ -105,11 +105,11 @@ export default function Tahu() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div className="text-left">
-            <h3 className="font-bold text-lg mb-1">PRODUK SIAP SANTAP</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1">PRODUK SIAP SANTAP</h3>
+            <p className="text-[16px] max-w-[320px]">
               Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.
             </p>
-            <p className="text-sm mt-1 font-medium">
+            <p className="text-[16px] mt-1 font-medium">
               Tahan: 1 Minggu (chiller)
             </p>
           </div>

@@ -33,16 +33,16 @@ export default function Tempe() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#f5b74b" }}
         >
-          <h2 className="text-3xl font-extrabold mb-4 uppercase font-[Playfair-Display]">
+          <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Tempe
           </h2>
-          <p className="mb-6 text-xl leading-relaxed">
-                Tempe Bacem Mindut Gendut — dibuat dari kedelai pilihan dan dimasak perlahan dengan bumbu bacem tradisional khas Jawa. Rasanya manis gurih, lembut, dan meresap sampai ke dalam, menghadirkan cita rasa rumahan yang autentik. Dijamin beda dari tempe bacem biasa — sekali coba, pasti ketagihan!
+          <p className="mb-6 text-[23px] leading-relaxed">
+            Tempe Bacem Mindut Gendut — dibuat dari kedelai pilihan dan dimasak perlahan dengan bumbu bacem tradisional khas Jawa. Rasanya manis gurih, lembut, dan meresap sampai ke dalam, menghadirkan cita rasa rumahan yang autentik. Dijamin beda dari tempe bacem biasa — sekali coba, pasti ketagihan!
           </p>
 
           {/* Ukuran */}
           <div className="mb-6">
-            <h3 className="font-semibold text-lg mb-3">Isi :</h3>
+            <h3 className="font-semibold text-[18px] mb-3">Isi :</h3>
             <div className="flex flex-wrap gap-12">
               <button
                 className="px-2 py-1 text-lg font-semibold border rounded-lg"
@@ -75,8 +75,8 @@ export default function Tempe() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div>
-            <h3 className="font-bold text-lg mb-1">BAHAN BAKU PILIHAN</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1">BAHAN BAKU PILIHAN</h3>
+            <p className="text-[16px] max-w-[320px]">
               Bahan baku pilihan. Segar, dan alami rahasia kelezatan Mindut Gendut.
             </p>
           </div>
@@ -104,11 +104,11 @@ export default function Tempe() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div className="text-left">
-            <h3 className="font-bold text-lg mb-1">PRODUK SIAP SANTAP</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1">PRODUK SIAP SANTAP</h3>
+            <p className="text-[16px] max-w-[320px]">
               Produk siap proses, bisa langsung dimasak dengan atau tanpa bumbu tambahan.
             </p>
-            <p className="text-sm mt-1 font-medium">
+            <p className="text-[16px] mt-1 font-medium">
               Tahan: 1 Minggu (chiller)
             </p>
           </div>

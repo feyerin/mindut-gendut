@@ -33,16 +33,16 @@ export default function IgaMercon() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#990001" }}
         >
-          <h2 className="text-3xl font-extrabold mb-4 uppercase font-[Playfair-Display]">
+          <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Iga Mercon Warisan
           </h2>
-          <p className="mb-6 text-xl leading-relaxed">
+          <p className="mb-6 text-[23px] leading-relaxed">
             Sambal Iga Mindut Gendut — perpaduan iga sapi pilihan dengan bumbu khas warisan nenek, dibuat tanpa pengawet, melalui proses diungkep selama 8 jam, menghasilkan cita rasa yang dalam, bebas amis, dan bumbu yang meresap sempurna hingga ke dalam daging. Menu makan malam spesial dan praktis siap dihidangkan!
           </p>
 
           {/* Ukuran */}
           <div className="mb-6">
-            <h3 className="font-semibold text-lg mb-3">Varian :</h3>
+            <h3 className="font-semibold text-[18px] mb-3">Varian :</h3>
             <div className="flex flex-wrap gap-10">
               <button
                 className="px-2 py-1 text-lg font-semibold border rounded-lg"
@@ -69,7 +69,7 @@ export default function IgaMercon() {
 
           {/* 🔹 Varian */}
           <div className="w-full">
-            <h3 className="font-semibold text-lg mb-3">Varian :</h3>
+            <h3 className="font-semibold text-[18px] mb-3">Varian :</h3>
             <div className="flex flex-wrap gap-4 justify-start items-start">
               {/* Varian 1 */}
               <motion.div
@@ -90,7 +90,7 @@ export default function IgaMercon() {
                 </div>
 
                 <img
-                  src="/spicyBites/Ayam Ungkep Kalasan.png"
+                  src="/spicyBites/Iga.png"
                   alt="kalasan"
                   className="h-28 object-contain"
                   style={{
@@ -149,8 +149,8 @@ export default function IgaMercon() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div>
-            <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1">RESEP WARISAN</h3>
+            <p className="text-[16px] max-w-[320px]">
               Resep warisan nusantara yang tetap dijaga keaslian dan cara
               masaknya.
             </p>
@@ -179,12 +179,12 @@ export default function IgaMercon() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div className="text-left">
-            <h3 className="font-bold text-lg mb-1">PRODUK BEKU</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1">PRODUK BEKU</h3>
+            <p className="text-[16px] max-w-[320px]">
               Segera bekukan setelah diterima. Pindahkan ke chiller semalam
               sebelum dimasak.
             </p>
-            <p className="text-sm mt-1 font-medium">
+            <p className="text-[16px] mt-1 font-medium">
               Tahan: 1 tahun (freezer) & 3 hari (chiller)
             </p>
           </div>

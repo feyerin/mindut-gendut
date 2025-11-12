@@ -33,16 +33,16 @@ export default function AyamUngkep() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#f5b74b" }}
         >
-          <h2 className="text-3xl font-extrabold mb-4 uppercase font-[Playfair-Display]">
+          <h2 className="text-[35px] font-bold mb-4 uppercase font-[Playfair-Display]">
             Ayam Ungkep Pejantan
           </h2>
-          <p className="mb-6 text-xl leading-relaxed">
+          <p className="mb-6 text-[23px] leading-relaxed font-[Arial]">
             Ayam Frozen Pejantan Mindut Gendut bukan ayam ungkep biasa. Dibuat dari ayam pejantan pilihan dan bumbu kaldu alami warisan nenek, tersedia dalam dua varian: Bumbu Kalasan dan Bumbu Kuning. Tanpa pengawet, praktis tinggal goreng — nikmati cita rasa rumahan yang autentik dan bergizi.          
           </p>
 
           {/* Ukuran */}
           <div className="mb-6">
-            <h3 className="font-semibold text-lg mb-3">Ukuran :</h3>
+            <h3 className="font-semibold text-[18px] mb-3">Ukuran :</h3>
             <div className="flex flex-wrap gap-12">
               <button
                 className="px-2 py-1 text-lg font-semibold border rounded-lg"
@@ -69,7 +69,7 @@ export default function AyamUngkep() {
 
           {/* 🔹 Varian */}
           <div className="w-full">
-            <h3 className="font-semibold text-lg mb-3">Varian :</h3>
+            <h3 className="font-semibold text-18px mb-3">Varian :</h3>
             <div className="flex flex-wrap gap-4 justify-start items-start">
               {/* Varian 1 */}
               <motion.div
@@ -135,7 +135,7 @@ export default function AyamUngkep() {
 
       {/* 🔹 Bagian bawah - rata tengah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8 md:px-20 gap-6 mt-20"
+        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8  mt-20"
         style={{
           color: "#f5b74b",
           minHeight: "240px",
@@ -149,8 +149,8 @@ export default function AyamUngkep() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div>
-            <h3 className="font-bold text-lg mb-1">RESEP WARISAN</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[23px] mb-1">RESEP WARISAN</h3>
+            <p className="text-[16px] max-w-[320px]">
               Resep warisan nusantara yang tetap dijaga keaslian dan cara
               masaknya.
             </p>
@@ -179,12 +179,12 @@ export default function AyamUngkep() {
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div className="text-left">
-            <h3 className="font-bold text-lg mb-1">PRODUK BEKU</h3>
-            <p className="text-sm max-w-[320px]">
+            <h3 className="font-bold text-[25px] mb-1">PRODUK BEKU</h3>
+            <p className="text-[16px] max-w-[320px]">
               Segera bekukan setelah diterima. Pindahkan ke chiller semalam
               sebelum dimasak.
             </p>
-            <p className="text-sm mt-1 font-medium">
+            <p className="text-[16px] mt-1 font-medium">
               Tahan: 1 tahun (freezer) & 3 hari (chiller)
             </p>
           </div>
