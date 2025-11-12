@@ -43,27 +43,34 @@ export default function IgaMercon() {
           {/* Ukuran */}
           <div className="mb-6">
             <h3 className="font-semibold text-[18px] mb-3">Varian :</h3>
-            <div className="flex flex-wrap gap-10">
-              <button
-                className="px-2 py-1 text-lg font-semibold border rounded-lg"
-                style={{
-                  backgroundColor: "#990001",
-                  color: "#fff",
-                  borderColor: "#990001",
-                }}
-              >
-                Original
-              </button>
-              <button
-                className="px-2 py-1 text-lg font-semibold border rounded-lg"
-                style={{
-                  backgroundColor: "#990001",
-                  color: "#fff",
-                  borderColor: "#990001",
-                }}
-              >
-                Pedas
-              </button>
+
+            {/* ✅ Ganti flex jadi grid */}
+            <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
+              <div className="w-28">
+                <button
+                  className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                  style={{
+                    backgroundColor: "#990001",
+                    color: "#fff",
+                    borderColor: "#990001",
+                  }}
+                >
+                  Original
+                </button>
+              </div>
+
+              <div>
+                <button
+                  className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                  style={{
+                    backgroundColor: "#990001",
+                    color: "#fff",
+                    borderColor: "#990001",
+                  }}
+                >
+                  Pedas
+                </button>
+              </div>
             </div>
           </div>
 
@@ -92,7 +99,7 @@ export default function IgaMercon() {
                 <img
                   src="/spicyBites/Iga.png"
                   alt="kalasan"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "140px",
                     borderRadius: "12px",
@@ -121,7 +128,7 @@ export default function IgaMercon() {
                 <img
                   src="/spicyBites/Paru.png"
                   alt="Paru"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "140px",
                     borderRadius: "12px",

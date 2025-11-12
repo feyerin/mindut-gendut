@@ -44,9 +44,13 @@ export default function Sambal() {
           </p>
 
           {/* Ukuran */}
-          <div className="mb-6">
+         <div className="mb-6">
             <h3 className="font-semibold text-[18px] mb-3">Ukuran :</h3>
-            <div className="flex flex-wrap gap-10">
+
+            {/* ✅ Hanya ubah jadi grid */}
+            <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
+              <div className="w-28">
+
               <button
                 className="px-4 py-1 text-lg font-semibold border rounded-lg"
                 style={{
@@ -57,6 +61,10 @@ export default function Sambal() {
               >
                 50 gr
               </button>
+              </div>
+              
+              <div>
+
               <button
                 className="px-2 py-1 text-[18px] font-semibold border rounded-lg"
                 style={{
@@ -67,6 +75,8 @@ export default function Sambal() {
               >
                 200 gr
               </button>
+              </div>
+
             </div>
           </div>
 
@@ -95,7 +105,7 @@ export default function Sambal() {
                 <img
                   src="/spicyBites/Sambal Gami.png"
                   alt="gami"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "140px",
                     borderRadius: "12px",
@@ -124,7 +134,7 @@ export default function Sambal() {
                 <img
                   src="/spicyBites/Sambal Terasi.png"
                   alt="terasi"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "140px",
                     borderRadius: "12px",

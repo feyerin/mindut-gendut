@@ -41,30 +41,34 @@ export default function BumbuUngkep() {
             Bumbu Ungkep Kaldu Mindut Gendut bukan sekadar bumbu ungkep biasa. Diracik dari resep tradisional warisan nenek, bumbu ini sudah mengandung kaldu alami sehingga bisa langsung digunakan tanpa tambahan bumbu lain. Praktis, sehat, dan bergizi — menghadirkan rasa gurih autentik khas masakan rumahan.
           </p>
 
-          {/* Ukuran */}
+          {/* 🔸 Ukuran */}
           <div className="mb-10">
             <h3 className="font-semibold text-[18px] mb-3">Ukuran :</h3>
-            <div className="flex flex-wrap gap-6">
-              <button
-                className="px-2 py-1 text-[18px] font-semibold border rounded-lg"
-                style={{
-                  backgroundColor: "#990001",
-                  color: "#fff",
-                  borderColor: "#990001",
-                }}
-              >
-                500 ml
-              </button>
-              <button
-                className="px-2 py-1 text-[18px] font-semibold border rounded-lg"
-                style={{
-                  backgroundColor: "#990001",
-                  color: "#fff",
-                  borderColor: "#990001",
-                }}
-              >
-                1 liter
-              </button>
+            <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
+              <div className="w-28">
+                <button
+                  className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                  style={{
+                    backgroundColor: "#990001",
+                    color: "#fff",
+                    borderColor: "#990001",
+                  }}
+                >
+                  500 ml
+                </button>
+              </div>
+              <div>
+                <button
+                  className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                  style={{
+                    backgroundColor: "#990001",
+                    color: "#fff",
+                    borderColor: "#990001",
+                  }}
+                >
+                  1 liter
+                </button>
+              </div>
             </div>
           </div>
 
@@ -80,7 +84,7 @@ export default function BumbuUngkep() {
                 className="flex flex-col items-start"
               >
                 <div
-                  className="px-2 py-1 rounded-lg font-semibold text-[18px] mb-3 border"
+                  className="px-2 py-1 rounded-lg font-semibold text-lg mb-3 border"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -92,7 +96,7 @@ export default function BumbuUngkep() {
                 <img
                   src="/spicyBites/Kalasan.png"
                   alt="Kalasan"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "160px",
                     borderRadius: "12px",
@@ -108,7 +112,7 @@ export default function BumbuUngkep() {
                 className="flex flex-col items-start"
               >
                 <div
-                  className="px-2 py-1 rounded-lg font-semibold text-[18px] mb-3 border"
+                  className="px-2 py-1 rounded-lg font-semibold text-lg mb-3 border"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -120,7 +124,7 @@ export default function BumbuUngkep() {
                 <img
                   src="/spicyBites/Kuning.png"
                   alt="Kuning"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "160px",
                     borderRadius: "12px",
@@ -134,7 +138,7 @@ export default function BumbuUngkep() {
 
       {/* 🔹 Bagian bawah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8  mt-20"
+        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8 mt-20"
         style={{
           color: "#990001",
           minHeight: "200px",
@@ -152,8 +156,7 @@ export default function BumbuUngkep() {
               RESEP WARISAN
             </h3>
             <p className="text-[16px] max-w-[280px] leading-snug">
-              Resep warisan nusantara yang tetap dijaga keaslian dan cara
-              masaknya.
+              Resep warisan nusantara yang tetap dijaga keaslian dan cara masaknya.
             </p>
           </div>
         </div>
@@ -168,12 +171,7 @@ export default function BumbuUngkep() {
         </div>
 
         {/* 🔸 Kanan: Produk Info */}
-        <div
-          className="flex items-center gap-4 justify-center md:justify-start"
-          style={{
-            color: "#990001",
-          }}
-        >
+        <div className="flex items-center gap-4 justify-center md:justify-start">
           <img
             src="/Ikon Frozen.png"
             alt="Produk Beku"
@@ -184,8 +182,7 @@ export default function BumbuUngkep() {
               PRODUK BEKU
             </h3>
             <p className="text-[16px] max-w-[280px] leading-snug">
-              Segera bekukan setelah diterima. Pindahkan ke chiller semalam
-              sebelum dimasak.
+              Segera bekukan setelah diterima. Pindahkan ke chiller semalam sebelum dimasak.
             </p>
             <p className="text-[16px] mt-1 font-medium leading-snug">
               Tahan: 1 tahun (freezer) & 3 hari (chiller)

@@ -43,7 +43,8 @@ export default function SambalLauk() {
           {/* Ukuran */}
           <div className="mb-6">
             <h3 className="font-semibold text-[18px] mb-3">Ukuran :</h3>
-            <div className="flex flex-wrap gap-12">
+            <div className="grid grid-cols-2 gap-4 w-full max-w-sm">  
+              <div className="w-28">        
               <button
                 className="px-3 py-1 text-lg font-semibold border rounded-lg"
                 style={{
@@ -54,6 +55,8 @@ export default function SambalLauk() {
               >
                 50 gr
               </button>
+              </div>
+              <div>
               <button
                 className="px-2 py-1 text-lg font-semibold border rounded-lg"
                 style={{
@@ -64,6 +67,7 @@ export default function SambalLauk() {
               >
                 200 gr
               </button>
+              </div>
             </div>
           </div>
 
@@ -92,7 +96,7 @@ export default function SambalLauk() {
                 <img
                   src="/spicyBites/Sambal Baby Cumi.png"
                   alt="kalasan"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "140px",
                     borderRadius: "12px",
@@ -121,7 +125,7 @@ export default function SambalLauk() {
                 <img
                   src="/spicyBites/Sambal Pete.png"
                   alt="Kuning"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "140px",
                     borderRadius: "12px",

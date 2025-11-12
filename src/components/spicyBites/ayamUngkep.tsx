@@ -43,9 +43,12 @@ export default function AyamUngkep() {
           {/* Ukuran */}
           <div className="mb-6">
             <h3 className="font-semibold text-[18px] mb-3">Ukuran :</h3>
-            <div className="flex flex-wrap gap-12">
+
+            {/* ✅ Ganti flex jadi grid */}
+            <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
+              <div className="w-28">             
               <button
-                className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                className="px-2 py-1 text-lg font-semibold border rounded-lg text-center"
                 style={{
                   backgroundColor: "#f5b74b",
                   color: "#990001",
@@ -54,16 +57,19 @@ export default function AyamUngkep() {
               >
                 1/2 ekor
               </button>
-              <button
-                className="px-2 py-1 text-lg font-semibold border rounded-lg"
-                style={{
-                  backgroundColor: "#f5b74b",
-                  color: "#990001",
-                  borderColor: "#f5b74b",
-                }}
-              >
-                1 ekor
-              </button>
+               </div>
+                <div>
+                <button
+                  className="px-2 py-1 text-lg font-semibold border rounded-lg text-center"
+                  style={{
+                    backgroundColor: "#f5b74b",
+                    color: "#990001",
+                    borderColor: "#f5b74b",
+                  }}
+                >
+                  1 ekor
+                </button>
+               </div>
             </div>
           </div>
 
@@ -92,7 +98,7 @@ export default function AyamUngkep() {
                 <img
                   src="/spicyBites/Ayam Ungkep Kalasan.png"
                   alt="kalasan"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "140px",
                     borderRadius: "12px",
@@ -121,7 +127,7 @@ export default function AyamUngkep() {
                 <img
                   src="/spicyBites/Ayam Ungkep Kuning.png"
                   alt="Kuning"
-                  className="h-28 object-contain"
+                  className="w-28 object-contain"
                   style={{
                     maxWidth: "140px",
                     borderRadius: "12px",
