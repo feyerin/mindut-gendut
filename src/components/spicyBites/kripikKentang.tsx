@@ -36,7 +36,7 @@ export default function KripikKentang() {
           <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Keripik Kentang
           </h2>
-          <p className="mb-6 text-[23px] font-[Arial]">
+          <p className="mb-6 text-[23px] font-[Arial] leading-tight">
             Keripik Kentang Sambal Mindut Gendut — keripik kentang renyah dengan coating sambal pedas manis gurih khas Mindut Gendut. Dibuat dari kentang pilihan tanpa pengawet, rasanya nagih banget! Dikemas dalam toples praktis yang memudahkan penyimpanan.
             <br/> <br/> Cocok dimakan langsung, jadi lauk pendamping nasi, atau teman nasi goreng & mi instan favoritmu!"
           </p>

@@ -36,7 +36,7 @@ export default function AyamUngkep() {
           <h2 className="text-[35px] font-bold mb-4 uppercase font-[Playfair-Display]">
             Ayam Ungkep Pejantan
           </h2>
-          <p className="mb-6 text-[23px] font-[Arial]">
+          <p className="mb-6 text-[23px] font-[Arial] leading-tight">
             Ayam Frozen Pejantan Mindut Gendut bukan ayam ungkep biasa. Dibuat dari ayam pejantan pilihan dan bumbu kaldu alami warisan nenek, tersedia dalam dua varian: Bumbu Kalasan dan Bumbu Kuning. Tanpa pengawet, praktis tinggal goreng — nikmati cita rasa rumahan yang autentik dan bergizi.          
           </p>
 

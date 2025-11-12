@@ -36,7 +36,7 @@ export default function Sambal() {
           <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Sambal Mindut Gendut
           </h2>
-          <p className="mb-6 text-[23px] font-[Arial]">
+          <p className="mb-6 text-[23px] font-[Arial] leading-tight">
             Sambal rumahan autentik tanpa pengawet, dibuat dari bahan segar pilihan dengan cita rasa khas Indonesia. 
             <br/> <br/>Tersedia 4 varian rasa sesuai level pedas favoritmu: 
             <br/> Gami: pedas manis gurih, Terasi: pedas sedang, 
