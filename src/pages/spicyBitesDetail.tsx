@@ -204,7 +204,7 @@ export default function SpicyBitesPage() {
 
             {/* 🔹 Bagian bawah */}
             <div
-              className="w-full grid grid-cols-1 md:grid-cols-3 items-start text-center md:text-left px-6 md:px-16 pb-10 md:pb-12 gap-8 mt-10"
+              className="w-full grid grid-cols-1 md:grid-cols-3 items-start text-center md:text-left px-6 md:px-16 gap-8 mt-20"
               style={{ color: textColor }}
             >
               {/* 🔹 Kiri: Ikon Bahan Baku / Resep Warisan */}
