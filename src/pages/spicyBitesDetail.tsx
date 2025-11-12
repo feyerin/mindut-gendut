@@ -148,11 +148,11 @@ export default function SpicyBitesPage() {
                 {item.category !== "kripik-kentang" &&
                   Array.isArray(item.variants) &&
                   item.variants.length > 0 && (
-                    <div className="mb-8 w-full">
+                    <div className="mb-2 w-full">
                       <h3 className="font-semibold text-lg mb-3">Varian :</h3>
 
                       {/* Tombol Varian */}
-                      <div className="flex flex-wrap gap-3 mb-6">
+                      <div className="flex flex-wrap gap-3">
                         {item.variants.map((variant, i) => (
                           <button
                             key={i}
@@ -172,7 +172,7 @@ export default function SpicyBitesPage() {
                       {Array.isArray(item.variantGroups) &&
                         item.variantGroups.length > 0 &&
                         item.variantGroups[0].options?.length > 0 && (
-                          <div className="flex flex-wrap gap-2 justify-start mt-6">
+                          <div className="flex flex-wrap gap-2 justify-start">
                             {item.variantGroups[0].options.map((opt, i) => (
                               <motion.div
                                 key={i}
