@@ -7,7 +7,6 @@ import WhatsAppFloat from "./components/whatsappFloat";
 import AboutUs from "./pages/aboutUs";
 import MenuPage from "./pages/menu";
 import ContactUs from "./pages/contactUs";
-import SpicyBitesDetail from "./pages/spicyBitesDetail";
 import SpicyBitesPage from "./pages/spicyBites";
 
 function ScrollHandler() {
