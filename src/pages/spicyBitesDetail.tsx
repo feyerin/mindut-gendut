@@ -38,11 +38,9 @@ export default function SpicyBitesPage() {
           ? "/background/secondary.png"
           : "/background/main.png";
         const mainColor = isOdd ? "#990001" : "#f5b74b";
-        const secondaryColor = isOdd ? "#f5b74b" : "#990001";
+        const secondaryColor = isOdd ? "#fff" : "#990001";
         const textColor = isOdd ? "#990001" : "#f5b74b";
-        const hideVariants = false;
-
-        const iconSuffix = !isOdd ? "_Kuning" : ""; // bg main → versi kuning
+        const iconSuffix = !isOdd ? "_Kuning" : "";
 
         // 🔹 Info produk default
         let productInfo = {
@@ -54,7 +52,7 @@ export default function SpicyBitesPage() {
           textColor,
         };
 
-        // 🔹 Override info produk berdasarkan kategori
+        // 🔹 Override info produk
         if (["kentang", "kripik-kentang"].includes(item.category)) {
           productInfo = {
             title: "PRODUK SIAP SANTAP",
@@ -75,15 +73,18 @@ export default function SpicyBitesPage() {
           };
         }
 
-        // 🔹 Cek apakah pakai ikon "Bahan Baku Pilihan" atau "Resep Warisan"
-        const isBahanBaku =
-          ["kentang", "kripik-kentang", "tahu", "tempe"].includes(item.category);
+        const isBahanBaku = [
+          "kentang",
+          "kripik-kentang",
+          "tahu",
+          "tempe",
+        ].includes(item.category);
 
         return (
           <section
             key={item.id}
             id={sectionIds[item.category] || item.category}
-            className="w-full h-screen flex flex-col justify-between items-center"
+            className="w-full min-h-screen flex flex-col justify-between items-center pb-20"
             style={{
               backgroundImage: `url('${bgImage}')`,
               backgroundRepeat: "no-repeat",
@@ -92,27 +93,31 @@ export default function SpicyBitesPage() {
             }}
           >
             {/* 🔹 Bagian utama */}
-            <div className="flex flex-col md:flex-row items-center justify-center flex-1 w-full">
-              <div className="w-full md:w-1/2 flex justify-center items-center">
+            <div className="flex flex-col md:flex-row items-start justify-start flex-1 w-full md:px-20 px-8 pt-16 md:pt-20 gap-10">
+              {/* Gambar */}
+              <div className="w-full md:w-1/2 flex justify-center md:justify-end items-start">
                 <motion.img
                   src={item.image}
                   alt={item.name}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4 }}
-                  className="rounded-3xl shadow-lg w-full max-w-md"
+                  className="rounded-3xl shadow-lg w-full max-w-2xl object-contain"
                 />
               </div>
 
+              {/* Teks */}
               <div
-                className="w-full md:w-1/2 flex flex-col justify-center h-full px-8 md:px-16"
+                className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
                 style={{ color: textColor }}
               >
                 <h2 className="text-3xl font-extrabold mb-4 uppercase font-[Playfair-Display]">
                   {item.name}
                 </h2>
+
                 <p className="mb-6 leading-relaxed">{item.description}</p>
 
+                {/* 🔸 Ukuran / Isi */}
                 {Array.isArray(item.sizes) && item.sizes.length > 0 && (
                   <div className="mb-6">
                     <h3 className="font-semibold text-lg mb-3">
@@ -120,11 +125,12 @@ export default function SpicyBitesPage() {
                         ? "Isi :"
                         : "Ukuran :"}
                     </h3>
+
                     <div className="flex flex-wrap gap-3">
                       {item.sizes.map((size, i) => (
                         <button
                           key={i}
-                          className="px-5 py-2 text-sm font-semibold border rounded-full"
+                          className="px-5 py-2 text-sm font-semibold border rounded-lg"
                           style={{
                             backgroundColor: mainColor,
                             color: secondaryColor,
@@ -138,16 +144,19 @@ export default function SpicyBitesPage() {
                   </div>
                 )}
 
-                {!hideVariants &&
+                {/* 🔸 Varian + Gambar */}
+                {item.category !== "kripik-kentang" &&
                   Array.isArray(item.variants) &&
                   item.variants.length > 0 && (
-                    <div className="mb-8">
+                    <div className="mb-8 w-full">
                       <h3 className="font-semibold text-lg mb-3">Varian :</h3>
-                      <div className="flex flex-wrap gap-3">
+
+                      {/* Tombol Varian */}
+                      <div className="flex flex-wrap gap-3 mb-6">
                         {item.variants.map((variant, i) => (
                           <button
                             key={i}
-                            className="px-5 py-2 text-sm font-semibold border rounded-full"
+                            className="px-5 py-2 text-sm font-semibold border rounded-lg"
                             style={{
                               backgroundColor: mainColor,
                               color: secondaryColor,
@@ -158,6 +167,36 @@ export default function SpicyBitesPage() {
                           </button>
                         ))}
                       </div>
+
+                      {/* 🔹 Gambar varian dari variantGroups */}
+                      {Array.isArray(item.variantGroups) &&
+                        item.variantGroups.length > 0 &&
+                        item.variantGroups[0].options?.length > 0 && (
+                          <div className="flex flex-wrap gap-2 justify-start mt-6">
+                            {item.variantGroups[0].options.map((opt, i) => (
+                              <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                  duration: 0.3,
+                                  delay: i * 0.1,
+                                }}
+                                className="flex flex-col items-center"
+                              >
+                                <img
+                                  src={opt.image}
+                                  alt={opt.name || `Varian ${i + 1}`}
+                                  className="h-24 md:h-32 object-contain rounded-xl"
+                                  style={{
+                                    maxWidth: "100px",
+                                    transition: "transform 0.25s ease",
+                                  }}
+                                />
+                              </motion.div>
+                            ))}
+                          </div>
+                        )}
                     </div>
                   )}
               </div>
@@ -165,11 +204,11 @@ export default function SpicyBitesPage() {
 
             {/* 🔹 Bagian bawah */}
             <div
-              className="w-full grid grid-cols-1 md:grid-cols-3 items-center text-center md:text-left px-6 md:px-16 py-6"
+              className="w-full grid grid-cols-1 md:grid-cols-3 items-start text-center md:text-left px-6 md:px-16 pb-10 md:pb-12 gap-8 mt-10"
               style={{ color: textColor }}
             >
-              {/* 🔹 Kiri: Ikon Bahan Baku atau Resep Warisan */}
-              <div className="flex items-center justify-center md:justify-start gap-6">
+              {/* 🔹 Kiri: Ikon Bahan Baku / Resep Warisan */}
+              <div className="flex items-start justify-center md:justify-start gap-6">
                 <img
                   src={
                     isBahanBaku
@@ -185,7 +224,9 @@ export default function SpicyBitesPage() {
                 />
                 <div>
                   <h3 className="font-bold text-lg mb-1">
-                    {isBahanBaku ? "BAHAN BAKU PILIHAN" : "RESEP WARISAN"}
+                    {isBahanBaku
+                      ? "BAHAN BAKU PILIHAN"
+                      : "RESEP WARISAN"}
                   </h3>
                   <p className="text-sm max-w-[320px]">
                     {isBahanBaku
@@ -196,17 +237,17 @@ export default function SpicyBitesPage() {
               </div>
 
               {/* 🔹 Tengah: Halal */}
-              <div className="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center justify-start">
                 <img
                   src={`/Ikon Halal${iconSuffix}.png`}
                   alt="Halal Logo"
-                  className="w-12 mb-2"
+                  className="w-14 md:w-16 mb-2"
                 />
               </div>
 
-              {/* 🔹 Kanan: Info produk */}
+              {/* 🔹 Kanan: Info Produk */}
               <div
-                className="flex items-center gap-6 p-4 rounded-xl justify-center md:justify-start"
+                className="flex items-start gap-6 p-4 rounded-xl justify-center md:justify-start"
                 style={{
                   backgroundColor: productInfo.bgColor,
                   color: productInfo.textColor,
@@ -221,7 +262,9 @@ export default function SpicyBitesPage() {
                   <h3 className="font-bold text-lg mb-1">
                     {productInfo.title}
                   </h3>
-                  <p className="text-sm max-w-[320px]">{productInfo.desc}</p>
+                  <p className="text-sm max-w-[320px]">
+                    {productInfo.desc}
+                  </p>
                   <p className="text-sm mt-1 font-medium">
                     {productInfo.duration}
                   </p>

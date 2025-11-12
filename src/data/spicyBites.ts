@@ -80,10 +80,10 @@ export const menuData: MenuItem[] = [
       {
         groupName: "",
         options: [
-          { name: "", image: "/spicyBites/Sambal Gami botol.png" },
-          { name: "", image: "/spicyBites/Sambal Terasi botol.png" },
-          { name: "", image: "/spicyBites/Sambal Korek botol.png" },
-          { name: "", image: "/spicyBites/sambal Mercon botol.png" },
+          { name: "", image: "/spicyBites/Sambal Gami.png" },
+          { name: "", image: "/spicyBites/Sambal Terasi.png" },
+          { name: "", image: "/spicyBites/Sambal korek.png" },
+          { name: "", image: "/spicyBites/Sambal Mercon.png" },
         ],
       },
     ],
@@ -98,20 +98,20 @@ export const menuData: MenuItem[] = [
     rating: 4.7,
     reviews: 97,
     sizes: ["200 gr", "50 gr"],
-    variants: ["Sambal Cumi", "Sambal Pete"],
+    variants: ["Baby Cumi", "Pete"],
     variantGroups: [
       {
         groupName: "",
         options: [
-          { name: "", image: "/spicyBites/Sambal Cumi botol.png" },
-          { name: "", image: "/spicyBites/Sambal Pete pouch.png" },
+          { name: "", image: "/spicyBites/Sambal Baby Cumi.png" },
+          { name: "", image: "/spicyBites/Sambal Pete.png" },
         ],
       },
     ],
   },
   {
     id: 5,
-    name: "Sapi",
+    name: "Iga Mercon Warisan",
     category: "sapi",
     description:"Sambal Iga Mindut Gendut — perpaduan iga sapi pilihan dengan bumbu khas warisan nenek, dibuat tanpa pengawet, melalui proses diungkep selama 8 jam, menghasilkan cita rasa yang dalam, bebas amis, dan bumbu yang meresap sempurna hingga ke dalam daging. Menu makan malam spesial dan praktis siap dihidangkan!",
     price: "Rp25.000",
@@ -119,13 +119,13 @@ export const menuData: MenuItem[] = [
     rating: 4.9,
     reviews: 140,
     sizes: ["200 gr"],
-    variants: ["Original", "Pedas"],
+    variants: ["Iga", "Paru"],
     variantGroups: [
       {
         groupName: "",
         options: [
-          { name: "Iga", image: "/spicyBites/Iga Mercon.png" },
-          { name: "Paru", image: "/spicyBites/sapi-blackpepper.jpg" },
+          { name: "", image: "/spicyBites/Iga.png" },
+          { name: "", image: "/spicyBites/Paru.png" },
         ],
       },
     ],
@@ -145,7 +145,6 @@ export const menuData: MenuItem[] = [
       {
         groupName: "Varian:",
         options: [
-          { name: "Original", image: "/spicyBites/Keripik kentang.png" },
         ],
       },
     ],
