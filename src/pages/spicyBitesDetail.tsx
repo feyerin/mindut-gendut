@@ -156,7 +156,7 @@ export default function SpicyBitesPage() {
                         {item.variants.map((variant, i) => (
                           <button
                             key={i}
-                            className="px-5 py-2 text-sm font-semibold border rounded-lg"
+                            className="px-2 py-2 text-sm font-semibold border rounded-lg"
                             style={{
                               backgroundColor: mainColor,
                               color: secondaryColor,
