@@ -36,7 +36,7 @@ export default function Tahu() {
           <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Tahu
           </h2>
-          <p className="mb-6 text-[23px] leading-relaxed">
+          <p className="mb-6 text-[23px] leading-relaxed font-[Arial]">
             Tahu Susu Spesial Mindut Gendut — dibuat fresh setiap hari dari bahan berkualitas, menghasilkan tekstur lembut dan rasa gurih alami yang khas. Tanpa pengawet, bisa langsung digoreng atau dijadikan lauk sesuai selera. 
             <br/> <br/> Untuk penyimpanan lebih lama, setelah diterima ganti airnya dengan air panas, lalu simpan di kulkas — tahan hingga 1 minggu. Praktis, segar, dan lezat setiap hari!          
           </p>

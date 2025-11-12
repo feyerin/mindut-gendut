@@ -37,7 +37,7 @@ export default function BumbuUngkep() {
             Bumbu Ungkep Kaldu
           </h2>
 
-          <p className="mb-8 text-[23px] leading-relaxed font-sans">
+          <p className="mb-8 text-[23px] leading-relaxed font-[Arial]">
             Bumbu Ungkep Kaldu Mindut Gendut bukan sekadar bumbu ungkep biasa. Diracik dari resep tradisional warisan nenek, bumbu ini sudah mengandung kaldu alami sehingga bisa langsung digunakan tanpa tambahan bumbu lain. Praktis, sehat, dan bergizi — menghadirkan rasa gurih autentik khas masakan rumahan.
           </p>
 
