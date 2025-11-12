@@ -36,7 +36,7 @@ export default function SambalLauk() {
           <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Sambal Lauk
           </h2>
-          <p className="mb-6 text-[23px] leading-relaxed font-[Arial]">
+          <p className="mb-6 text-[23px] font-[Arial]">
             Praktisnya lauk pedas khas rumahan, dibuat tanpa pengawet dari bahan segar berkualitas. Tersedia 2 varian favorit: Sambal Baby Cumi & Sambal Pete dengan sambal mercon yang menggugah selera.
           </p>
 

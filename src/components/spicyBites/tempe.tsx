@@ -36,7 +36,7 @@ export default function Tempe() {
           <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Tempe
           </h2>
-          <p className="mb-6 text-[23px] leading-relaxed font-[Arial]">
+          <p className="mb-6 text-[23px] font-[Arial]">
             Tempe Bacem Mindut Gendut — dibuat dari kedelai pilihan dan dimasak perlahan dengan bumbu bacem tradisional khas Jawa. Rasanya manis gurih, lembut, dan meresap sampai ke dalam, menghadirkan cita rasa rumahan yang autentik. Dijamin beda dari tempe bacem biasa — sekali coba, pasti ketagihan!
           </p>
 
