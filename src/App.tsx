@@ -8,6 +8,7 @@ import AboutUs from "./pages/aboutUs";
 import MenuPage from "./pages/menu";
 import ContactUs from "./pages/contactUs";
 import SpicyBitesDetail from "./pages/spicyBitesDetail";
+import SpicyBitesPage from "./pages/spicyBites";
 
 function ScrollHandler() {
   const { pathname, hash } = useLocation();
@@ -35,7 +36,7 @@ export default function App() {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Menu" element={<MenuPage />} />
           <Route path="/kontak" element={<ContactUs />} />
-          <Route path="/spicyBites" element={<SpicyBitesDetail />} />
+          <Route path="/spicyBites" element={<SpicyBitesPage />} />
         </Routes>
         <WhatsAppFloat
           phone="628119938180"

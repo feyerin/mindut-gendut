@@ -80,7 +80,7 @@ export default function Navbar() {
                     "ayam-ungkep",
                     "sambal",
                     "sambal-lauk",
-                    "sapi",
+                    "iga-mercon",
                     "kripik-kentang",
                     "tahu",
                     "tempe",
