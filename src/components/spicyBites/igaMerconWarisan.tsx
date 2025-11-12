@@ -36,7 +36,7 @@ export default function IgaMercon() {
           <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
             Iga Mercon Warisan
           </h2>
-          <p className="mb-6 text-[23px] leading-relaxed">
+          <p className="mb-6 text-[23px] leading-relaxed font-[Arial]">
             Sambal Iga Mindut Gendut — perpaduan iga sapi pilihan dengan bumbu khas warisan nenek, dibuat tanpa pengawet, melalui proses diungkep selama 8 jam, menghasilkan cita rasa yang dalam, bebas amis, dan bumbu yang meresap sempurna hingga ke dalam daging. Menu makan malam spesial dan praktis siap dihidangkan!
           </p>
 
