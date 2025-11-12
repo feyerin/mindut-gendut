@@ -38,8 +38,8 @@ export const menuData: MenuItem[] = [
       {
         groupName: "",
         options: [
-          { name: "", image: "/spicyBites/Bumbu Kalasan.png" },
-          { name: "", image: "/spicyBites/Bumbu Kuning.png" },
+          { name: "", image: "/spicyBites/Kalasan.png" },
+          { name: "", image: "/spicyBites/Kuning.png" },
         ],
       },
     ],
