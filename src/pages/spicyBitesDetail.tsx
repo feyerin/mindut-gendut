@@ -115,7 +115,7 @@ export default function SpicyBitesPage() {
                   {item.name}
                 </h2>
 
-                <p className="mb-6 leading-relaxed">{item.description}</p>
+                <p className="mb-6 text-xl leading-relaxed">{item.description}</p>
 
                 {/* 🔸 Ukuran / Isi */}
                 {Array.isArray(item.sizes) && item.sizes.length > 0 && (

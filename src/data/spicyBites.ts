@@ -59,8 +59,8 @@ export const menuData: MenuItem[] = [
       {
         groupName: "",
         options: [
-          { name: "", image: "/spicyBites/Ayam Kalasan.png" },
-          { name: "", image: "/spicyBites/Ayam Kuning.png" },
+          { name: "", image: "/spicyBites/Kalasan.png" },
+          { name: "", image: "/spicyBites/Kuning.png" },
         ],
       },
     ],
