@@ -134,7 +134,7 @@ export default function BumbuUngkep() {
 
       {/* 🔹 Bagian bawah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8 md:px-20 mt-12"
+        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8  mt-20"
         style={{
           color: "#990001",
           minHeight: "200px",
