@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
         playfair: ["'Playfair Display'", "serif"],
+        bookman: ["Bookman Old Style", "serif"],
       },
       colors: {
         brand: "#9a0906", // contoh warna khusus untuk button

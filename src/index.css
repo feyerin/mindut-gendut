@@ -14,3 +14,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@font-face {
+  font-family: 'Bookman Old Style';
+  src: url('/Bookman Old Style/BookmanOldStyle.ttf') format('truetype');
+  font-weight: 400;
+}

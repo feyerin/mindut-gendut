@@ -33,8 +33,13 @@ export default function IgaMercon() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#990001" }}
         >
-          <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
-            Iga Mercon Warisan
+        <h2
+            className="text-[35px] font-black mb-2 uppercase font-['Bookman-Old-Style']"
+            style={{
+              textShadow: "0.8px 0 0 currentColor, -0.8px 0 0 currentColor"
+            }}
+          >
+          Iga Mercon Warisan
           </h2>
           <p className="mb-6 text-[23px] font-[Arial] leading-tight">
             Sambal Iga Mindut Gendut — perpaduan iga sapi pilihan dengan bumbu khas warisan nenek, dibuat tanpa pengawet, melalui proses diungkep selama 8 jam, menghasilkan cita rasa yang dalam, bebas amis, dan bumbu yang meresap sempurna hingga ke dalam daging. Menu makan malam spesial dan praktis siap dihidangkan!
@@ -42,13 +47,15 @@ export default function IgaMercon() {
 
           {/* Ukuran */}
           <div className="mb-6">
-            <h3 className="font-semibold text-[18px] mb-3">Varian :</h3>
+            <h3 className="font-semibold text-[18px] mb-3" style={{
+              textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
+            }}>Varian :</h3>
 
             {/* ✅ Ganti flex jadi grid */}
             <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
               <div className="w-28">
                 <button
-                  className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                  className="px-2 py-1 text-lg border rounded-lg"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -61,7 +68,7 @@ export default function IgaMercon() {
 
               <div>
                 <button
-                  className="px-2 py-1 text-lg font-semibold border rounded-lg"
+                  className="px-2 py-1 text-lg border rounded-lg"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -76,7 +83,9 @@ export default function IgaMercon() {
 
           {/* 🔹 Varian */}
           <div className="w-full">
-            <h3 className="font-semibold text-[18px] mb-3">Varian :</h3>
+            <h3 className="font-semibold text-[18px] mb-3" style={{
+              textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
+            }}>Varian :</h3>
             <div className="flex flex-wrap gap-4 justify-start items-start">
               {/* Varian 1 */}
               <motion.div
@@ -86,7 +95,7 @@ export default function IgaMercon() {
                 className="flex flex-col items-start"
               >
                 <div
-                  className="px-2 py-1 rounded-lg font-semibold text-lg mb-3 border"
+                  className="px-2 py-1 rounded-lg text-lg mb-3 border"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -115,7 +124,7 @@ export default function IgaMercon() {
                 className="flex flex-col items-start"
               >
                 <div
-                  className="px-2 py-1 rounded-lg font-semibold text-lg mb-3 border"
+                  className="px-2 py-1 rounded-lg text-lg mb-3 border"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -142,7 +151,7 @@ export default function IgaMercon() {
 
       {/* 🔹 Bagian bawah - rata tengah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8 md:px-20 gap-6 mt-20"
+        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left px-8 md:px-8 gap-6 mt-20"
         style={{
           color: "#990001",
           minHeight: "240px",
@@ -157,8 +166,8 @@ export default function IgaMercon() {
           />
           <div>
             <h3 className="font-bold text-[25px] mb-1">RESEP WARISAN</h3>
-            <p className="text-[16px] max-w-[320px]">
-              Resep warisan nusantara yang tetap dijaga keaslian dan cara
+            <p className="text-[16px] max-w-[400px]">
+              Resep warisan nusantara yang <br/> tetap dijaga keaslian dan cara
               masaknya.
             </p>
           </div>
@@ -187,8 +196,8 @@ export default function IgaMercon() {
           />
           <div className="text-left">
             <h3 className="font-bold text-[25px] mb-1">PRODUK BEKU</h3>
-            <p className="text-[16px] max-w-[320px]">
-              Segera bekukan setelah diterima. Pindahkan ke chiller semalam
+            <p className="text-[16px] max-w-[400px]">
+              Segera bekukan setelah diterima.<br/> Pindahkan ke chiller semalam
               sebelum dimasak.
             </p>
             <p className="text-[16px] mt-1 font-medium">

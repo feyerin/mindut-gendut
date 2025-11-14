@@ -33,8 +33,12 @@ export default function SambalLauk() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#f5b74b" }}
         >
-          <h2 className="text-[35px] font-extrabold mb-4 uppercase font-[Playfair-Display]">
-            Sambal Lauk
+ <h2
+            className="text-[35px] font-black mb-2 uppercase font-['Bookman-Old-Style']"
+            style={{
+              textShadow: "0.8px 0 0 currentColor, -0.8px 0 0 currentColor"
+            }}
+          >            Sambal Lauk
           </h2>
           <p className="mb-6 text-[23px] font-[Arial] leading-tight">
             Praktisnya lauk pedas khas rumahan, dibuat tanpa pengawet dari bahan segar berkualitas. 
@@ -43,7 +47,10 @@ export default function SambalLauk() {
 
           {/* Ukuran */}
           <div className="mb-6">
-            <h3 className="font-semibold text-[18px] mb-3">Ukuran :</h3>
+            <h3 className="font-extrabold text-[18px] mb-3"
+            style={{
+              textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
+            }}>Ukuran :</h3>
             <div className="grid grid-cols-2 gap-4 w-full max-w-sm">  
               <div className="w-28">        
               <button
@@ -74,7 +81,10 @@ export default function SambalLauk() {
 
           {/* 🔹 Varian */}
           <div className="w-full">
-            <h3 className="font-semibold text-[18px] mb-3">Varian :</h3>
+            <h3 className="font-extrabold text-[18px] mb-3"
+            style={{
+              textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
+            }}>Varian :</h3>
             <div className="flex flex-wrap gap-4 justify-start items-start">
               {/* Varian 1 */}
               <motion.div
@@ -140,7 +150,7 @@ export default function SambalLauk() {
 
       {/* 🔹 Bagian bawah - rata tengah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8 md:px-20 gap-6 mt-20"
+        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left px-8 md:px-8 gap-6 mt-20"
         style={{
           color: "#f5b74b",
           minHeight: "240px",
@@ -155,8 +165,8 @@ export default function SambalLauk() {
           />
           <div>
             <h3 className="font-bold text-[25px] mb-1">RESEP WARISAN</h3>
-            <p className="text-[16px] max-w-[320px]">
-              Resep warisan nusantara yang tetap dijaga keaslian dan cara
+            <p className="text-[16px] max-w-[400px]">
+              Resep warisan nusantara yang <br/>tetap dijaga keaslian dan cara
               masaknya.
             </p>
           </div>
@@ -185,8 +195,8 @@ export default function SambalLauk() {
           />
           <div className="text-left">
             <h3 className="font-bold text-[25px] mb-1">PRODUK BEKU</h3>
-            <p className="text-[16px] max-w-[320px]">
-              Segera bekukan setelah diterima. Pindahkan ke chiller semalam
+            <p className="text-[16px] max-w-[400px]">
+              Segera bekukan setelah diterima.<br/> Pindahkan ke chiller semalam
               sebelum dimasak.
             </p>
             <p className="text-[16px] mt-1 font-medium">

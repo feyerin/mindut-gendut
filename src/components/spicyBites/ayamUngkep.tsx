@@ -15,7 +15,7 @@ export default function AyamUngkep() {
       }}
     >
       {/* 🔹 Bagian utama */}
-      <div className="flex flex-col md:flex-row items-start justify-start flex-1 w-full md:px-20 px-8 pt-16 md:pt-20 gap-10">
+      <div className="flex flex-col md:flex-row items-start justify-start flex-1 w-full md:px-8 px-8 pt-16 md:pt-20 gap-10">
         {/* Gambar kiri */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end items-start">
           <motion.img
@@ -24,7 +24,7 @@ export default function AyamUngkep() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="rounded-3xl shadow-lg w-full max-w-2xl object-contain"
+            className="rounded-[50px] shadow-lg w-full max-w-2xl object-contain"
           />
         </div>
 
@@ -33,7 +33,12 @@ export default function AyamUngkep() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#f5b74b" }}
         >
-          <h2 className="text-[35px] font-bold mb-4 uppercase font-[Playfair-Display]">
+        <h2
+            className="text-[35px] font-black mb-2 uppercase font-['Bookman-Old-Style']"
+            style={{
+              textShadow: "0.8px 0 0 currentColor, -0.8px 0 0 currentColor"
+            }}
+          >            
             Ayam Ungkep Pejantan
           </h2>
           <p className="mb-6 text-[23px] font-[Arial] leading-tight">
@@ -42,7 +47,9 @@ export default function AyamUngkep() {
 
           {/* Ukuran */}
           <div className="mb-6">
-            <h3 className="font-semibold text-[18px] mb-3">Ukuran :</h3>
+            <h3 className="font-semibold text-[18px] mb-3" style={{
+              textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
+            }}>Ukuran :</h3>
 
             {/* ✅ Ganti flex jadi grid */}
             <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
@@ -75,7 +82,9 @@ export default function AyamUngkep() {
 
           {/* 🔹 Varian */}
           <div className="w-full">
-            <h3 className="font-semibold text-18px mb-3">Varian :</h3>
+            <h3 className="font-semibold text-18px mb-3" style={{
+              textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
+            }}>Varian :</h3>
             <div className="flex flex-wrap gap-4 justify-start items-start">
               {/* Varian 1 */}
               <motion.div
@@ -141,7 +150,7 @@ export default function AyamUngkep() {
 
       {/* 🔹 Bagian bawah - rata tengah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-items-center text-center md:text-left px-8  mt-20"
+        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left px-8  mt-20"
         style={{
           color: "#f5b74b",
           minHeight: "240px",
@@ -156,8 +165,8 @@ export default function AyamUngkep() {
           />
           <div>
             <h3 className="font-bold text-[23px] mb-1">RESEP WARISAN</h3>
-            <p className="text-[16px] max-w-[320px]">
-              Resep warisan nusantara yang tetap dijaga keaslian dan cara
+            <p className="text-[16px] max-w-[400px]">
+              Resep warisan nusantara yang <br/> tetap dijaga keaslian dan cara
               masaknya.
             </p>
           </div>
@@ -186,8 +195,8 @@ export default function AyamUngkep() {
           />
           <div className="text-left">
             <h3 className="font-bold text-[25px] mb-1">PRODUK BEKU</h3>
-            <p className="text-[16px] max-w-[320px]">
-              Segera bekukan setelah diterima. Pindahkan ke chiller semalam
+            <p className="text-[16px] max-w-[400px]">
+              Segera bekukan setelah diterima.<br/> Pindahkan ke chiller semalam
               sebelum dimasak.
             </p>
             <p className="text-[16px] mt-1 font-medium">
