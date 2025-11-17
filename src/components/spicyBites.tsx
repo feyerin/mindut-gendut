@@ -8,7 +8,7 @@ const spicyItems = [
   { name: "Ayam Ungkep", img: "/spicyBites/Ayam Ungkep.png", category: "ayam-ungkep" },
   { name: "Sambal", img: "/spicyBites/Sambal.png", category: "sambal" },
   { name: "Sambal Lauk", img: "/spicyBites/Sambal Lauk.png", category: "sambal-lauk" },
-  { name: "Sapi", img: "/spicyBites/Sapi.png", category: "sapi" },
+  { name: "Iga Mercon", img: "/spicyBites/Sapi.png", category: "iga-mercon" },
   { name: "Kripik Kentang", img: "/spicyBites/Keripik kentang.png", category: "kripik-kentang" },
   { name: "Tahu", img: "/spicyBites/Tahu.png", category: "tahu" },
   { name: "Tempe", img: "/spicyBites/Tempe.png", category: "tempe" },
