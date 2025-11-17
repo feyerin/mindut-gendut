@@ -150,7 +150,7 @@ export default function AyamUngkep() {
 
       {/* 🔹 Bagian bawah - rata tengah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left px-8  mt-20"
+        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left px-8"
         style={{
           color: "#f5b74b",
           minHeight: "240px",

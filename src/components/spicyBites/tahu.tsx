@@ -68,7 +68,7 @@ export default function Tahu() {
 
        {/* 🔹 Bagian bawah - rata tengah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left px-8 md:px-20 gap-6 mt-20"
+        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left px-8 md:px-20 gap-6"
         style={{
           color: "#990001",
           minHeight: "240px",
