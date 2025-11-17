@@ -16,7 +16,6 @@ export default function Tempe() {
     >
       {/* 🔹 Bagian utama */}
       <div className="flex flex-col md:flex-row items-start justify-start flex-1 w-full md:px-8 px-8 pt-16 md:pt-20 gap-10">
-        {/* Gambar kiri */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end items-start">
           <motion.img
             src="/spicyBites/Tempe.png"
