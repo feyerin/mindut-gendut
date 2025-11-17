@@ -45,7 +45,7 @@ export default function Sambal() {
             Sambal rumahan autentik tanpa pengawet, dibuat dari bahan segar pilihan dengan cita rasa khas Indonesia. 
             <br/> <br/>Tersedia 4 varian rasa sesuai level pedas favoritmu: 
             <br/> Gami: pedas manis gurih, Terasi: pedas sedang, 
-            <br/>Korek: pedas gurih yang bikin nagih, Mercon: super pedas
+            <br/>Korek: pedas gurih yang bikin nagih & Mercon: super pedas
           </p>
 
           {/* Ukuran */}
