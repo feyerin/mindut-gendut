@@ -6,7 +6,7 @@ export default function Sambal() {
   return (
     <section
       id="sambal"
-      className="w-full min-h-screen flex flex-col justify-between items-center pb-20 relative"
+      className="w-full min-h-screen flex flex-col justify-between items-center relative"
       style={{
         backgroundImage: `url('/background/secondary.png')`,
         backgroundRepeat: "no-repeat",

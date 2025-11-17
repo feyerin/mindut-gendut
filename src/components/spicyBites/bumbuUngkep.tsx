@@ -6,7 +6,7 @@ export default function BumbuUngkep() {
   return (
     <section
       id="bumbu-ungkep"
-      className="w-full min-h-screen flex flex-col justify-between items-center pb-16 relative"
+      className="w-full min-h-screen flex flex-col justify-between items-center relative"
       style={{
         backgroundImage: `url('/background/secondary.png')`,
         backgroundRepeat: "no-repeat",

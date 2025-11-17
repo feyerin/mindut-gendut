@@ -6,7 +6,7 @@ export default function AyamUngkep() {
   return (
     <section
       id="ayam-ungkep"
-      className="w-full min-h-screen flex flex-col justify-between items-center pb-20 relative"
+      className="w-full min-h-screen flex flex-col justify-between items-center relative"
       style={{
         backgroundImage: `url('/background/main.png')`,
         backgroundRepeat: "no-repeat",
