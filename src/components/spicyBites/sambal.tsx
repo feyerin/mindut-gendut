@@ -24,7 +24,7 @@ export default function Sambal() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="rounded-[50px] shadow-lg w-full max-w-2xl object-contain"
+            className="rounded-[50px] w-[560px] shadow-lg max-w-2xl object-contain"
           />
         </div>
 
@@ -218,7 +218,7 @@ export default function Sambal() {
 
       {/* 🔹 Bagian bawah - rata tengah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left px-8 md:px-8 gap-6"
+        className="w-full grid grid-cols-1 md:grid-cols-[1.0fr_0.1fr_1.0fr] items-center justify-items-center text-center md:text-left"
         style={{
           color: "#990001",
           minHeight: "240px",
@@ -229,7 +229,7 @@ export default function Sambal() {
           <img
             src="/Ikon Resep Warisan.png"
             alt="Resep Warisan"
-            className="w-20 h-20 object-contain flex-shrink-0"
+            className="w-16 h-16 object-contain flex-shrink-0"
           />
           <div>
             <h3 className="font-bold text-[25px] mb-1">RESEP WARISAN</h3>
@@ -259,7 +259,7 @@ export default function Sambal() {
           <img
             src="/Ikon Frozen.png"
             alt="Produk Beku"
-            className="w-20 h-20 object-contain flex-shrink-0"
+            className="w-16 h-16 object-contain flex-shrink-0"
           />
           <div className="text-left">
             <h3 className="font-bold text-[25px] mb-1">PRODUK BEKU</h3>

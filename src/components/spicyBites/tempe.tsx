@@ -23,7 +23,7 @@ export default function Tempe() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="rounded-3xl w-full max-w-2xl object-contain"
+            className="rounded-3xl w-[530px] max-w-2xl object-contain"
           />
         </div>
 
@@ -37,7 +37,8 @@ export default function Tempe() {
             style={{
               textShadow: "0.8px 0 0 currentColor, -0.8px 0 0 currentColor"
             }}
-          >            Tempe Bacem
+          >            
+          Tempe Bacem
           </h2>
           <p className="mb-20 text-[23px] font-[Arial] leading-tight">
             Tempe Bacem Mindut Gendut — dibuat dari kedelai pilihan dan dimasak perlahan dengan bumbu bacem tradisional khas Jawa. Rasanya manis gurih, lembut, dan meresap sampai ke dalam, menghadirkan cita rasa rumahan yang autentik. Dijamin beda dari tempe bacem biasa — sekali coba, pasti ketagihan!
@@ -66,7 +67,7 @@ export default function Tempe() {
 
       {/* 🔹 Bagian bawah - rata tengah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left px-8 md:px-20 gap-6"
+        className="w-full grid grid-cols-1 md:grid-cols-[1.0fr_0.1fr_1.0fr] items-center justify-items-center text-center md:text-left"
         style={{
           color: "#f5b74b",
           minHeight: "240px",
@@ -77,7 +78,7 @@ export default function Tempe() {
           <img
             src="/Ikon bahan baku pilihan_Kuning.png"
             alt="Resep Warisan"
-            className="w-20 h-20 object-contain flex-shrink-0"
+            className="w-16 h-16 object-contain flex-shrink-0"
           />
           <div>
             <h3 className="font-bold text-[25px] mb-1">BAHAN BAKU PILIHAN</h3>
@@ -106,7 +107,7 @@ export default function Tempe() {
           <img
             src="/Ikon siap santap_Kuning.png"
             alt="Produk Beku"
-            className="w-20 h-20 object-contain flex-shrink-0"
+            className="w-16 h-16 object-contain flex-shrink-0"
           />
           <div className="text-left">
             <h3 className="font-bold text-[25px] mb-1">PRODUK SIAP SANTAP</h3>

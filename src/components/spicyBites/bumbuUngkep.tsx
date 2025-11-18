@@ -24,7 +24,7 @@ export default function BumbuUngkep() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="rounded-[50px] shadow-lg w-full max-w-2xl object-contain"
+            className="rounded-[50px] shadow-lg w-[530px] max-w-2xl object-contain"
           />
         </div>
 
@@ -57,7 +57,7 @@ export default function BumbuUngkep() {
             <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
               <div className="w-28">
                 <button
-                  className="px-2 py-1 text-lg font-light border rounded-lg"
+                  className="px-2 py-1 text-lg w-[100px] font-light border rounded-lg"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -69,7 +69,7 @@ export default function BumbuUngkep() {
               </div>
               <div>
                 <button
-                  className="px-2 py-1 text-lg  font-light border rounded-lg"
+                  className="px-2 py-1 text-lg w-[100px] font-light border rounded-lg"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -99,7 +99,7 @@ export default function BumbuUngkep() {
                 className="flex flex-col items-start"
               >
                 <div
-                  className="px-2 py-1 rounded-lg text-lg mb-3 border"
+                  className="px-2 py-1 w-[100px] text-center rounded-lg text-lg mb-3 border"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -127,7 +127,7 @@ export default function BumbuUngkep() {
                 className="flex flex-col items-start"
               >
                 <div
-                  className="px-2 py-1 rounded-lg text-lg mb-3 border"
+                  className="px-2 py-1 w-[100px] text-center rounded-lg text-lg mb-3 border"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
@@ -153,7 +153,7 @@ export default function BumbuUngkep() {
 
       {/* 🔹 Bagian bawah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-[1.3fr_0.8fr_1.3fr] items-center justify-items-center text-center md:text-left"
+        className="w-full grid grid-cols-1 md:grid-cols-[1.0fr_0.1fr_1.0fr] items-center justify-items-center text-center md:text-left"
         style={{
           color: "#990001",
           minHeight: "200px",
@@ -164,7 +164,7 @@ export default function BumbuUngkep() {
           <img
             src="/Ikon Resep Warisan.png"
             alt="Resep Warisan"
-            className="w-20 h-20 object-contain flex-shrink-0"
+            className="w-16 h-16 object-contain flex-shrink-0"
           />
           <div>
             <h3 className="font-bold text-[25px] mb-1 uppercase">
@@ -190,7 +190,7 @@ export default function BumbuUngkep() {
           <img
             src="/Ikon Frozen.png"
             alt="Produk Beku"
-            className="w-20 h-20 object-contain flex-shrink-0"
+            className="w-16 h-16 object-contain flex-shrink-0"
           />
           <div className="text-left">
             <h3 className="font-bold text-[25px] mb-1 uppercase">
