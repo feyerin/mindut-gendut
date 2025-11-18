@@ -93,7 +93,7 @@ export default function Tempe() {
           <img
             src="/Ikon Halal_Kuning.png"
             alt="Halal Logo"
-            className="w-24 h-24 md:w-28 md:h-28 object-contain"
+            className="w-24 h-24  object-contain"
           />
         </div>
 

@@ -181,7 +181,7 @@ export default function BumbuUngkep() {
           <img
             src="/Ikon Halal.png"
             alt="Halal Logo"
-            className="w-28 h-28 object-contain"
+            className="w-24 h-24 object-contain"
           />
         </div>
 
