@@ -14,7 +14,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll untuk anchor link (#)
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLAnchorElement;
@@ -32,6 +31,17 @@ export default function Navbar() {
     return () => document.removeEventListener("click", handleAnchorClick);
   }, []);
 
+  const spicyItems = [
+    "bumbu-ungkep",
+    "ayam-ungkep",
+    "sambal",
+    "sambal-lauk",
+    "iga-mercon",
+    "kripik-kentang",
+    "tahu",
+    "tempe",
+  ];
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-colors uppercase duration-300 ${
@@ -44,9 +54,10 @@ export default function Navbar() {
           <img src="/logo.png" alt="Mindut Gendut" className="h-14" />
         </Link>
 
-        {/* Desktop / Tablet Menu */}
-        <div className="flex items-center gap-6">
-          <ul className="hidden sm:flex gap-5 font-semibold text-white relative">
+        {/* Menu / Buttons */}
+        <div className="flex items-center gap-4">
+          {/* Desktop & Tablet Menu */}
+          <ul className="hidden sm:flex gap-4 md:gap-6 font-semibold text-white text-sm md:text-base relative">
             <li>
               <Link to="/menu" className="hover:text-gray-300 transition-colors">
                 Menu
@@ -71,20 +82,9 @@ export default function Navbar() {
                 </a>
                 <ChevronDown size={16} className="group-hover:rotate-180 transition-transform" />
               </div>
-
-              {/* Dropdown */}
               <div className="absolute left-0 top-full pt-2 hidden group-hover:block z-50">
-                <ul className="flex flex-col bg-[#5c0b0b] text-white rounded-md shadow-lg w-56 overflow-hidden">
-                  {[
-                    "bumbu-ungkep",
-                    "ayam-ungkep",
-                    "sambal",
-                    "sambal-lauk",
-                    "iga-mercon",
-                    "kripik-kentang",
-                    "tahu",
-                    "tempe",
-                  ].map((id) => (
+                <ul className="flex flex-col bg-[#5c0b0b] text-white rounded-md shadow-lg w-56 overflow-hidden text-sm">
+                  {spicyItems.map((id) => (
                     <li key={id}>
                       <Link
                         to={`/spicyBites#${id}`}
@@ -108,7 +108,17 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* Desktop/Tablet Button */}
+          {/* Tablet WA Button (icon only) */}
+          <a
+            href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden sm:inline-block md:hidden text-[#f5b74b]"
+          >
+            <MessageCircle size={26} />
+          </a>
+
+          {/* Desktop WA Button */}
           <a
             href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
             target="_blank"
@@ -116,16 +126,6 @@ export default function Navbar() {
             className="hidden md:inline-block px-4 py-2 rounded-full font-semibold bg-[#f5b74b] text-[#9a0906] hover:bg-[#e0a841] transition-colors"
           >
             Pesan Sekarang
-          </a>
-
-          {/* Tablet Icon */}
-          <a
-            href="https://wa.me/628119938180?text=Halo%20saya%20mau%20pesan%20catering"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden sm:inline-block md:hidden"
-          >
-            <MessageCircle className="text-[#f5b74b]" size={26} />
           </a>
 
           {/* Mobile Toggle */}
@@ -137,7 +137,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="sm:hidden bg-[#420606] text-white flex flex-col items-center gap-4 py-4 font-semibold">
+        <div className="sm:hidden bg-[#420606] text-white flex flex-col items-center gap-4 py-4 font-semibold text-sm">
           <Link to="/menu" onClick={() => setMenuOpen(false)}>Menu</Link>
           <Link to="/aboutUs" onClick={() => setMenuOpen(false)}>Tentang Mindut</Link>
           <a href="/#catering" onClick={() => setMenuOpen(false)}>Catering</a>
@@ -146,7 +146,7 @@ export default function Navbar() {
           <div className="flex flex-col items-center w-full">
             <button
               onClick={() => setSpicyOpen(!spicyOpen)}
-              className="flex items-center gap-1"
+              className="flex items-center gap-1 uppercase"
             >
               Spicy Bites
               <ChevronDown
@@ -156,16 +156,7 @@ export default function Navbar() {
             </button>
             {spicyOpen && (
               <div className="flex flex-col items-center mt-2 text-sm gap-2">
-                {[
-                  "bumbu-ungkep",
-                  "ayam-ungkep",
-                  "sambal",
-                  "sambal-lauk",
-                  "Iga Mercon",
-                  "kripik-kentang",
-                  "tahu",
-                  "tempe",
-                ].map((id) => (
+                {spicyItems.map((id) => (
                   <Link key={id} to={`/spicyBites#${id}`} onClick={() => setMenuOpen(false)}>
                     {id
                       .split("-")

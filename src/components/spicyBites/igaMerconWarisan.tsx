@@ -6,7 +6,7 @@ export default function IgaMercon() {
   return (
     <section
       id="iga-mercon"
-      className="w-full min-h-screen flex flex-col justify-between items-center relative"
+      className="w-full min-h-screen flex flex-col justify-between items-center relative pb-12 lg:pb-0"
       style={{
         backgroundImage: `url('/background/secondary.png')`,
         backgroundRepeat: "no-repeat",
@@ -15,16 +15,16 @@ export default function IgaMercon() {
       }}
     >
       {/* 🔹 Bagian utama */}
-      <div className="flex flex-col md:flex-row items-start justify-start flex-1 w-full md:px-20 px-8 pt-16 md:pt-20 gap-10">
+      <div className="flex flex-col md:flex-row items-start justify-start flex-1 w-full px-4 sm:px-8 md:px-20 pt-16 md:pt-20 gap-6 md:gap-10">
         {/* Gambar kiri */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end items-start">
           <motion.img
             src="/spicyBites/Sapi.png"
-            alt="Bumbu Ungkep"
+            alt="Iga Mercon"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="rounded-3xl shadow-lg w-[560px] max-w-2xl object-contain"
+            className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[560px] rounded-3xl shadow-lg object-contain"
           />
         </div>
 
@@ -33,132 +33,90 @@ export default function IgaMercon() {
           className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
           style={{ color: "#990001" }}
         >
-        <h2
-            className="text-[35px] font-black mb-2 uppercase font-['Bookman-Old-Style']"
-            style={{
-              textShadow: "0.8px 0 0 currentColor, -0.8px 0 0 currentColor"
-            }}
+          <h2
+            className="text-2xl sm:text-3xl md:text-[35px] font-black mb-2 uppercase font-['Bookman-Old-Style']"
+            style={{ textShadow: "0.8px 0 0 currentColor, -0.8px 0 0 currentColor" }}
           >
-          Iga Mercon Warisan
+            Iga Mercon Warisan
           </h2>
-          <p className="mb-6 text-[23px] font-[Arial] leading-tight">
+
+          <p className="mb-6 sm:mb-8 text-[16px] sm:text-[20px] md:text-[23px] font-[Arial] leading-snug sm:leading-tight">
             Sambal Iga Mindut Gendut — perpaduan iga sapi pilihan dengan bumbu khas warisan nenek, dibuat tanpa pengawet, melalui proses diungkep selama 8 jam, menghasilkan cita rasa yang dalam, bebas amis, dan bumbu yang meresap sempurna hingga ke dalam daging. Menu makan malam spesial dan praktis siap dihidangkan!
           </p>
 
-          {/* Ukuran */}
-          <div className="mb-6">
-            <h3 className="font-semibold text-[18px] mb-3" style={{
-              textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
-            }}>Varian :</h3>
+          {/* Varian */}
+          <div className="mb-5">
+            <h3 className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
+              style={{ textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor" }}
+            >
+              Varian :
+            </h3>
 
-            {/* ✅ Ganti flex jadi grid */}
-            <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
-              <div className="w-28">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 w-full max-w-sm">
+              {["Original", "Pedas"].map((variant) => (
                 <button
-                  className="px-2 py-1 text-lg border rounded-lg"
+                  key={variant}
+                  className="px-2 py-1 text-sm sm:text-lg w-full font-semibold border rounded-lg"
                   style={{
                     backgroundColor: "#990001",
                     color: "#fff",
                     borderColor: "#990001",
                   }}
                 >
-                  Original
+                  {variant}
                 </button>
-              </div>
-
-              <div>
-                <button
-                  className="px-2 py-1 text-lg border rounded-lg"
-                  style={{
-                    backgroundColor: "#990001",
-                    color: "#fff",
-                    borderColor: "#990001",
-                  }}
-                >
-                  Pedas
-                </button>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* 🔹 Varian */}
+          {/* 🔹 Varian visual */}
           <div className="w-full">
-            <h3 className="font-semibold text-[18px] mb-3" style={{
-              textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
-            }}>Varian :</h3>
-            <div className="flex flex-wrap gap-4 justify-start items-start">
-              {/* Varian 1 */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                className="flex flex-col items-start"
-              >
-                <div
-                  className="px-2 py-1 rounded-lg text-lg mb-3 border"
-                  style={{
-                    backgroundColor: "#990001",
-                    color: "#fff",
-                    borderColor: "#990001",
-                  }}
+            <h3 className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
+              style={{ textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor" }}
+            >
+              Varian :
+            </h3>
+            <div className="flex flex-wrap gap-2 sm:gap-4 justify-start items-start">
+              {[
+                { name: "Iga", img: "/spicyBites/Iga.png" },
+                { name: "Paru", img: "/spicyBites/Paru.png" },
+              ].map((item, i) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: i * 0.1 }}
+                  className="flex flex-col items-start"
                 >
-                  Iga
-                </div>
-
-                <img
-                  src="/spicyBites/Iga.png"
-                  alt="kalasan"
-                  className="w-28 object-contain"
-                  style={{
-                    maxWidth: "140px",
-                    borderRadius: "12px",
-                  }}
-                />
-              </motion.div>
-
-              {/* Varian 2 */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-                className="flex flex-col items-start"
-              >
-                <div
-                  className="px-2 py-1 rounded-lg text-lg mb-3 border"
-                  style={{
-                    backgroundColor: "#990001",
-                    color: "#fff",
-                    borderColor: "#990001",
-                  }}
-                >
-                  Paru
-                </div>
-
-                <img
-                  src="/spicyBites/Paru.png"
-                  alt="Paru"
-                  className="w-28 object-contain"
-                  style={{
-                    maxWidth: "140px",
-                    borderRadius: "12px",
-                  }}
-                />
-              </motion.div>
+                  <div
+                    className="px-2 py-1 rounded-lg text-sm sm:text-lg mb-2 sm:mb-3 w-[100px] text-center border"
+                    style={{
+                      backgroundColor: "#990001",
+                      color: "#fff",
+                      borderColor: "#990001",
+                    }}
+                  >
+                    {item.name}
+                  </div>
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-20 sm:w-28 object-contain rounded-[12px]"
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
-      {/* 🔹 Bagian bawah - rata tengah */}
+      {/* 🔹 Bagian bawah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-[1.0fr_0.1fr_1.0fr] items-center justify-items-center text-center md:text-left"
-        style={{
-          color: "#990001",
-          minHeight: "240px",
-        }}
+        className="hidden lg:grid w-full grid-cols-[1.0fr_0.1fr_1.0fr] items-center justify-items-center text-center md:text-left"
+        style={{ color: "#990001", minHeight: "240px" }}
       >
-        {/* 🔸 Kiri: Resep Warisan */}
-        <div className="flex items-center justify-center md:justify-start gap-6">
+        {/* Kiri */}
+        <div className="flex items-center justify-center lg:justify-start gap-6">
           <img
             src="/Ikon Resep Warisan.png"
             alt="Resep Warisan"
@@ -167,28 +125,22 @@ export default function IgaMercon() {
           <div>
             <h3 className="font-bold text-[25px] mb-1">RESEP WARISAN</h3>
             <p className="text-[16px] max-w-[400px]">
-              Resep warisan nusantara yang <br/> tetap dijaga keaslian dan cara
-              masaknya.
+              Resep warisan nusantara yang <br /> tetap dijaga keaslian dan cara masaknya.
             </p>
           </div>
         </div>
 
-        {/* 🔸 Tengah: Halal */}
+        {/* Tengah */}
         <div className="flex flex-col items-center justify-center">
           <img
             src="/Ikon Halal.png"
             alt="Halal Logo"
-            className="w-24 h-24  object-contain"
+            className="w-24 h-24 object-contain"
           />
         </div>
 
-        {/* 🔸 Kanan: Produk Info */}
-        <div
-          className="flex items-center gap-6 justify-center md:justify-start"
-          style={{
-            color: "#990001",
-          }}
-        >
+        {/* Kanan */}
+        <div className="flex items-center gap-6 justify-center lg:justify-start">
           <img
             src="/Ikon Frozen.png"
             alt="Produk Beku"
@@ -197,8 +149,7 @@ export default function IgaMercon() {
           <div className="text-left">
             <h3 className="font-bold text-[25px] mb-1">PRODUK BEKU</h3>
             <p className="text-[16px] max-w-[400px]">
-              Segera bekukan setelah diterima.<br/> Pindahkan ke chiller semalam
-              sebelum dimasak.
+              Segera bekukan setelah diterima.<br />Pindahkan ke chiller semalam sebelum dimasak.
             </p>
             <p className="text-[16px] mt-1 font-medium">
               Tahan: 1 tahun (freezer) & 3 hari (chiller)

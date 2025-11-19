@@ -30,21 +30,24 @@ export default function MenuPage() {
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center gap-6 mb-10 flex-wrap px-4">
-          {categories.map((cat) => (
-            <button
-              key={cat.name}
-              onClick={() => setActive(cat)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                active.name === cat.name
-                  ? "bg-[#9a0906] text-white shadow-md"
-                  : "bg-white text-[#9a0906] border border-[#9a0906] hover:bg-[#f1eedd]"
-              }`}
-            >
-              {cat.name}
-            </button>
-          ))}
-        </div>
+<div className="flex justify-center flex-wrap gap-4 md:gap-6 mb-10 px-4">
+  {categories.map((cat) => (
+    <button
+      key={cat.name}
+      onClick={() => setActive(cat)}
+      className={`
+        px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all 
+        text-sm sm:text-base
+        ${active.name === cat.name
+          ? "bg-[#9a0906] text-white shadow-md"
+          : "bg-white text-[#9a0906] border border-[#9a0906] hover:bg-[#f1eedd]"
+        }
+      `}
+    >
+      {cat.name}
+    </button>
+  ))}
+</div>
 
         {/* Gambar Menu */}
         <div className="max-w-6xl mx-auto px-6 pb-24">

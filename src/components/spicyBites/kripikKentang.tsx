@@ -6,7 +6,7 @@ export default function KripikKentang() {
   return (
     <section
       id="kripik-kentang"
-      className="w-full min-h-screen flex flex-col justify-between items-center relative"
+      className="w-full min-h-screen flex flex-col justify-between items-center relative pb-12 lg:pb-0"
       style={{
         backgroundImage: `url('/background/main.png')`,
         backgroundRepeat: "no-repeat",
@@ -15,45 +15,43 @@ export default function KripikKentang() {
       }}
     >
       {/* 🔹 Bagian utama */}
-      <div className="flex flex-col md:flex-row items-start justify-start flex-1 w-full md:px-8 px-8 pt-16 md:pt-20 gap-10">
+      <div className="flex flex-col md:flex-row items-start justify-start flex-1 w-full px-4 sm:px-8 md:px-8 pt-16 md:pt-20 gap-6 md:gap-10">
         {/* Gambar kiri */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end items-start">
           <motion.img
             src="/spicyBites/Keripik kentang.png"
-            alt="kripik kentang"
+            alt="Kripik Kentang"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="rounded-3xl w-[530px] max-w-2xl object-contain"
+            className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[530px] rounded-3xl object-contain"
           />
         </div>
 
         {/* Deskripsi kanan */}
-        <div
-          className="w-full md:w-1/2 flex flex-col justify-start items-start h-full"
-          style={{ color: "#f5b74b" }}
-        >
-        <h2
-            className="text-[35px] font-black mb-2 uppercase font-['Bookman-Old-Style']"
-            style={{
-              textShadow: "0.8px 0 0 currentColor, -0.8px 0 0 currentColor"
-            }}
-          >            
-          Keripik Kentang
+        <div className="w-full md:w-1/2 flex flex-col justify-start items-start h-full" style={{ color: "#f5b74b" }}>
+          <h2
+            className="text-2xl sm:text-3xl md:text-[35px] font-black mb-2 uppercase font-['Bookman-Old-Style']"
+            style={{ textShadow: "0.8px 0 0 currentColor, -0.8px 0 0 currentColor" }}
+          >
+            Keripik Kentang
           </h2>
-          <p className="mb-6 text-[23px] font-[Arial] leading-tight">
+          <p className="mb-6 sm:mb-8 text-[16px] sm:text-[20px] md:text-[23px] font-[Arial] leading-snug sm:leading-tight">
             Keripik Kentang Sambal Mindut Gendut — keripik kentang renyah dengan coating sambal pedas manis gurih khas Mindut Gendut. Dibuat dari kentang pilihan tanpa pengawet, rasanya nagih banget! Dikemas dalam toples praktis yang memudahkan penyimpanan.
-            <br/> <br/> Cocok dimakan langsung, jadi lauk pendamping nasi, atau teman nasi goreng & mi instan favoritmu!"
+            <br /> <br /> Cocok dimakan langsung, jadi lauk pendamping nasi, atau teman nasi goreng & mi instan favoritmu!
           </p>
 
           {/* Ukuran */}
           <div className="mb-6">
-            <h3 className="font-semibold text-[18px] mb-3" style={{
-              textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
-            }}>Ukuran :</h3>
-            <div className="flex flex-wrap gap-12">
+            <h3
+              className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
+              style={{ textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor" }}
+            >
+              Ukuran :
+            </h3>
+            <div className="grid grid-cols-2 gap-3 w-full max-w-xs">
               <button
-                className="px-2 py-1 text-lg border rounded-lg"
+                className="px-2 py-1 text-sm sm:text-lg w-full font-semibold border rounded-lg"
                 style={{
                   backgroundColor: "#f5b74b",
                   color: "#990001",
@@ -67,19 +65,16 @@ export default function KripikKentang() {
         </div>
       </div>
 
-      {/* 🔹 Bagian bawah - rata tengah */}
+      {/* 🔹 Bagian bawah */}
       <div
-        className="w-full grid grid-cols-1 md:grid-cols-[1.0fr_0.1fr_1.0fr] items-center justify-items-center text-center md:text-left"
-        style={{
-          color: "#f5b74b",
-          minHeight: "240px",
-        }}
+        className="hidden lg:grid w-full grid-cols-[1.0fr_0.1fr_1.0fr] items-center justify-items-center text-center md:text-left"
+        style={{ color: "#f5b74b", minHeight: "240px" }}
       >
-        {/* 🔸 Kiri: Resep Warisan */}
-        <div className="flex items-center justify-center md:justify-start gap-6">
+        {/* Kiri */}
+        <div className="flex items-center justify-center lg:justify-start gap-6">
           <img
             src="/Ikon bahan baku pilihan_Kuning.png"
-            alt="Resep Warisan"
+            alt="Bahan Baku Pilihan"
             className="w-20 h-20 object-contain flex-shrink-0"
           />
           <div>
@@ -90,25 +85,20 @@ export default function KripikKentang() {
           </div>
         </div>
 
-        {/* 🔸 Tengah: Halal */}
+        {/* Tengah */}
         <div className="flex flex-col items-center justify-center">
           <img
             src="/Ikon Halal_Kuning.png"
             alt="Halal Logo"
-            className="w-24 h-24  object-contain"
+            className="w-24 h-24 object-contain"
           />
         </div>
 
-        {/* 🔸 Kanan: Produk Info */}
-        <div
-          className="flex items-center gap-6 justify-center md:justify-start"
-          style={{
-            color: "#f5b74b",
-          }}
-        >
+        {/* Kanan */}
+        <div className="flex items-center gap-6 justify-center lg:justify-start">
           <img
             src="/Ikon siap santap_Kuning.png"
-            alt="Produk Beku"
+            alt="Produk Siap Santap"
             className="w-16 h-16 object-contain flex-shrink-0"
           />
           <div className="text-left">
