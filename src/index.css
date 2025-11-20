@@ -7,6 +7,26 @@ body {
     font-family: 'Montserrat'
 }
 
+/* globals.css */
+.bg-secondary {
+  background-image: url('/background/secondary.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* globals.css */
+.bg-primary {
+  background-image: url('/background/main.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
 .font-worksans {
     font-family: 'Work Sans';
 }

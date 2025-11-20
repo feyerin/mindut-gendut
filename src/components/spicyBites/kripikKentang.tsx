@@ -51,7 +51,7 @@ export default function KripikKentang() {
             </h3>
             <div className="grid grid-cols-2 gap-3 w-full max-w-xs">
               <button
-                className="px-2 py-1 text-sm sm:text-lg w-full font-semibold border rounded-lg"
+                className="px-2 py-1 text-sm sm:text-lg w-full border rounded-lg"
                 style={{
                   backgroundColor: "#f5b74b",
                   color: "#990001",

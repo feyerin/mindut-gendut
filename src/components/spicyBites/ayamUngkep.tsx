@@ -46,67 +46,73 @@ export default function AyamUngkep() {
           </p>
 
           {/* Ukuran */}
-          <div className="mb-5">
-            <h3 className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
-              style={{ textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor" }}
-            >
-              Ukuran :
-            </h3>
-            <div className="grid grid-cols-2 gap-2 sm:gap-3 w-full max-w-sm">
-              {["1/2 ekor", "1 ekor"].map((size) => (
-                <button
-                  key={size}
-                  className="px-2 py-1 text-sm sm:text-lg w-full font-semibold border rounded-lg"
-                  style={{
-                    backgroundColor: "#f5b74b",
-                    color: "#990001",
-                    borderColor: "#f5b74b",
-                  }}
-                >
-                  {size}
-                </button>
-              ))}
-            </div>
-          </div>
+<div className="mb-5">
+  <h3
+    className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
+    style={{ textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor" }}
+  >
+    Ukuran :
+  </h3>
 
-          {/* Varian */}
-          <div className="w-full">
-            <h3 className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
-              style={{ textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor" }}
-            >
-              Varian :
-            </h3>
-            <div className="flex flex-wrap gap-2 sm:gap-4 justify-start items-start">
-              {[
-                { name: "Kalasan", img: "/spicyBites/Ayam Ungkep Kalasan.png" },
-                { name: "Kuning", img: "/spicyBites/Ayam Ungkep Kuning.png" },
-              ].map((variant, i) => (
-                <motion.div
-                  key={variant.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.1 }}
-                  className="flex flex-col items-start"
-                >
-                  <div
-                    className="px-2 py-1 w-[100px] text-center rounded-lg text-sm sm:text-lg mb-2 sm:mb-3 border"
-                    style={{
-                      backgroundColor: "#f5b74b",
-                      color: "#990001",
-                      borderColor: "#f5b74b",
-                    }}
-                  >
-                    {variant.name}
-                  </div>
-                  <img
-                    src={variant.img}
-                    alt={variant.name}
-                    className="w-20 sm:w-28 object-contain rounded-[12px]"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </div>
+  <div className="grid grid-cols-2 gap-2 sm:gap-3 w-full max-w-sm">
+    {["1/2 ekor", "1 ekor"].map((size) => (
+      <div key={size} className="w-20 sm:w-28">
+        <button
+          className="px-2 py-1 text-sm sm:text-lg w-20 md:w-[100px] mb-2 sm:mb-3 border rounded-lg"
+          style={{
+            backgroundColor: "#f5b74b",
+            color: "#990001",
+            borderColor: "#f5b74b",
+          }}
+        >
+          {size}
+        </button>
+      </div>
+    ))}
+  </div>
+</div>
+
+{/* Varian */}
+<div className="w-full">
+  <h3
+    className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
+    style={{ textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor" }}
+  >
+    Varian :
+  </h3>
+
+  <div className="flex flex-wrap gap-2 sm:gap-4 justify-start items-start">
+    {[
+      { name: "Kalasan", img: "/spicyBites/Ayam Ungkep Kalasan.png" },
+      { name: "Kuning", img: "/spicyBites/Ayam Ungkep Kuning.png" },
+    ].map((variant, i) => (
+      <motion.div
+        key={variant.name}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: i * 0.1 }}
+        className="flex flex-col items-start"
+      >
+        <div
+          className="px-2 py-1 w-[100px] text-center rounded-lg text-sm sm:text-lg mb-2 sm:mb-3 border"
+          style={{
+            backgroundColor: "#f5b74b",
+            color: "#990001",
+            borderColor: "#f5b74b",
+          }}
+        >
+          {variant.name}
+        </div>
+
+        <img
+          src={variant.img}
+          alt={variant.name}
+          className="w-20 sm:w-28 object-contain rounded-[12px]"
+        />
+      </motion.div>
+    ))}
+  </div>
+</div>
         </div>
       </div>
 

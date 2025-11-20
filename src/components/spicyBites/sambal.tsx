@@ -46,26 +46,31 @@ export default function Sambal() {
           </p>
 
           {/* Ukuran */}
-          <div className="mb-6">
+          <div className="mb-5">
             <h3
-              className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
-              style={{ textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor" }}
+              className="font-[900] text-[16px] sm:text-[18px] mb-2 sm:mb-3"
+              style={{
+                textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
+              }}
             >
               Ukuran :
             </h3>
-            <div className="grid grid-cols-2 gap-3 w-full max-w-xs">
-              <button
-                className="px-4 py-1 text-sm sm:text-lg w-full border rounded-lg"
-                style={{ backgroundColor: "#990001", color: "#fff", borderColor: "#990001" }}
-              >
-                50 gr
-              </button>
-              <button
-                className="px-4 py-1 text-sm sm:text-lg w-full border rounded-lg"
-                style={{ backgroundColor: "#990001", color: "#fff", borderColor: "#990001" }}
-              >
-                200 gr
-              </button>
+            <div className="flex flex-wrap gap-2 sm:gap-4 justify-start items-start">
+              {["50 gr", "200 gr"].map((size) => (
+                <div className="w-20 sm:w-28">
+                  <button
+                    key={size}
+                    className="px-2 py-1 text-sm sm:text-lg w-20 md:w-[100px] mb-2 sm:mb-3 border rounded-lg"
+                    style={{
+                      backgroundColor: "#990001",
+                      color: "#fff",
+                      borderColor: "#990001",
+                    }}
+                  >
+                    {size}
+                  </button>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -77,7 +82,7 @@ export default function Sambal() {
             >
               Varian :
             </h3>
-            <div className="flex flex-wrap gap-4 justify-start items-start">
+            <div className="flex flex-wrap gap-2 sm:gap-4 justify-start items-start">
               {[
                 { name: "Gami", img: "/spicyBites/Sambal Gami.png" },
                 { name: "Terasi", img: "/spicyBites/Sambal Terasi.png" },
@@ -92,7 +97,7 @@ export default function Sambal() {
                   className="flex flex-col items-start"
                 >
                   <div
-                    className="px-2 py-1 rounded-lg text-lg mb-3 border"
+                    className="px-2 py-1 w-[100px] text-center rounded-lg text-sm sm:text-lg mb-2 sm:mb-3"
                     style={{ backgroundColor: "#990001", color: "#fff", borderColor: "#990001" }}
                   >
                     {v.name}
@@ -100,8 +105,7 @@ export default function Sambal() {
                   <img
                     src={v.img}
                     alt={v.name}
-                    className="w-28 sm:w-32 h-28 object-contain"
-                    style={{ maxWidth: "140px", borderRadius: "12px" }}
+                    className="w-20 sm:w-28 object-contain rounded-[12px]"
                   />
                 </motion.div>
               ))}

@@ -50,7 +50,7 @@ export default function Tempe() {
             </h3>
             <div className="flex gap-4 flex-wrap max-w-xs">
               <button
-                className="px-3 py-1 text-sm sm:text-lg font-semibold border rounded-lg"
+                className="px-3 py-1 text-sm sm:text-lg border rounded-lg"
                 style={{ backgroundColor: "#f5b74b", color: "#990001", borderColor: "#f5b74b" }}
               >
                 10 pcs

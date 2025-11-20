@@ -54,7 +54,7 @@ export default function SambalLauk() {
               {["50 gr", "200 gr"].map((size) => (
                 <button
                   key={size}
-                  className="px-3 py-1 text-sm sm:text-lg font-semibold border rounded-lg w-full"
+                  className="px-2 py-1 text-sm sm:text-lg w-20 md:w-[120px] mb-2 sm:mb-3 border rounded-lg"
                   style={{ backgroundColor: "#f5b74b", color: "#990001", borderColor: "#f5b74b" }}
                 >
                   {size}
@@ -84,7 +84,7 @@ export default function SambalLauk() {
                   className="flex flex-col items-start"
                 >
                   <div
-                    className="px-2 py-1 rounded-lg font-semibold text-lg mb-3 border"
+                    className="px-2 py-1 w-[120px] text-center rounded-lg text-sm sm:text-lg mb-2 sm:mb-3"
                     style={{ backgroundColor: "#f5b74b", color: "#990001", borderColor: "#f5b74b" }}
                   >
                     {v.name}
@@ -92,8 +92,7 @@ export default function SambalLauk() {
                   <img
                     src={v.img}
                     alt={v.name}
-                    className="w-28 sm:w-32 object-contain"
-                    style={{ maxWidth: "140px", borderRadius: "12px" }}
+                    className="w-20 sm:w-28 object-contain rounded-[12px]"
                   />
                 </motion.div>
               ))}

@@ -29,12 +29,12 @@ export default function SpicyBites() {
 
   return (
     <div
-      className="py-20 px-6 md:px-12 w-full bg-center"
-      style={{
-        backgroundImage: "url('/background/secondary.png')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="py-20 px-6 md:px-12 w-full bg-center bg-secondary"
+      // style={{
+      //   backgroundImage: "url('/background/secondary.png')",
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      // }}
     >
       <div className="w-11/12 max-w-7xl mx-auto text-center">
         <motion.h2

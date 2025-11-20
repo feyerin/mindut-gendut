@@ -5,7 +5,7 @@ import { MapPin, Clock } from "lucide-react";
 
 export default function Home() {
   return (
-    <div>
+    <div className="scroll-smooth">
       <Hero />
       <SpicyBites />
       <Services />
@@ -13,12 +13,7 @@ export default function Home() {
       {/* Lokasi & Jam Operasional */}
       <section
         id="lokasi"
-        style={{
-          backgroundImage: "url('/background/secondary.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="bg-secondary"
       >
         <div className="max-w-7xl mx-auto px-6 py-20">
           <h2 className="text-4xl md:text-5xl font-[Playfair-Display] font-bold text-center text-[#9a0906] mb-12">

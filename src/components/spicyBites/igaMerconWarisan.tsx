@@ -45,29 +45,33 @@ export default function IgaMercon() {
           </p>
 
           {/* Varian */}
-          <div className="mb-5">
-            <h3 className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
-              style={{ textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor" }}
-            >
-              Varian :
-            </h3>
+<div className="mb-5">
+  <h3
+    className="font-semibold text-[16px] sm:text-[18px] mb-2 sm:mb-3"
+    style={{
+      textShadow: "0.5px 0 0 currentColor, -0.5px 0 0 currentColor"
+    }}
+  >
+    Varian :
+  </h3>
 
-            <div className="grid grid-cols-2 gap-2 sm:gap-3 w-full max-w-sm">
-              {["Original", "Pedas"].map((variant) => (
-                <button
-                  key={variant}
-                  className="px-2 py-1 text-sm sm:text-lg w-full font-semibold border rounded-lg"
-                  style={{
-                    backgroundColor: "#990001",
-                    color: "#fff",
-                    borderColor: "#990001",
-                  }}
-                >
-                  {variant}
-                </button>
-              ))}
-            </div>
-          </div>
+  <div className="grid grid-cols-2 gap-2 sm:gap-3 w-full max-w-sm">
+    {["Original", "Pedas"].map((variant) => (
+      <div key={variant} className="w-20 sm:w-28">
+        <button
+        className="px-2 py-1 text-sm sm:text-lg w-20 md:w-[100px] mb-2 sm:mb-3 border rounded-lg"
+          style={{
+            backgroundColor: "#990001",
+            color: "#fff",
+            borderColor: "#990001",
+          }}
+        >
+          {variant}
+        </button>
+      </div>
+    ))}
+  </div>
+</div>
 
           {/* 🔹 Varian visual */}
           <div className="w-full">
@@ -89,7 +93,7 @@ export default function IgaMercon() {
                   className="flex flex-col items-start"
                 >
                   <div
-                    className="px-2 py-1 rounded-lg text-sm sm:text-lg mb-2 sm:mb-3 w-[100px] text-center border"
+                    className="px-2 py-1 w-[100px] text-center rounded-lg text-sm sm:text-lg mb-2 sm:mb-3"
                     style={{
                       backgroundColor: "#990001",
                       color: "#fff",

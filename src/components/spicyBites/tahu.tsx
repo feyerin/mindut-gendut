@@ -52,7 +52,7 @@ export default function Tahu() {
             </h3>
             <div className="flex gap-4 flex-wrap max-w-xs">
               <button
-                className="px-3 py-1 text-sm sm:text-lg font-semibold border rounded-lg"
+                className="px-3 py-1 text-sm sm:text-lg border rounded-lg"
                 style={{ backgroundColor: "#990001", color: "#fff", borderColor: "#990001" }}
               >
                 10 pcs

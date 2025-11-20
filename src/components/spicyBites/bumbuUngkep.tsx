@@ -56,19 +56,21 @@ export default function BumbuUngkep() {
             >
               Ukuran :
             </h3>
-            <div className="grid grid-cols-2 gap-2 sm:gap-3 w-full max-w-sm">
+            <div className="flex flex-wrap gap-2 sm:gap-4 justify-start items-start">
               {["500 ml", "1 liter"].map((size) => (
-                <button
-                  key={size}
-                  className="px-2 py-1 text-sm sm:text-lg w-full font-light border rounded-lg"
-                  style={{
-                    backgroundColor: "#990001",
-                    color: "#fff",
-                    borderColor: "#990001",
-                  }}
-                >
-                  {size}
-                </button>
+                <div className="w-20 sm:w-28">
+                  <button
+                    key={size}
+                    className="px-2 py-1 text-sm sm:text-lg w-20 md:w-[100px] mb-2 sm:mb-3 border rounded-lg"
+                    style={{
+                      backgroundColor: "#990001",
+                      color: "#fff",
+                      borderColor: "#990001",
+                    }}
+                  >
+                    {size}
+                  </button>
+                </div>
               ))}
             </div>
           </div>
@@ -96,7 +98,7 @@ export default function BumbuUngkep() {
                   className="flex flex-col items-start"
                 >
                   <div
-                    className="px-2 py-1 w-[100px] text-center rounded-lg text-sm sm:text-lg mb-2 sm:mb-3 border"
+                    className="px-2 py-1 w-[100px] text-center rounded-lg text-sm sm:text-lg mb-2 sm:mb-3"
                     style={{
                       backgroundColor: "#990001",
                       color: "#fff",
